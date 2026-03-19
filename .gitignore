@@ -1,23 +1,17 @@
-﻿build/
-*/build/
-*-build/
-debug/
-release/
-*.exe
-*.obj
-*.o
-*.log
-*.ilk
-*.pdb
-*.user
-*.pro.user
-*.pro.user.*
-*.autosave
-.qtc_clangd/
+﻿# Служебные папки Qt
 .qtcreator/
-CMakeLists.txt.user
-CMakeLists.txt.user.*
-*.creator.user
-*.creator.user.*
-.DS_Store
-Thumbs.db
+build/
+*.user
+*.user.*
+*.pro.user*
+
+# Папки сборки
+*/build/
+*/debug/
+*/release/
+
+# Временные файлы
+*.o
+*.exe
+*.dll
+*.db

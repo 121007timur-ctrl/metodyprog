@@ -28,26 +28,27 @@ private:
     ~SingletonClient() { qDebug() << "SingletonClient УНИЧТОЖЕН"; }
     friend class SingletonClientDestroyer;
 
-    QString m_userLogin;
-    bool m_isLoggedIn;
+    //решить какие функции реально нужны или же удалить
+        QString m_userLogin;
+        bool m_isLoggedIn;
     QTcpSocket* m_socket;
-    bool m_connected;
+        bool m_connected;
 
 public:
     static SingletonClient* getInstance();
-    void setUserLogin(const QString& login);
-    QString getUserLogin() const;
-    bool isLoggedIn() const;
-    void setLoggedIn(bool status);
-    void showStatus() const;
-    void login(const QString& login);
-    void logout();
+            void setUserLogin(const QString& login);
+            QString getUserLogin() const;
+            bool isLoggedIn() const;
+            void setLoggedIn(bool status);
+            void showStatus() const;
+            void login(const QString& login);
+            void logout();
     bool connectToServer(const QString& host, int port);
     void disconnectFromServer();
     bool sendCommand(const QString& command);
     QString waitForResponse();
-    void processUserInput();
-    bool isConnected() const { return m_connected; }
+            void processUserInput();
+            bool isConnected() const { return m_connected; }
 };
 
 #endif

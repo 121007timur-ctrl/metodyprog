@@ -1,17 +1,21 @@
-﻿# Служебные папки Qt
+# Служебные папки Qt
 .qtcreator/
-build/
 *.user
 *.user.*
-*.pro.user*
 
 # Папки сборки
+build/
 */build/
-*/debug/
-*/release/
+debug/
+release/
 
 # Временные файлы
 *.o
+*.obj
 *.exe
 *.dll
 *.db
+
+# Служебные файлы
+*.idx
+compile_commands.json

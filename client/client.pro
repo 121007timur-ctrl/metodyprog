@@ -1,17 +1,22 @@
-QT -= gui
-QT += core network
+QT       += core gui network
 
-CONFIG += c++11 console
-CONFIG -= app_bundle
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += c++17
 
 SOURCES += \
-    client_main.cpp \
-    singletonclient.cpp
+    main.cpp \
+    authregform.cpp \
+    mainwindow.cpp \
+    clientapi.cpp \
+    functionclient.cpp
 
 HEADERS += \
-    singletonclient.h
+    authregform.h \
+    mainwindow.h \
+    clientapi.h \
+    functionclient.h
 
-DESTDIR = $$PWD/../bin
-OBJECTS_DIR = $$PWD/build/obj
-MOC_DIR = $$PWD/build/moc
-TARGET = client
+FORMS += \
+    authregform.ui \
+    mainwindow.ui

@@ -12,7 +12,6 @@ AUTHregForm::AUTHregForm(QWidget *parent)
     setWindowTitle("Авторизация");
     updateStatus("Подключение к серверу...");
 
-    // Используем (Singleton)
     ClientAPI* api = ClientAPI::getInstance();
     if (api->connectToServer("127.0.0.1", 33333)) {
         updateStatus("Подключено к серверу");
@@ -33,8 +32,6 @@ void AUTHregForm::updateStatus(const QString& status)
 
 void AUTHregForm::on_registerButton_clicked()
 {
-    // В вашем UI:
-
     QString email = ui->loginEdit->text();     // Email
     QString login = ui->emailEdit->text();     // Логин
     QString password = ui->passwordEdit->text();
@@ -49,7 +46,7 @@ void AUTHregForm::on_registerButton_clicked()
     ClientAPI* api = ClientAPI::getInstance();
     QString response = api->registerUser(login, email, password);
 
-    if (response.contains("успешна")) {
+    if (response.contains("успешна") || response.contains("uspeshna")) {
         QMessageBox::information(this, "Успех", "Регистрация прошла успешно!\nТеперь войдите в систему.");
         updateStatus("Регистрация выполнена");
         ui->loginEdit->clear();
@@ -63,7 +60,6 @@ void AUTHregForm::on_registerButton_clicked()
 
 void AUTHregForm::on_loginButton_clicked()
 {
-    // Для входа используем логин (поле emailEdit)
     QString login = ui->emailEdit->text();     // Логин
     QString password = ui->passwordEdit->text();
 
@@ -77,7 +73,8 @@ void AUTHregForm::on_loginButton_clicked()
     ClientAPI* api = ClientAPI::getInstance();
     QString response = api->loginUser(login, password);
 
-    if (response.contains("успешно") || response.contains("Добро пожаловать")) {
+    if (response.contains("успешно") || response.contains("uspeshno") ||
+        response.contains("Добро пожаловать") || response.contains("Dobro pozhalovat")) {
         QMessageBox::information(this, "Успех", "Вход выполнен успешно!");
         updateStatus("Вход выполнен");
 

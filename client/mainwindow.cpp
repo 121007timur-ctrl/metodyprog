@@ -29,49 +29,48 @@ void MainWindow::addInfo(const QString& text)
     ui->infoTextEdit->append("[" + timestamp + "] " + text);
 }
 
-// Задание 1
 void MainWindow::on_task1Button_clicked()
 {
-    addInfo("Задание 1: Метод половинного деления");
+    addInfo("Задание 1: Решите уравнение x^2 - 4 = 0");
+
+    ClientAPI* api = ClientAPI::getInstance();
+    QString response = api->sendCommand("TASK1");
+    addInfo(response);
 
     bool ok;
-    double a = QInputDialog::getDouble(this, "Метод половинного деления",
-                                       "Левая граница a:", 1.0, -1000, 1000, 2, &ok);
-    if (!ok) return;
+    QString answer = QInputDialog::getText(this, "Задание 1",
+                                           response + "\n\nВведите ваш ответ:", QLineEdit::Normal, "", &ok);
 
-    double b = QInputDialog::getDouble(this, "Метод половинного деления",
-                                       "Правая граница b:", 3.0, -1000, 1000, 2, &ok);
-    if (!ok) return;
-
-    QString result = bisectionMethod(a, b);
-    addInfo(result);
-    QMessageBox::information(this, "Результат", result);
+    if (ok && !answer.isEmpty()) {
+        QString result = api->sendCommand(answer);
+        addInfo(result);
+        QMessageBox::information(this, "Результат", result);
+    } else {
+        addInfo("Задание 1 отменено");
+    }
 }
 
-// Задание 2
 void MainWindow::on_task2Button_clicked()
 {
-    addInfo("Задание 2: Метод левых прямоугольников");
+    addInfo("Задание 2: Вычислите интеграл ∫ x^2 dx от 0 до 2");
+
+    ClientAPI* api = ClientAPI::getInstance();
+    QString response = api->sendCommand("TASK2");
+    addInfo(response);
 
     bool ok;
-    double a = QInputDialog::getDouble(this, "Метод прямоугольников",
-                                       "Нижний предел a:", 0, -1000, 1000, 2, &ok);
-    if (!ok) return;
+    QString answer = QInputDialog::getText(this, "Задание 2",
+                                           response + "\n\nВведите ваш ответ:", QLineEdit::Normal, "", &ok);
 
-    double b = QInputDialog::getDouble(this, "Метод прямоугольников",
-                                       "Верхний предел b:", 2, -1000, 1000, 2, &ok);
-    if (!ok) return;
-
-    int n = QInputDialog::getInt(this, "Метод прямоугольников",
-                                 "Количество отрезков n:", 10, 1, 1000, 1, &ok);
-    if (!ok) return;
-
-    QString result = leftRectangleMethod(a, b, n);
-    addInfo(result);
-    QMessageBox::information(this, "Результат", result);
+    if (ok && !answer.isEmpty()) {
+        QString result = api->sendCommand(answer);
+        addInfo(result);
+        QMessageBox::information(this, "Результат", result);
+    } else {
+        addInfo("Задание 2 отменено");
+    }
 }
 
-// Статистика
 void MainWindow::on_statsButton_clicked()
 {
     addInfo("Запрос статистики...");
@@ -80,7 +79,6 @@ void MainWindow::on_statsButton_clicked()
     QMessageBox::information(this, "Статистика", response);
 }
 
-// Меню
 void MainWindow::on_menuButton_clicked()
 {
     QStringList items = {"О программе", "Помощь", "Настройки", "Контакты"};
@@ -90,11 +88,10 @@ void MainWindow::on_menuButton_clicked()
     if (ok && choice == "О программе") {
         QMessageBox::about(this, "О программе", "Клиент для работы с сервером\nВарианты 1 и 16");
     } else if (ok && choice == "Помощь") {
-        QMessageBox::information(this, "Помощь", "Задание 1 - метод половинного деления\nЗадание 2 - метод левых прямоугольников");
+        QMessageBox::information(this, "Помощь", "Задание 1 - решить уравнение x^2 - 4 = 0\nЗадание 2 - вычислить интеграл ∫ x^2 dx от 0 до 2");
     }
 }
 
-// Выход
 void MainWindow::on_logoutButton_clicked()
 {
     int result = QMessageBox::question(this, "Выход", "Выйти из системы?",

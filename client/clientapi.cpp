@@ -56,23 +56,45 @@ QString ClientAPI::sendAndReceive(const QString& message, int timeoutMs)
 QString ClientAPI::registerUser(const QString& login, const QString& email, const QString& password)
 {
     if (!m_connected) return "ERROR: Server not available";
+
+    // Шаг 1: REGISTER
     QString response = sendAndReceive("REGISTER");
-    if (response.contains("Введите ваш email")) response = sendAndReceive(email);
-    if (response.contains("Введите логин")) response = sendAndReceive(login);
-    if (response.contains("Введите пароль")) response = sendAndReceive(password);
+    if (response.isEmpty()) return "ERROR: No response";
+
+    // Шаг 2: EMAIL (НЕ ЛОГИН!)
+    response = sendAndReceive(email);
+    if (response.isEmpty()) return "ERROR: No response";
+
+    // Шаг 3: LOGIN (НЕ EMAIL!)
+    response = sendAndReceive(login);
+    if (response.isEmpty()) return "ERROR: No response";
+
+    // Шаг 4: PASSWORD
+    response = sendAndReceive(password);
+    if (response.isEmpty()) return "ERROR: No response";
+
     return response;
 }
 
 QString ClientAPI::loginUser(const QString& login, const QString& password)
 {
     if (!m_connected) return "ERROR: Server not available";
+
     QString response = sendAndReceive("LOGIN");
-    if (response.contains("Введите логин или email")) response = sendAndReceive(login);
-    if (response.contains("Введите пароль")) response = sendAndReceive(password);
-    if (response.contains("Вход выполнен успешно") || response.contains("Добро пожаловать")) {
+    if (response.isEmpty()) return "ERROR: No response";
+
+    response = sendAndReceive(login);
+    if (response.isEmpty()) return "ERROR: No response";
+
+    response = sendAndReceive(password);
+    if (response.isEmpty()) return "ERROR: No response";
+
+    if (response.contains("uspeshno") || response.contains("успешно") ||
+        response.contains("Dobro pozhalovat") || response.contains("Добро пожаловать")) {
         m_userLogin = login;
         m_isLoggedIn = true;
     }
+
     return response;
 }
 
@@ -97,8 +119,40 @@ QString ClientAPI::getServerStats()
     return sendAndReceive("STATS");
 }
 
-void ClientAPI::onConnected() { m_connected = true; }
-void ClientAPI::onDisconnected() { m_connected = false; }
+QString ClientAPI::startGame()
+{
+    if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
+    return sendAndReceive("STARTGAME");
+}
+
+QString ClientAPI::makeGuess(int number)
+{
+    if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
+    return sendAndReceive("GUESS " + QString::number(number));
+}
+
+QString ClientAPI::getGameStats()
+{
+    if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
+    return sendAndReceive("GAMESTATS");
+}
+
+QString ClientAPI::getHint()
+{
+    if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
+    return sendAndReceive("HINT");
+}
+
+void ClientAPI::onConnected()
+{
+    m_connected = true;
+}
+
+void ClientAPI::onDisconnected()
+{
+    m_connected = false;
+}
+
 void ClientAPI::onError(QAbstractSocket::SocketError error)
 {
     qDebug() << "Socket error:" << error;

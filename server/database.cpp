@@ -24,6 +24,10 @@ bool Database::registerUser(const QString& email, const QString& login, const QS
     newUser.login = login;
     newUser.password = password;
     newUser.isOnline = false;
+    newUser.gameStats.totalAttempts = 0;
+    newUser.gameStats.totalCorrect = 0;
+    newUser.gameStats.gamesPlayed = 0;
+    newUser.gameStats.bestGameAttempts = 999999;
 
     users[login] = newUser;
     emailToLogin[email] = login;
@@ -97,4 +101,63 @@ int Database::getTotalUsers()
 QVector<QString> Database::getAllLogins()
 {
     return users.keys();
+}
+
+void Database::updateGameStats(const QString& login, int attempts, bool success)
+{
+    if (!users.contains(login)) return;
+
+    UserData& user = users[login];
+    user.gameStats.totalAttempts += attempts;
+
+    if (success) {
+        user.gameStats.totalCorrect++;
+        if (attempts < user.gameStats.bestGameAttempts) {
+            user.gameStats.bestGameAttempts = attempts;
+        }
+    }
+
+    user.gameStats.gamesPlayed++;
+    qDebug() << "Game stats updated for:" << login << "attempts:" << attempts << "success:" << success;
+}
+
+GameStatsData Database::getUserGameStats(const QString& login)
+{
+    GameStatsData empty = {0, 0, 0, 0};
+    if (!users.contains(login)) return empty;
+    return users[login].gameStats;
+}
+
+void Database::resetUserGameStats(const QString& login)
+{
+    if (!users.contains(login)) return;
+
+    users[login].gameStats.totalAttempts = 0;
+    users[login].gameStats.totalCorrect = 0;
+    users[login].gameStats.gamesPlayed = 0;
+    users[login].gameStats.bestGameAttempts = 999999;
+
+    qDebug() << "Game stats reset for:" << login;
+}
+
+QVector<QPair<QString, int>> Database::getTopPlayers(int limit)
+{
+    QVector<QPair<QString, int>> topPlayers;
+
+    for (auto it = users.begin(); it != users.end(); ++it) {
+        if (it.value().gameStats.totalCorrect > 0) {
+            topPlayers.append(qMakePair(it.key(), it.value().gameStats.totalCorrect));
+        }
+    }
+
+    std::sort(topPlayers.begin(), topPlayers.end(),
+              [](const QPair<QString, int>& a, const QPair<QString, int>& b) {
+                  return a.second > b.second;
+              });
+
+    if (topPlayers.size() > limit) {
+        topPlayers.resize(limit);
+    }
+
+    return topPlayers;
 }

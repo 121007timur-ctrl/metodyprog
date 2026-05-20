@@ -1,0 +1,150 @@
+#include <QtTest>
+#include <QString>
+
+// ========== МОК-ОБЪЕКТ ДЛЯ ТЕСТИРОВАНИЯ ==========
+
+// Это упрощённая версия ClientAPI для тестов
+class TestClientAPI
+{
+private:
+    bool m_isLoggedIn;
+    QString m_currentUser;
+
+public:
+    TestClientAPI() : m_isLoggedIn(false) {}
+
+    bool isLoggedIn() const { return m_isLoggedIn; }
+    QString getCurrentUser() const { return m_currentUser; }
+
+    QString loginUser(const QString& login, const QString& password)
+    {
+        // Симуляция проверки логина
+        if (login.isEmpty() || password.isEmpty()) {
+            return "Ошибка: пустые поля";
+        }
+        if (login == "admin" && password == "123456") {
+            m_isLoggedIn = true;
+            m_currentUser = login;
+            return "Вход выполнен успешно";
+        }
+        if (login == "user" && password == "pass123") {
+            m_isLoggedIn = true;
+            m_currentUser = login;
+            return "Добро пожаловать";
+        }
+        return "Ошибка: неверный логин или пароль";
+    }
+
+    void logout()
+    {
+        m_isLoggedIn = false;
+        m_currentUser = "";
+    }
+
+    QString registerUser(const QString& login, const QString& email, const QString& password)
+    {
+        // Симуляция регистрации
+        if (login.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            return "Ошибка: заполните все поля";
+        }
+        if (!email.contains('@')) {
+            return "Ошибка: неверный email";
+        }
+        if (password.length() < 6) {
+            return "Ошибка: пароль слишком короткий";
+        }
+        if (login == "existing") {
+            return "Ошибка: пользователь уже существует";
+        }
+        return "Регистрация прошла успешна";
+    }
+};
+
+// ========== ТЕСТЫ ==========
+
+class TestClientAPILogic : public QObject
+{
+    Q_OBJECT
+
+private slots:
+    void testInitialState()
+    {
+        TestClientAPI api;
+        QVERIFY(!api.isLoggedIn());
+        QVERIFY(api.getCurrentUser().isEmpty());
+    }
+
+    void testSuccessfulLogin()
+    {
+        TestClientAPI api;
+        QString result = api.loginUser("admin", "123456");
+        QVERIFY(result.contains("успешно"));
+        QVERIFY(api.isLoggedIn());
+        QCOMPARE(api.getCurrentUser(), QString("admin"));
+    }
+
+    void testFailedLogin()
+    {
+        TestClientAPI api;
+        QString result = api.loginUser("wrong", "wrong");
+        QVERIFY(result.contains("Ошибка"));
+        QVERIFY(!api.isLoggedIn());
+    }
+
+    void testEmptyLogin()
+    {
+        TestClientAPI api;
+        QString result = api.loginUser("", "123456");
+        QVERIFY(result.contains("пустые"));
+        QVERIFY(!api.isLoggedIn());
+    }
+
+    void testEmptyPassword()
+    {
+        TestClientAPI api;
+        QString result = api.loginUser("admin", "");
+        QVERIFY(result.contains("пустые"));
+        QVERIFY(!api.isLoggedIn());
+    }
+
+    void testLogout()
+    {
+        TestClientAPI api;
+        api.loginUser("admin", "123456");
+        QVERIFY(api.isLoggedIn());
+
+        api.logout();
+        QVERIFY(!api.isLoggedIn());
+        QVERIFY(api.getCurrentUser().isEmpty());
+    }
+
+    void testSuccessfulRegistration()
+    {
+        TestClientAPI api;
+        QString result = api.registerUser("newuser", "new@mail.com", "123456");
+        QVERIFY(result.contains("успешна"));
+    }
+
+    void testFailedRegistrationExistingUser()
+    {
+        TestClientAPI api;
+        QString result = api.registerUser("existing", "existing@mail.com", "123456");
+        QVERIFY(result.contains("уже существует"));
+    }
+
+    void testRegistrationInvalidEmail()
+    {
+        TestClientAPI api;
+        QString result = api.registerUser("user", "invalid", "123456");
+        QVERIFY(result.contains("email"));
+    }
+
+    void testRegistrationShortPassword()
+    {
+        TestClientAPI api;
+        QString result = api.registerUser("user", "user@mail.com", "123");
+        QVERIFY(result.contains("короткий"));
+    }
+};
+
+QTEST_MAIN(TestClientAPILogic)

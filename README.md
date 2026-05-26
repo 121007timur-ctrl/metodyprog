@@ -1,7 +1,8 @@
 ## Тест-кейсы
 
 [Тест-кейсы](client/test_case/test_case_client.xlsx)
-[дефект](client/test_case/defect №1.xlsx)
+[дефект](client/test_case/defect%20N%C2%B01.xlsx)
+
 ## Диаграмма классов
 
 ```mermaid

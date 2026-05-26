@@ -1,6 +1,6 @@
 ## Тест-кейсы
 
-- [Тест-кейсы клиента и дифект][test_case](test_case)
+[Тест-кейсы](test_case/test_case_client.xlsx)
 
 ## Диаграмма классов
 

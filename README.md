@@ -1,7 +1,7 @@
 ## Тест-кейсы
 
-[Тест-кейсы](client/test_case/test_case_client.xlsx)
-[дефект](client/test_case/defect%20N%C2%B01.xlsx)
+[Тест-кейс и дефект в одной папке](client/test_case/test_case_client.xlsx)
+
 
 ## Диаграмма классов
 

@@ -1,6 +1,7 @@
 ## Тест-кейсы
 
 [Тест-кейс и дефект в одной папке](client/test_case/test_case_client.xlsx)
+[Тест-кейс и дефект в папке сервер](server/defect test/server_registration_db_test_case.xlsx)(Чистяков Аким).
 
 
 ## Диаграмма классов

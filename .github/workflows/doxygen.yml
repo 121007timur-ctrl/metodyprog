@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install Doxygen
         run: sudo apt-get update && sudo apt-get install doxygen
       - name: Generate Documentation
@@ -25,7 +25,7 @@ jobs:
             echo "✅ No Doxygen warnings found"
           fi
       - name: Upload Documentation Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: doxygen-docs
           path: docs/html

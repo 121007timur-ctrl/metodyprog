@@ -1,5 +1,5 @@
-PROJECT_NAME = "My Project"
-INPUT = src/
+PROJECT_NAME = "TextFilter Testing"
+INPUT = client/ server/
 RECURSIVE = YES
 EXTRACT_ALL = YES
 GENERATE_HTML = YES

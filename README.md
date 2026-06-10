@@ -64,5 +64,6 @@ classDiagram
     Server --> Authorization : uses
     Server --> Database : uses
     Authorization --> User : creates
+<!-- trigger: run doxygen -->
     Admin --|> User : inherits
     Admin --> Database : uses

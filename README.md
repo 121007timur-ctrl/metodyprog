@@ -1,12 +1,6 @@
-# TextFilter Testing
+# Диаграммы классов
 
-## Test Cases (from team)
-
-[Test case and defect in one folder](client/test_case/test_case_client.xlsx) (Насыров Тимур)
-
-[Test case and defect in server folder](server/defect%20test/server_registration_db_test_case.xlsx) (Чистяков Аким)
-
-## Class Diagram (client-server)
+## 1. Диаграмма классов для Сервера
 
 ```mermaid
 classDiagram
@@ -25,28 +19,14 @@ classDiagram
         #processClient(int clientId) void
     }
 
-    class Client {
-        -string host
-        -int port
-        -SOCKET clientSocket
-        -bool isConnected
-        +Client(string host, int port)
-        +~Client()
-        +connect() bool
-        +disconnect() void
-        +sendData(string data) bool
-        +receiveData() string
-        +authenticate(string login, string pass) bool
-    }
-
-    class NetworkConnection {
+    class ClientSession {
+        -int id
         -SOCKET socket
-        -string lastError
-        +send(string data) int
+        -string login
+        -bool isAuthenticated
+        +send(string data) bool
         +receive() string
         +close() void
-        +isValid() bool
-        +getLastError() string
     }
 
     class Authorization {
@@ -56,8 +36,16 @@ classDiagram
         -string role
         +login(string login, string pass) bool
         +logout() void
-        +hasRole(string requiredRole) bool
-        +changePassword(string oldPass, string newPass) bool
+        +hasRole(string role) bool
+    }
+
+    class Database {
+        -string connectionString
+        +connect() bool
+        +disconnect() void
+        +query(string sql) ResultSet
+        +getUserByLogin(string login) User
+        +saveUser(User user) bool
     }
 
     class User {
@@ -66,51 +54,17 @@ classDiagram
         +string email
         +string role
         +getStats() UserStats
-        +updateProfile() bool
     }
 
     class Admin {
         +getUserList() vector~User~
         +deleteUser(int userId) bool
         +getStatistics() Stats
-        +setUserRole(int userId, string role) bool
     }
 
-    class Filter {
-        +string pattern
-        +bool caseSensitive
-        +apply(vector~string~ input) vector~string~
-        +clear() void
-        +isActive() bool
-    }
-
-    class Sorting {
-        +sortAsc(vector~string~ input) vector~string~
-        +sortDesc(vector~string~ input) vector~string~
-        +sortWithFilter(vector~string~ input, Filter filter, bool asc) vector~string~
-    }
-
-    class Database {
-        -string connectionString
-        +connect() bool
-        +disconnect() void
-        +query(string sql) ResultSet
-        +execute(string sql) bool
-        +getUserByLogin(string login) User
-        +saveUser(User user) bool
-    }
-
-    Server --> NetworkConnection : uses
-    Server --> Database : works with
-    Server --> Authorization : manages
-    
-    Client --> NetworkConnection : uses
-    Client --> Authorization : contains
-    
-    Admin --|> User : inherits
-    
-    Client --> Filter : uses
-    Client --> Sorting : uses
-    
+    Server --> ClientSession : manages
+    Server --> Authorization : uses
+    Server --> Database : uses
     Authorization --> User : creates
-    Admin --> Database : manages
+    Admin --|> User : inherits
+    Admin --> Database : uses

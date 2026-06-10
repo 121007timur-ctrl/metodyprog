@@ -1,16 +1,16 @@
 # TextFilter Testing
 
-## Тест-кейсы (от команды)
+## Test Cases (from team)
 
-[Тест-кейс и дефект в одной папке](client/test_case/test_case_client.xlsx) (Насыров Тимур)
+[Test case and defect in one folder](client/test_case/test_case_client.xlsx) (Nasyrov Timur)
 
-[Тест-кейс и дефект в папке сервер](server/defect%20test/server_registration_db_test_case.xlsx) (Чистяков Аким)
+[Test case and defect in server folder](server/defect%20test/server_registration_db_test_case.xlsx) (Chistyakov Akim)
 
-## Диаграмма классов (клиент-сервер)
+## Class Diagram (client-server)
 
 ```mermaid
 classDiagram
-    class Сервер {
+    class Server {
         -int port
         -bool isRunning
         -SOCKET serverSocket
@@ -25,7 +25,7 @@ classDiagram
         #processClient(int clientId) void
     }
 
-    class Клиент {
+    class Client {
         -string host
         -int port
         -SOCKET clientSocket
@@ -39,7 +39,7 @@ classDiagram
         +authenticate(string login, string pass) bool
     }
 
-    class СетевоеСоединение {
+    class NetworkConnection {
         -SOCKET socket
         -string lastError
         +send(string data) int
@@ -49,7 +49,7 @@ classDiagram
         +getLastError() string
     }
 
-    class Авторизация {
+    class Authorization {
         -string login
         -string passwordHash
         -bool isAuthenticated
@@ -60,7 +60,7 @@ classDiagram
         +changePassword(string oldPass, string newPass) bool
     }
 
-    class Пользователь {
+    class User {
         +int id
         +string name
         +string email
@@ -69,14 +69,14 @@ classDiagram
         +updateProfile() bool
     }
 
-    class Админ {
+    class Admin {
         +getUserList() vector~User~
         +deleteUser(int userId) bool
         +getStatistics() Stats
         +setUserRole(int userId, string role) bool
     }
 
-    class Фильтр {
+    class Filter {
         +string pattern
         +bool caseSensitive
         +apply(vector~string~ input) vector~string~
@@ -84,13 +84,13 @@ classDiagram
         +isActive() bool
     }
 
-    class Сортировка {
+    class Sorting {
         +sortAsc(vector~string~ input) vector~string~
         +sortDesc(vector~string~ input) vector~string~
         +sortWithFilter(vector~string~ input, Filter filter, bool asc) vector~string~
     }
 
-    class БД {
+    class Database {
         -string connectionString
         +connect() bool
         +disconnect() void
@@ -100,17 +100,17 @@ classDiagram
         +saveUser(User user) bool
     }
 
-    Сервер --> СетевоеСоединение : использует
-    Сервер --> БД : работает с
-    Сервер --> Авторизация : управляет
+    Server --> NetworkConnection : uses
+    Server --> Database : works with
+    Server --> Authorization : manages
     
-    Клиент --> СетевоеСоединение : использует
-    Клиент --> Авторизация : содержит
+    Client --> NetworkConnection : uses
+    Client --> Authorization : contains
     
-    Админ --|> Пользователь : наследует
+    Admin --|> User : inherits
     
-    Клиент --> Фильтр : использует
-    Клиент --> Сортировка : использует
+    Client --> Filter : uses
+    Client --> Sorting : uses
     
-    Авторизация --> Пользователь : создаёт
-    Админ --> БД : управляет
+    Authorization --> User : creates
+    Admin --> Database : manages

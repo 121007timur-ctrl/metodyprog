@@ -2,9 +2,9 @@
 
 ## Test Cases (from team)
 
-[Test case and defect in one folder](client/test_case/test_case_client.xlsx) (Nasyrov Timur)
+[Test case and defect in one folder](client/test_case/test_case_client.xlsx) (Насыров Тимур)
 
-[Test case and defect in server folder](server/defect%20test/server_registration_db_test_case.xlsx) (Chistyakov Akim)
+[Test case and defect in server folder](server/defect%20test/server_registration_db_test_case.xlsx) (Чистяков Аким)
 
 ## Class Diagram (client-server)
 

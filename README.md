@@ -85,9 +85,9 @@ classDiagram
     }
 
     class Сортировка {
-        +enum Order { ASC, DESC }
-        +sort(vector~string~ input, Order order) vector~string~
-        +sortWithFilter(vector~string~ input, Filter filter, Order order) vector~string~
+        +sortAsc(vector~string~ input) vector~string~
+        +sortDesc(vector~string~ input) vector~string~
+        +sortWithFilter(vector~string~ input, Filter filter, bool asc) vector~string~
     }
 
     class БД {
@@ -114,37 +114,3 @@ classDiagram
     
     Авторизация --> Пользователь : создаёт
     Админ --> БД : управляет
-```
-
-### Легенда
-| Стрелка | Значение |
-|---------|----------|
-| `-->` | Использует (ассоциация) |
-| `--|>` | Наследование |
-| `*--` | Композиция |
-| `o--` | Агрегация |
-
-## Тестирование (Аслан Далаков)
-
-### Тест-кейсы (Markdown)
-- [01_menu_test_cases.md](test-cases/01_menu_test_cases.md)
-- [02_list_elements_test_cases.md](test-cases/02_list_elements_test_cases.md)
-- [03_filters_test_cases.md](test-cases/03_filters_test_cases.md)
-- [04_sorting_test_cases.md](test-cases/04_sorting_test_cases.md)
-
-### Найденные баги (Issues)
-
-| № | Название | Приоритет |
-|---|----------|-----------|
-| [#1](https://github.com/121007timur-ctrl/metodyprog/issues/1) | При применении фильтра пропадают все элементы списка | Critical |
-| [#2](https://github.com/121007timur-ctrl/metodyprog/issues/2) | Сортировка по убыванию не меняет порядок элементов | Major |
-| [#3](https://github.com/121007timur-ctrl/metodyprog/issues/3) | Горячая клавиша Ctrl+S не сохраняет файл | Minor |
-
-### Статус тестирования
-
-| Область | Статус |
-|---------|--------|
-| Меню + кнопки | ⬜ Ожидает сборки |
-| Элементы списка | ⬜ Ожидает сборки |
-| Фильтры | ⬜ Ожидает сборки |
-| Сортировка | ⬜ Ожидает сборки |

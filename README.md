@@ -1,4 +1,12 @@
-# Диаграмма классов для Сервера
+# TextFilter Testing
+
+## Тест-кейсы (от команды)
+
+[Тест-кейс и дефект в одной папке](client/test_case/test_case_client.xlsx) (Насыров Тимур)
+
+[Тест-кейс и дефект в папке сервер](server/defect%20test/server_registration_db_test_case.xlsx) (Чистяков Аким)
+
+## Диаграмма классов для Сервера
 
 ```mermaid
 classDiagram
@@ -64,6 +72,5 @@ classDiagram
     Server --> Authorization : uses
     Server --> Database : uses
     Authorization --> User : creates
-<!-- trigger: run doxygen -->
     Admin --|> User : inherits
     Admin --> Database : uses

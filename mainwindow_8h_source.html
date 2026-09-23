@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл client/mainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">mainwindow.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define MAINWINDOW_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>QT_BEGIN_NAMESPACE</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="classMainWindow.html">MainWindow</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>QT_END_NAMESPACE</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classMainWindow.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classMainWindow.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    Q_OBJECT</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classMainWindow.html">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>, <span class="keyword">const</span> QString&amp; username = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a230acdc6dd9bd5bde6317092cefd34a6">on_task1Button_clicked</a>();   </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a78f1131c6e80b500bed768c0a3f3872c">on_task2Button_clicked</a>();   </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#acaa9954d50c4b485e91762fc59ae302b">on_statsButton_clicked</a>();   </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#aea3e97d7cd92a03e10cba58c85156b4c">on_menuButton_clicked</a>();    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a2b771ad50b698ea76cfb5d42f43bd221">on_logoutButton_clicked</a>();  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#a3a7a4c705552f4831c0910dad6f85f3f">on_task4Button_clicked</a>();   </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classMainWindow.html#ac1bf4fc4edb40bfc38bd8370cd48f8ba">on_newtonButton_clicked</a>();  </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classMainWindow.html#a35466a70ed47252a0191168126a352a5">   47</a></span>    Ui::MainWindow *<a class="code hl_variable" href="classMainWindow.html#a35466a70ed47252a0191168126a352a5">ui</a>;  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classMainWindow.html#ad1ca5c731082718947fc10662a22103e">   48</a></span>    QString <a class="code hl_variable" href="classMainWindow.html#ad1ca5c731082718947fc10662a22103e">currentUser</a>; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMainWindow.html#a8a599c2452263746a7621d12d1179bc0">addInfo</a>(<span class="keyword">const</span> QString&amp; text);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
+<div class="ttc" id="aclassMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdoc">Главное окно: задания, статистика, вариант 4, выход.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00022">mainwindow.h:23</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a230acdc6dd9bd5bde6317092cefd34a6"><div class="ttname"><a href="classMainWindow.html#a230acdc6dd9bd5bde6317092cefd34a6">MainWindow::on_task1Button_clicked</a></div><div class="ttdeci">void on_task1Button_clicked()</div><div class="ttdoc">Задание 1: уравнение (TASK1)</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00037">mainwindow.cpp:37</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a2b771ad50b698ea76cfb5d42f43bd221"><div class="ttname"><a href="classMainWindow.html#a2b771ad50b698ea76cfb5d42f43bd221">MainWindow::on_logoutButton_clicked</a></div><div class="ttdeci">void on_logoutButton_clicked()</div><div class="ttdoc">Выход и возврат к окну входа</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00100">mainwindow.cpp:100</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="classMainWindow.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdoc">Сгенерированная форма</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00047">mainwindow.h:47</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a3a7a4c705552f4831c0910dad6f85f3f"><div class="ttname"><a href="classMainWindow.html#a3a7a4c705552f4831c0910dad6f85f3f">MainWindow::on_task4Button_clicked</a></div><div class="ttdeci">void on_task4Button_clicked()</div><div class="ttdoc">Вариант 4: задание на метод Ньютона (TASK4)</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00112">mainwindow.cpp:112</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a78f1131c6e80b500bed768c0a3f3872c"><div class="ttname"><a href="classMainWindow.html#a78f1131c6e80b500bed768c0a3f3872c">MainWindow::on_task2Button_clicked</a></div><div class="ttdeci">void on_task2Button_clicked()</div><div class="ttdoc">Задание 2: интеграл (TASK2)</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00058">mainwindow.cpp:58</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_a8a599c2452263746a7621d12d1179bc0"><div class="ttname"><a href="classMainWindow.html#a8a599c2452263746a7621d12d1179bc0">MainWindow::addInfo</a></div><div class="ttdeci">void addInfo(const QString &amp;text)</div><div class="ttdoc">Добавить строку с меткой времени в журнал окна.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00031">mainwindow.cpp:31</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ac1bf4fc4edb40bfc38bd8370cd48f8ba"><div class="ttname"><a href="classMainWindow.html#ac1bf4fc4edb40bfc38bd8370cd48f8ba">MainWindow::on_newtonButton_clicked</a></div><div class="ttdeci">void on_newtonButton_clicked()</div><div class="ttdoc">Вариант 4: калькулятор шага Ньютона (NEWTON)</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00133">mainwindow.cpp:133</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_acaa9954d50c4b485e91762fc59ae302b"><div class="ttname"><a href="classMainWindow.html#acaa9954d50c4b485e91762fc59ae302b">MainWindow::on_statsButton_clicked</a></div><div class="ttdeci">void on_statsButton_clicked()</div><div class="ttdoc">Статистика сервера (STATS)</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00079">mainwindow.cpp:79</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ad1ca5c731082718947fc10662a22103e"><div class="ttname"><a href="classMainWindow.html#ad1ca5c731082718947fc10662a22103e">MainWindow::currentUser</a></div><div class="ttdeci">QString currentUser</div><div class="ttdoc">Логин пользователя</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8h_source.html#l00048">mainwindow.h:48</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Удаляет форму.</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00026">mainwindow.cpp:26</a></div></div>
+<div class="ttc" id="aclassMainWindow_html_aea3e97d7cd92a03e10cba58c85156b4c"><div class="ttname"><a href="classMainWindow.html#aea3e97d7cd92a03e10cba58c85156b4c">MainWindow::on_menuButton_clicked</a></div><div class="ttdeci">void on_menuButton_clicked()</div><div class="ttdoc">Меню «О программе» / «Помощь»</div><div class="ttdef"><b>Definition</b> <a href="mainwindow_8cpp_source.html#l00087">mainwindow.cpp:87</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="mainwindow_8h.html">mainwindow.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

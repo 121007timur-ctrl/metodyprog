@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл tests/test_database.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('test__database_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_database.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__database_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TEST_DATABASE_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TEST_DATABASE_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classTestDatabase.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classTestDatabase.html">TestDatabase</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Q_OBJECT</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">singletonIsSameInstance</a>(); </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">registerNewUser</a>(); </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">registerDuplicateLogin</a>(); </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">registerDuplicateEmail</a>(); </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">loginByLogin</a>(); </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">loginByEmail</a>(); </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">loginWrongPassword</a>(); </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">loginUnknownUser</a>(); </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">getUserLoginByEmail</a>(); </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">gameStatsUpdate</a>(); </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">gameStatsReset</a>(); </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">topPlayersSortedAndLimited</a>(); </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">// TEST_DATABASE_H</span></div>
+<div class="ttc" id="aclassTestDatabase_html"><div class="ttname"><a href="classTestDatabase.html">TestDatabase</a></div><div class="ttdoc">Набор тестов для Database. Синглтон общий, поэтому каждый тест использует свои логины.</div><div class="ttdef"><b>Definition</b> <a href="test__database_8h_source.html#l00011">test_database.h:12</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a07bc0294c99c168694e3a2f0563e9a18"><div class="ttname"><a href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">TestDatabase::singletonIsSameInstance</a></div><div class="ttdeci">void singletonIsSameInstance()</div><div class="ttdoc">instance() всегда возвращает один объект</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00005">test_database.cpp:5</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a215e7cb7369e24f0924bdfba2d0840f2"><div class="ttname"><a href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">TestDatabase::loginByEmail</a></div><div class="ttdeci">void loginByEmail()</div><div class="ttdoc">Вход по email.</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00046">test_database.cpp:46</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a43118890e5155bb2b9995de388f46640"><div class="ttname"><a href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">TestDatabase::registerNewUser</a></div><div class="ttdeci">void registerNewUser()</div><div class="ttdoc">Регистрация нового пользователя</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00010">test_database.cpp:10</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a45442329e55468c14a5efab645d8bff1"><div class="ttname"><a href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">TestDatabase::loginUnknownUser</a></div><div class="ttdeci">void loginUnknownUser()</div><div class="ttdoc">Неизвестный пользователь не входит</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00063">test_database.cpp:63</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a4de19d1180cb2d8ae434847c076e26e3"><div class="ttname"><a href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">TestDatabase::gameStatsUpdate</a></div><div class="ttdeci">void gameStatsUpdate()</div><div class="ttdoc">Накопление игровой статистики</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00079">test_database.cpp:79</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a51e06d56d803f4439d0a68699bd8a6ba"><div class="ttname"><a href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">TestDatabase::loginByLogin</a></div><div class="ttdeci">void loginByLogin()</div><div class="ttdoc">Вход по логину</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00037">test_database.cpp:37</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a56e44f55ac8c7658e79e8e7db003f79b"><div class="ttname"><a href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">TestDatabase::getUserLoginByEmail</a></div><div class="ttdeci">void getUserLoginByEmail()</div><div class="ttdoc">Поиск логина по email.</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00071">test_database.cpp:71</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a93d8e3db71f9351aa248b227915eec84"><div class="ttname"><a href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">TestDatabase::topPlayersSortedAndLimited</a></div><div class="ttdeci">void topPlayersSortedAndLimited()</div><div class="ttdoc">Топ игроков отсортирован и ограничен</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00113">test_database.cpp:113</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_aa330c42ce5cc2c9edb12145a1fd57e25"><div class="ttname"><a href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">TestDatabase::gameStatsReset</a></div><div class="ttdeci">void gameStatsReset()</div><div class="ttdoc">Сброс игровой статистики</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00100">test_database.cpp:100</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_aa9c7bab6c4b1f9cbacd000548fbdf673"><div class="ttname"><a href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">TestDatabase::loginWrongPassword</a></div><div class="ttdeci">void loginWrongPassword()</div><div class="ttdoc">Неверный пароль отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00054">test_database.cpp:54</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_ad64c9b1d88ba6534478b34d3f9c7a1e2"><div class="ttname"><a href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">TestDatabase::registerDuplicateEmail</a></div><div class="ttdeci">void registerDuplicateEmail()</div><div class="ttdoc">Повторный email отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00029">test_database.cpp:29</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_af0c214d00621c4bc9fd9f7db6c4893a0"><div class="ttname"><a href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">TestDatabase::registerDuplicateLogin</a></div><div class="ttdeci">void registerDuplicateLogin()</div><div class="ttdoc">Повторный логин отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00022">test_database.cpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><a class="el" href="test__database_8h.html">test_database.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

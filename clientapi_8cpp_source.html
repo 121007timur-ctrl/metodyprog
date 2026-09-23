@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл client/clientapi.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('clientapi_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clientapi.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="clientapi_8h.html">clientapi.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="functionclient_8h.html">functionclient.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><a class="code hl_class" href="classClientAPI.html">ClientAPI</a>* <a class="code hl_variable" href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">ClientAPI::m_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classClientAPI.html#ac8a193c05f8eb1b9e5af93687de891be">    7</a></span><a class="code hl_function" href="classClientAPI.html#ac8a193c05f8eb1b9e5af93687de891be">ClientAPI::ClientAPI</a>(QObject* parent)</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    : QObject(parent)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    , m_socket(new QTcpSocket(this))</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    , m_connected(false)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    , m_isLoggedIn(false)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    connect(<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>, &amp;QTcpSocket::connected, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classClientAPI.html#a3b722e113baa0d10afe8d0f613c158df">ClientAPI::onConnected</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    connect(<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>, &amp;QTcpSocket::disconnected, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classClientAPI.html#a35303b9ef3373c9101c92b1a4a196986">ClientAPI::onDisconnected</a>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    connect(<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>, &amp;QTcpSocket::errorOccurred, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classClientAPI.html#af9de38ddc0ac668fd4d650789bd66278">ClientAPI::onError</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classClientAPI.html#a769fa11fcdc3976f09a7e506baa718f0">   18</a></span><a class="code hl_function" href="classClientAPI.html#a769fa11fcdc3976f09a7e506baa718f0">ClientAPI::~ClientAPI</a>()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="classClientAPI.html#a9c83a1661a3904666fb51848f72c513a">disconnectFromServer</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classClientAPI.html#a6f291595ab86c589c32a1bcac3c33183">   23</a></span><a class="code hl_class" href="classClientAPI.html">ClientAPI</a>* <a class="code hl_function" href="classClientAPI.html#a6f291595ab86c589c32a1bcac3c33183">ClientAPI::getInstance</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">m_instance</a>) <a class="code hl_variable" href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">m_instance</a> = <span class="keyword">new</span> <a class="code hl_class" href="classClientAPI.html">ClientAPI</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">m_instance</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classClientAPI.html#ae731a85f63156cc7cd9c66a1e5bdb9cc">   29</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classClientAPI.html#ae731a85f63156cc7cd9c66a1e5bdb9cc">ClientAPI::connectToServer</a>(<span class="keyword">const</span> QString&amp; host, <span class="keywordtype">int</span> port)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;connectToHost(host, port);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> = <a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;waitForConnected(3000);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classClientAPI.html#a9c83a1661a3904666fb51848f72c513a">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classClientAPI.html#a9c83a1661a3904666fb51848f72c513a">ClientAPI::disconnectFromServer</a>()</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;disconnectFromHost();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">   45</a></span>QString <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">ClientAPI::sendAndReceive</a>(<span class="keyword">const</span> QString&amp; message, <span class="keywordtype">int</span> timeoutMs)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not connected&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    QByteArray data = message.toUtf8() + <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;write(data);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;waitForBytesWritten(timeoutMs)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Send failed&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;waitForReadyRead(timeoutMs)) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> QString::fromUtf8(<a class="code hl_variable" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a>-&gt;readAll());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classClientAPI.html#a554dc5177eea37718eeb258e487e4fd7">   57</a></span>QString <a class="code hl_function" href="classClientAPI.html#a554dc5177eea37718eeb258e487e4fd7">ClientAPI::registerUser</a>(<span class="keyword">const</span> QString&amp; login, <span class="keyword">const</span> QString&amp; email, <span class="keyword">const</span> QString&amp; password)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Server not available&quot;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Шаг 1: REGISTER</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    QString response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;REGISTER&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// Шаг 2: EMAIL (НЕ ЛОГИН!)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(email);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Шаг 3: LOGIN (НЕ EMAIL!)</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(login);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// Шаг 4: PASSWORD</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(password);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> response;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classClientAPI.html#a1427f3fbd7b023751c650477b66c4daf">   80</a></span>QString <a class="code hl_function" href="classClientAPI.html#a1427f3fbd7b023751c650477b66c4daf">ClientAPI::loginUser</a>(<span class="keyword">const</span> QString&amp; login, <span class="keyword">const</span> QString&amp; password)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Server not available&quot;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    QString response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;LOGIN&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(login);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    response = <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(password);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span> (response.isEmpty()) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: No response&quot;</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (response.contains(<span class="stringliteral">&quot;uspeshno&quot;</span>) || response.contains(<span class="stringliteral">&quot;успешно&quot;</span>) ||</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        response.contains(<span class="stringliteral">&quot;Dobro pozhalovat&quot;</span>) || response.contains(<span class="stringliteral">&quot;Добро пожаловать&quot;</span>)) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="classClientAPI.html#aaae5067119617e6734b73ab73f3830af">m_userLogin</a> = login;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> response;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classClientAPI.html#a14c44ea53e45507b9ffbd76e04f81979">  102</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classClientAPI.html#a14c44ea53e45507b9ffbd76e04f81979">ClientAPI::logout</a>()</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> &amp;&amp; <a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;LOGOUT&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_variable" href="classClientAPI.html#aaae5067119617e6734b73ab73f3830af">m_userLogin</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classClientAPI.html#a09cec81747c50788af55dd01d6a6d0c0">  111</a></span>QString <a class="code hl_function" href="classClientAPI.html#a09cec81747c50788af55dd01d6a6d0c0">ClientAPI::sendCommand</a>(<span class="keyword">const</span> QString&amp; command)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(command);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classClientAPI.html#a38b352f57dc1e3a670ffeaff26a5f40b">  117</a></span>QString <a class="code hl_function" href="classClientAPI.html#a38b352f57dc1e3a670ffeaff26a5f40b">ClientAPI::getServerStats</a>()</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Server not available&quot;</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;STATS&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classClientAPI.html#a863f3209cc1d23439959232f13211d07">  123</a></span>QString <a class="code hl_function" href="classClientAPI.html#a863f3209cc1d23439959232f13211d07">ClientAPI::startGame</a>()</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;STARTGAME&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classClientAPI.html#a4935feee3343ac48c455a57336f086e1">  129</a></span>QString <a class="code hl_function" href="classClientAPI.html#a4935feee3343ac48c455a57336f086e1">ClientAPI::makeGuess</a>(<span class="keywordtype">int</span> number)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;GUESS &quot;</span> + QString::number(number));</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classClientAPI.html#a6f1458522b2d526349b9b826bc8dbd07">  135</a></span>QString <a class="code hl_function" href="classClientAPI.html#a6f1458522b2d526349b9b826bc8dbd07">ClientAPI::getGameStats</a>()</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>{</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;GAMESTATS&quot;</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classClientAPI.html#a5b2b7303910603c2184ad407f8c60637">  141</a></span>QString <a class="code hl_function" href="classClientAPI.html#a5b2b7303910603c2184ad407f8c60637">ClientAPI::getHint</a>()</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(<span class="stringliteral">&quot;HINT&quot;</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>}</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classClientAPI.html#adf1293f6dbf75248dbe4dcf0c07a9059">  147</a></span>QString <a class="code hl_function" href="classClientAPI.html#adf1293f6dbf75248dbe4dcf0c07a9059">ClientAPI::newtonStep</a>(<span class="keywordtype">double</span> c3, <span class="keywordtype">double</span> c2, <span class="keywordtype">double</span> c1, <span class="keywordtype">double</span> c0, <span class="keywordtype">double</span> x0)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> || !<a class="code hl_variable" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a>) <span class="keywordflow">return</span> <span class="stringliteral">&quot;ERROR: Not logged in&quot;</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">return</span> stripServerMenu(<a class="code hl_function" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a>(buildNewtonCommand(c3, c2, c1, c0, x0)));</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classClientAPI.html#a3b722e113baa0d10afe8d0f613c158df">  153</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classClientAPI.html#a3b722e113baa0d10afe8d0f613c158df">ClientAPI::onConnected</a>()</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classClientAPI.html#a35303b9ef3373c9101c92b1a4a196986">  158</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classClientAPI.html#a35303b9ef3373c9101c92b1a4a196986">ClientAPI::onDisconnected</a>()</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>{</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classClientAPI.html#af9de38ddc0ac668fd4d650789bd66278">  163</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classClientAPI.html#af9de38ddc0ac668fd4d650789bd66278">ClientAPI::onError</a>(QAbstractSocket::SocketError error)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;Socket error:&quot;</span> &lt;&lt; error;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_variable" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+</div>
+<div class="ttc" id="aclassClientAPI_html"><div class="ttname"><a href="classClientAPI.html">ClientAPI</a></div><div class="ttdoc">Единая точка связи клиента с сервером.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00016">clientapi.h:17</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a09cec81747c50788af55dd01d6a6d0c0"><div class="ttname"><a href="classClientAPI.html#a09cec81747c50788af55dd01d6a6d0c0">ClientAPI::sendCommand</a></div><div class="ttdeci">QString sendCommand(const QString &amp;command)</div><div class="ttdoc">Отправить произвольную команду (только после входа).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00111">clientapi.cpp:111</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a1427f3fbd7b023751c650477b66c4daf"><div class="ttname"><a href="classClientAPI.html#a1427f3fbd7b023751c650477b66c4daf">ClientAPI::loginUser</a></div><div class="ttdeci">QString loginUser(const QString &amp;login, const QString &amp;password)</div><div class="ttdoc">Вход: LOGIN, затем логин (или email) и пароль.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00080">clientapi.cpp:80</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a14c44ea53e45507b9ffbd76e04f81979"><div class="ttname"><a href="classClientAPI.html#a14c44ea53e45507b9ffbd76e04f81979">ClientAPI::logout</a></div><div class="ttdeci">void logout()</div><div class="ttdoc">Выход из системы (LOGOUT).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00102">clientapi.cpp:102</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a35303b9ef3373c9101c92b1a4a196986"><div class="ttname"><a href="classClientAPI.html#a35303b9ef3373c9101c92b1a4a196986">ClientAPI::onDisconnected</a></div><div class="ttdeci">void onDisconnected()</div><div class="ttdoc">Соединение разорвано.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00158">clientapi.cpp:158</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a38b352f57dc1e3a670ffeaff26a5f40b"><div class="ttname"><a href="classClientAPI.html#a38b352f57dc1e3a670ffeaff26a5f40b">ClientAPI::getServerStats</a></div><div class="ttdeci">QString getServerStats()</div><div class="ttdoc">Статистика сервера (STATS).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00117">clientapi.cpp:117</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a3b722e113baa0d10afe8d0f613c158df"><div class="ttname"><a href="classClientAPI.html#a3b722e113baa0d10afe8d0f613c158df">ClientAPI::onConnected</a></div><div class="ttdeci">void onConnected()</div><div class="ttdoc">Соединение установлено.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00153">clientapi.cpp:153</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a4935feee3343ac48c455a57336f086e1"><div class="ttname"><a href="classClientAPI.html#a4935feee3343ac48c455a57336f086e1">ClientAPI::makeGuess</a></div><div class="ttdeci">QString makeGuess(int number)</div><div class="ttdoc">Сделать попытку (GUESS n).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00129">clientapi.cpp:129</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a5224f533fe092e59743633596798c7a0"><div class="ttname"><a href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">ClientAPI::m_connected</a></div><div class="ttdeci">bool m_connected</div><div class="ttdoc">Есть ли соединение</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00023">clientapi.h:23</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a530efe98e2593b79673a56e0a7d48930"><div class="ttname"><a href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">ClientAPI::m_socket</a></div><div class="ttdeci">QTcpSocket * m_socket</div><div class="ttdoc">Сокет соединения с сервером</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00022">clientapi.h:22</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a554dc5177eea37718eeb258e487e4fd7"><div class="ttname"><a href="classClientAPI.html#a554dc5177eea37718eeb258e487e4fd7">ClientAPI::registerUser</a></div><div class="ttdeci">QString registerUser(const QString &amp;login, const QString &amp;email, const QString &amp;password)</div><div class="ttdoc">Регистрация: REGISTER, затем email, логин, пароль.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00057">clientapi.cpp:57</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a5b2b7303910603c2184ad407f8c60637"><div class="ttname"><a href="classClientAPI.html#a5b2b7303910603c2184ad407f8c60637">ClientAPI::getHint</a></div><div class="ttdeci">QString getHint()</div><div class="ttdoc">Подсказка в игре (HINT).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00141">clientapi.cpp:141</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a6cb1fbde46c743dab67684a1c4a6be4d"><div class="ttname"><a href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">ClientAPI::m_isLoggedIn</a></div><div class="ttdeci">bool m_isLoggedIn</div><div class="ttdoc">Выполнен ли вход</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00025">clientapi.h:25</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a6f1458522b2d526349b9b826bc8dbd07"><div class="ttname"><a href="classClientAPI.html#a6f1458522b2d526349b9b826bc8dbd07">ClientAPI::getGameStats</a></div><div class="ttdeci">QString getGameStats()</div><div class="ttdoc">Игровая статистика (GAMESTATS).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00135">clientapi.cpp:135</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a6f291595ab86c589c32a1bcac3c33183"><div class="ttname"><a href="classClientAPI.html#a6f291595ab86c589c32a1bcac3c33183">ClientAPI::getInstance</a></div><div class="ttdeci">static ClientAPI * getInstance()</div><div class="ttdoc">Получить экземпляр (создаётся при первом вызове).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00023">clientapi.cpp:23</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a769fa11fcdc3976f09a7e506baa718f0"><div class="ttname"><a href="classClientAPI.html#a769fa11fcdc3976f09a7e506baa718f0">ClientAPI::~ClientAPI</a></div><div class="ttdeci">~ClientAPI()</div><div class="ttdoc">Разрывает соединение.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00018">clientapi.cpp:18</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a863f3209cc1d23439959232f13211d07"><div class="ttname"><a href="classClientAPI.html#a863f3209cc1d23439959232f13211d07">ClientAPI::startGame</a></div><div class="ttdeci">QString startGame()</div><div class="ttdoc">Начать игру «Угадай число» (STARTGAME).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00123">clientapi.cpp:123</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_a9c83a1661a3904666fb51848f72c513a"><div class="ttname"><a href="classClientAPI.html#a9c83a1661a3904666fb51848f72c513a">ClientAPI::disconnectFromServer</a></div><div class="ttdeci">void disconnectFromServer()</div><div class="ttdoc">Разорвать соединение.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00037">clientapi.cpp:37</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_aaae5067119617e6734b73ab73f3830af"><div class="ttname"><a href="classClientAPI.html#aaae5067119617e6734b73ab73f3830af">ClientAPI::m_userLogin</a></div><div class="ttdeci">QString m_userLogin</div><div class="ttdoc">Логин вошедшего пользователя</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00024">clientapi.h:24</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_ac8a193c05f8eb1b9e5af93687de891be"><div class="ttname"><a href="classClientAPI.html#ac8a193c05f8eb1b9e5af93687de891be">ClientAPI::ClientAPI</a></div><div class="ttdeci">ClientAPI(QObject *parent=nullptr)</div><div class="ttdoc">Закрытый конструктор синглтона.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00007">clientapi.cpp:7</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_acafa88bc295e4156625284f05d81228e"><div class="ttname"><a href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">ClientAPI::sendAndReceive</a></div><div class="ttdeci">QString sendAndReceive(const QString &amp;message, int timeoutMs=5000)</div><div class="ttdoc">Отправить строку и дождаться ответа.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00045">clientapi.cpp:45</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_adf1293f6dbf75248dbe4dcf0c07a9059"><div class="ttname"><a href="classClientAPI.html#adf1293f6dbf75248dbe4dcf0c07a9059">ClientAPI::newtonStep</a></div><div class="ttdeci">QString newtonStep(double c3, double c2, double c1, double c0, double x0)</div><div class="ttdoc">Вариант 4: шаг метода Ньютона на сервере (команда NEWTON).</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00147">clientapi.cpp:147</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_ae731a85f63156cc7cd9c66a1e5bdb9cc"><div class="ttname"><a href="classClientAPI.html#ae731a85f63156cc7cd9c66a1e5bdb9cc">ClientAPI::connectToServer</a></div><div class="ttdeci">bool connectToServer(const QString &amp;host=&quot;127.0.0.1&quot;, int port=33333)</div><div class="ttdoc">Подключиться к серверу.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00029">clientapi.cpp:29</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_af2264b830deff0d7670ae5c58edecba1"><div class="ttname"><a href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">ClientAPI::m_instance</a></div><div class="ttdeci">static ClientAPI * m_instance</div><div class="ttdoc">Единственный экземпляр</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8h_source.html#l00021">clientapi.h:21</a></div></div>
+<div class="ttc" id="aclassClientAPI_html_af9de38ddc0ac668fd4d650789bd66278"><div class="ttname"><a href="classClientAPI.html#af9de38ddc0ac668fd4d650789bd66278">ClientAPI::onError</a></div><div class="ttdeci">void onError(QAbstractSocket::SocketError error)</div><div class="ttdoc">Ошибка сокета.</div><div class="ttdef"><b>Definition</b> <a href="clientapi_8cpp_source.html#l00163">clientapi.cpp:163</a></div></div>
+<div class="ttc" id="aclientapi_8h_html"><div class="ttname"><a href="clientapi_8h.html">clientapi.h</a></div><div class="ttdoc">Сетевой API клиента (синглтон): соединение с сервером и команды протокола.</div></div>
+<div class="ttc" id="afunctionclient_8h_html"><div class="ttname"><a href="functionclient_8h.html">functionclient.h</a></div><div class="ttdoc">Функции вариантов на стороне клиента (численные методы).</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><b>clientapi.cpp</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

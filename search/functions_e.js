@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['sendandreceive_0',['sendAndReceive',['../classClientAPI.html#acafa88bc295e4156625284f05d81228e',1,'ClientAPI']]],
+  ['sendauthmenu_1',['sendAuthMenu',['../server__functions_8h.html#a5bafb310a0379a8f7212ef26a2faaeae',1,'server_functions.cpp']]],
+  ['sendcommand_2',['sendCommand',['../classClientAPI.html#a09cec81747c50788af55dd01d6a6d0c0',1,'ClientAPI']]],
+  ['sendmainmenu_3',['sendMainMenu',['../server__functions_8h.html#a0bde6e7390dd534761087102c497d020',1,'server_functions.cpp']]],
+  ['singletonissameinstance_4',['singletonIsSameInstance',['../classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18',1,'TestDatabase']]],
+  ['slotauthtimeout_5',['slotAuthTimeout',['../classMyTcpServer.html#a23bb2d51dcadfd167ab866fc77d48a05',1,'MyTcpServer']]],
+  ['slotclientdisconnected_6',['slotClientDisconnected',['../classMyTcpServer.html#a3e040c49dbefd65b9a58ab662fc9f7a2',1,'MyTcpServer']]],
+  ['slotnewconnection_7',['slotNewConnection',['../classMyTcpServer.html#a0ba7316ffe1a26c57fabde9e74b6c8dc',1,'MyTcpServer']]],
+  ['slotserverread_8',['slotServerRead',['../classMyTcpServer.html#ab4a64d2eab985d723090963f5c8a2882',1,'MyTcpServer']]],
+  ['startgame_9',['startGame',['../classClientAPI.html#a863f3209cc1d23439959232f13211d07',1,'ClientAPI']]],
+  ['stepsconvergetoroot_10',['stepsConvergeToRoot',['../classTestNewton.html#a64b9db2717684db8128b7a3acad09024',1,'TestNewton']]],
+  ['stripservermenu_11',['stripservermenu',['../classTestFunctionClient.html#a6b43d8c07da37c0fa73d90173eeafc25',1,'TestFunctionClient::stripServerMenu()'],['../functionclient_8h.html#a95825cc4bf2d636ffcf2d375ee97ecf8',1,'stripServerMenu():&#160;functionclient.cpp']]]
+];

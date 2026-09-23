@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Класс TestNewton</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTestNewton.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="classTestNewton-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс TestNewton</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Набор тестов для <a class="el" href="structPolynomial.html" title="Многочлен не выше третьей степени: c3*x^3 + c2*x^2 + c1*x + c0.">Polynomial</a>, newtonFirstStep, parseNewtonArgs и handleNewtonCommand.  
+ <a href="classTestNewton.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="test__newton_8h_source.html">test_newton.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:TestNewton:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classTestNewton.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:a52102920c0691c904e7b7048072c3eb2" id="r_a52102920c0691c904e7b7048072c3eb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a52102920c0691c904e7b7048072c3eb2">polynomialValue_data</a> ()</td></tr>
+<tr class="memdesc:a52102920c0691c904e7b7048072c3eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные: коэффициенты, точка, ожидаемое значение  <br /></td></tr>
+<tr class="separator:a52102920c0691c904e7b7048072c3eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dace6e1ebbb229cf769333b149a4820" id="r_a5dace6e1ebbb229cf769333b149a4820"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a5dace6e1ebbb229cf769333b149a4820">polynomialValue</a> ()</td></tr>
+<tr class="memdesc:a5dace6e1ebbb229cf769333b149a4820"><td class="mdescLeft">&#160;</td><td class="mdescRight">f(x) для разных многочленов  <br /></td></tr>
+<tr class="separator:a5dace6e1ebbb229cf769333b149a4820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ac5f8f7d325d8192413b30c341a58a" id="r_a61ac5f8f7d325d8192413b30c341a58a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a61ac5f8f7d325d8192413b30c341a58a">polynomialDerivative</a> ()</td></tr>
+<tr class="memdesc:a61ac5f8f7d325d8192413b30c341a58a"><td class="mdescLeft">&#160;</td><td class="mdescRight">f'(x) считается верно  <br /></td></tr>
+<tr class="separator:a61ac5f8f7d325d8192413b30c341a58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd44b8907c6744f774c2aea7aa0ed10" id="r_aebd44b8907c6744f774c2aea7aa0ed10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#aebd44b8907c6744f774c2aea7aa0ed10">polynomialToString_data</a> ()</td></tr>
+<tr class="memdesc:aebd44b8907c6744f774c2aea7aa0ed10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные: многочлен и его запись  <br /></td></tr>
+<tr class="separator:aebd44b8907c6744f774c2aea7aa0ed10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7d6c1a7e8fc2468e5873eea585abb1" id="r_a3b7d6c1a7e8fc2468e5873eea585abb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a3b7d6c1a7e8fc2468e5873eea585abb1">polynomialToString</a> ()</td></tr>
+<tr class="memdesc:a3b7d6c1a7e8fc2468e5873eea585abb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текстовая запись f и f'.  <br /></td></tr>
+<tr class="separator:a3b7d6c1a7e8fc2468e5873eea585abb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e340eac0377c2b85e8bbb69c8ba633" id="r_ae8e340eac0377c2b85e8bbb69c8ba633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#ae8e340eac0377c2b85e8bbb69c8ba633">firstStep_data</a> ()</td></tr>
+<tr class="memdesc:ae8e340eac0377c2b85e8bbb69c8ba633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Данные: многочлен, x0 и ожидаемое x1.  <br /></td></tr>
+<tr class="separator:ae8e340eac0377c2b85e8bbb69c8ba633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901a07f521e3a56fcfdeb6e63cd4e9d5" id="r_a901a07f521e3a56fcfdeb6e63cd4e9d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a901a07f521e3a56fcfdeb6e63cd4e9d5">firstStep</a> ()</td></tr>
+<tr class="memdesc:a901a07f521e3a56fcfdeb6e63cd4e9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">x1 = x0 - f(x0)/f'(x0) на известных примерах  <br /></td></tr>
+<tr class="separator:a901a07f521e3a56fcfdeb6e63cd4e9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310e00954b6988667fd61e44bad19b6d" id="r_a310e00954b6988667fd61e44bad19b6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a310e00954b6988667fd61e44bad19b6d">firstStepZeroDerivative</a> ()</td></tr>
+<tr class="memdesc:a310e00954b6988667fd61e44bad19b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка при f'(x0) = 0.  <br /></td></tr>
+<tr class="separator:a310e00954b6988667fd61e44bad19b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9821e0bdb0cb01ec9b35377329d5368e" id="r_a9821e0bdb0cb01ec9b35377329d5368e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a9821e0bdb0cb01ec9b35377329d5368e">firstStepRootStaysRoot</a> ()</td></tr>
+<tr class="memdesc:a9821e0bdb0cb01ec9b35377329d5368e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Если x0 — корень, то x1 = x0.  <br /></td></tr>
+<tr class="separator:a9821e0bdb0cb01ec9b35377329d5368e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b9db2717684db8128b7a3acad09024" id="r_a64b9db2717684db8128b7a3acad09024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a64b9db2717684db8128b7a3acad09024">stepsConvergeToRoot</a> ()</td></tr>
+<tr class="memdesc:a64b9db2717684db8128b7a3acad09024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повторные шаги сходятся к sqrt(2)  <br /></td></tr>
+<tr class="separator:a64b9db2717684db8128b7a3acad09024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ea4cda280039325d27122c694a96ff" id="r_ac4ea4cda280039325d27122c694a96ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#ac4ea4cda280039325d27122c694a96ff">parseArgsValid</a> ()</td></tr>
+<tr class="memdesc:ac4ea4cda280039325d27122c694a96ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разбор пяти чисел  <br /></td></tr>
+<tr class="separator:ac4ea4cda280039325d27122c694a96ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceba7bd8da271670a042f66b33b277ab" id="r_aceba7bd8da271670a042f66b33b277ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#aceba7bd8da271670a042f66b33b277ab">parseArgsCommaDecimal</a> ()</td></tr>
+<tr class="memdesc:aceba7bd8da271670a042f66b33b277ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запятая как десятичный разделитель  <br /></td></tr>
+<tr class="separator:aceba7bd8da271670a042f66b33b277ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee6456fef4e42e5f6bf68bc454f688a" id="r_abee6456fef4e42e5f6bf68bc454f688a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#abee6456fef4e42e5f6bf68bc454f688a">parseArgsWrongCount</a> ()</td></tr>
+<tr class="memdesc:abee6456fef4e42e5f6bf68bc454f688a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка при неверном числе аргументов  <br /></td></tr>
+<tr class="separator:abee6456fef4e42e5f6bf68bc454f688a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cff71cd89a90082b4a3b51c0ea1b33" id="r_aa7cff71cd89a90082b4a3b51c0ea1b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#aa7cff71cd89a90082b4a3b51c0ea1b33">parseArgsNotNumber</a> ()</td></tr>
+<tr class="memdesc:aa7cff71cd89a90082b4a3b51c0ea1b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка при нечисловом аргументе  <br /></td></tr>
+<tr class="separator:aa7cff71cd89a90082b4a3b51c0ea1b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839547cd16c1801e952cd001efe31d99" id="r_a839547cd16c1801e952cd001efe31d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a839547cd16c1801e952cd001efe31d99">commandOk</a> ()</td></tr>
+<tr class="memdesc:a839547cd16c1801e952cd001efe31d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ответ сервера на корректную команду NEWTON.  <br /></td></tr>
+<tr class="separator:a839547cd16c1801e952cd001efe31d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6d5987200577d9f30f4bb971eee310" id="r_a9e6d5987200577d9f30f4bb971eee310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a9e6d5987200577d9f30f4bb971eee310">commandError</a> ()</td></tr>
+<tr class="memdesc:a9e6d5987200577d9f30f4bb971eee310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ответ сервера на ошибочную команду NEWTON.  <br /></td></tr>
+<tr class="separator:a9e6d5987200577d9f30f4bb971eee310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7947671f698ee04a80c7d740e05aaed9" id="r_a7947671f698ee04a80c7d740e05aaed9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestNewton.html#a7947671f698ee04a80c7d740e05aaed9">generatedTaskIsSolvable</a> ()</td></tr>
+<tr class="memdesc:a7947671f698ee04a80c7d740e05aaed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задание TASK4 всегда корректно (200 генераций)  <br /></td></tr>
+<tr class="separator:a7947671f698ee04a80c7d740e05aaed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Набор тестов для <a class="el" href="structPolynomial.html" title="Многочлен не выше третьей степени: c3*x^3 + c2*x^2 + c1*x + c0.">Polynomial</a>, newtonFirstStep, parseNewtonArgs и handleNewtonCommand. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8h_source.html">test_newton.h</a> строка <a class="el" href="test__newton_8h_source.html#l00011">11</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a9e6d5987200577d9f30f4bb971eee310" name="a9e6d5987200577d9f30f4bb971eee310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6d5987200577d9f30f4bb971eee310">&#9670;&#160;</a></span>commandError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::commandError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ответ сервера на ошибочную команду NEWTON. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00197">197</a></p>
+
+</div>
+</div>
+<a id="a839547cd16c1801e952cd001efe31d99" name="a839547cd16c1801e952cd001efe31d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839547cd16c1801e952cd001efe31d99">&#9670;&#160;</a></span>commandOk</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::commandOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ответ сервера на корректную команду NEWTON. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00188">188</a></p>
+
+</div>
+</div>
+<a id="a901a07f521e3a56fcfdeb6e63cd4e9d5" name="a901a07f521e3a56fcfdeb6e63cd4e9d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901a07f521e3a56fcfdeb6e63cd4e9d5">&#9670;&#160;</a></span>firstStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::firstStep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>x1 = x0 - f(x0)/f'(x0) на известных примерах </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00094">94</a></p>
+
+</div>
+</div>
+<a id="ae8e340eac0377c2b85e8bbb69c8ba633" name="ae8e340eac0377c2b85e8bbb69c8ba633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e340eac0377c2b85e8bbb69c8ba633">&#9670;&#160;</a></span>firstStep_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::firstStep_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Данные: многочлен, x0 и ожидаемое x1. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00075">75</a></p>
+
+</div>
+</div>
+<a id="a9821e0bdb0cb01ec9b35377329d5368e" name="a9821e0bdb0cb01ec9b35377329d5368e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9821e0bdb0cb01ec9b35377329d5368e">&#9670;&#160;</a></span>firstStepRootStaysRoot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::firstStepRootStaysRoot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Если x0 — корень, то x1 = x0. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00118">118</a></p>
+
+</div>
+</div>
+<a id="a310e00954b6988667fd61e44bad19b6d" name="a310e00954b6988667fd61e44bad19b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310e00954b6988667fd61e44bad19b6d">&#9670;&#160;</a></span>firstStepZeroDerivative</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::firstStepZeroDerivative </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ошибка при f'(x0) = 0. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00110">110</a></p>
+
+</div>
+</div>
+<a id="a7947671f698ee04a80c7d740e05aaed9" name="a7947671f698ee04a80c7d740e05aaed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7947671f698ee04a80c7d740e05aaed9">&#9670;&#160;</a></span>generatedTaskIsSolvable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::generatedTaskIsSolvable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Задание TASK4 всегда корректно (200 генераций) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00204">204</a></p>
+
+</div>
+</div>
+<a id="aceba7bd8da271670a042f66b33b277ab" name="aceba7bd8da271670a042f66b33b277ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceba7bd8da271670a042f66b33b277ab">&#9670;&#160;</a></span>parseArgsCommaDecimal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::parseArgsCommaDecimal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Запятая как десятичный разделитель </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00156">156</a></p>
+
+</div>
+</div>
+<a id="aa7cff71cd89a90082b4a3b51c0ea1b33" name="aa7cff71cd89a90082b4a3b51c0ea1b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cff71cd89a90082b4a3b51c0ea1b33">&#9670;&#160;</a></span>parseArgsNotNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::parseArgsNotNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ошибка при нечисловом аргументе </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00178">178</a></p>
+
+</div>
+</div>
+<a id="ac4ea4cda280039325d27122c694a96ff" name="ac4ea4cda280039325d27122c694a96ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ea4cda280039325d27122c694a96ff">&#9670;&#160;</a></span>parseArgsValid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::parseArgsValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Разбор пяти чисел </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00142">142</a></p>
+
+</div>
+</div>
+<a id="abee6456fef4e42e5f6bf68bc454f688a" name="abee6456fef4e42e5f6bf68bc454f688a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee6456fef4e42e5f6bf68bc454f688a">&#9670;&#160;</a></span>parseArgsWrongCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::parseArgsWrongCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ошибка при неверном числе аргументов </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00167">167</a></p>
+
+</div>
+</div>
+<a id="a61ac5f8f7d325d8192413b30c341a58a" name="a61ac5f8f7d325d8192413b30c341a58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ac5f8f7d325d8192413b30c341a58a">&#9670;&#160;</a></span>polynomialDerivative</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::polynomialDerivative </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>f'(x) считается верно </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00034">34</a></p>
+
+</div>
+</div>
+<a id="a3b7d6c1a7e8fc2468e5873eea585abb1" name="a3b7d6c1a7e8fc2468e5873eea585abb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7d6c1a7e8fc2468e5873eea585abb1">&#9670;&#160;</a></span>polynomialToString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::polynomialToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Текстовая запись f и f'. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="aebd44b8907c6744f774c2aea7aa0ed10" name="aebd44b8907c6744f774c2aea7aa0ed10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd44b8907c6744f774c2aea7aa0ed10">&#9670;&#160;</a></span>polynomialToString_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::polynomialToString_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Данные: многочлен и его запись </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<a id="a5dace6e1ebbb229cf769333b149a4820" name="a5dace6e1ebbb229cf769333b149a4820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dace6e1ebbb229cf769333b149a4820">&#9670;&#160;</a></span>polynomialValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::polynomialValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>f(x) для разных многочленов </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a52102920c0691c904e7b7048072c3eb2" name="a52102920c0691c904e7b7048072c3eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52102920c0691c904e7b7048072c3eb2">&#9670;&#160;</a></span>polynomialValue_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::polynomialValue_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Данные: коэффициенты, точка, ожидаемое значение </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00006">6</a></p>
+
+</div>
+</div>
+<a id="a64b9db2717684db8128b7a3acad09024" name="a64b9db2717684db8128b7a3acad09024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b9db2717684db8128b7a3acad09024">&#9670;&#160;</a></span>stepsConvergeToRoot</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestNewton::stepsConvergeToRoot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Повторные шаги сходятся к sqrt(2) </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a> строка <a class="el" href="test__newton_8cpp_source.html#l00127">127</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>tests/<a class="el" href="test__newton_8h_source.html">test_newton.h</a></li>
+<li>tests/<a class="el" href="test__newton_8cpp_source.html">test_newton.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTestNewton.html">TestNewton</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

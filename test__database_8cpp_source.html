@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл tests/test_database.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('test__database_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_database.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="test__database_8h.html">test_database.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="database_8h.html">database.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QtTest&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">    5</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">TestDatabase::singletonIsSameInstance</a>()</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    QCOMPARE(&amp;<a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>(), &amp;<a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>());</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>}</div>
+</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">   10</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">TestDatabase::registerNewUser</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> before = db.<a class="code hl_function" href="classDatabase.html#a20a12a77740963d32222bc414a7bf1d2">getTotalUsers</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;reg@test.ru&quot;</span>, <span class="stringliteral">&quot;reg_user&quot;</span>, <span class="stringliteral">&quot;secret&quot;</span>));</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    QCOMPARE(db.<a class="code hl_function" href="classDatabase.html#a20a12a77740963d32222bc414a7bf1d2">getTotalUsers</a>(), before + 1);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a8df8d1ec0746f369dac3f3b53474298b">userExists</a>(<span class="stringliteral">&quot;reg_user&quot;</span>));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a8df8d1ec0746f369dac3f3b53474298b">userExists</a>(<span class="stringliteral">&quot;reg@test.ru&quot;</span>));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a68a9fdb40aaaae899a07df6a0b660eb5">getAllLogins</a>().contains(<span class="stringliteral">&quot;reg_user&quot;</span>));</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">   22</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">TestDatabase::registerDuplicateLogin</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;dup1@test.ru&quot;</span>, <span class="stringliteral">&quot;dup_login&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;dup2@test.ru&quot;</span>, <span class="stringliteral">&quot;dup_login&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">   29</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">TestDatabase::registerDuplicateEmail</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;same@test.ru&quot;</span>, <span class="stringliteral">&quot;email_user1&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;same@test.ru&quot;</span>, <span class="stringliteral">&quot;email_user2&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a8df8d1ec0746f369dac3f3b53474298b">userExists</a>(<span class="stringliteral">&quot;email_user2&quot;</span>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">   37</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">TestDatabase::loginByLogin</a>()</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;l1@test.ru&quot;</span>, <span class="stringliteral">&quot;login_user&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a0bb0040792bac566fa9571a216d11ae9">isLoggedIn</a>(<span class="stringliteral">&quot;login_user&quot;</span>));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;login_user&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a0bb0040792bac566fa9571a216d11ae9">isLoggedIn</a>(<span class="stringliteral">&quot;login_user&quot;</span>));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">   46</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">TestDatabase::loginByEmail</a>()</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;mail@test.ru&quot;</span>, <span class="stringliteral">&quot;mail_user&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>));</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;mail@test.ru&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#a0bb0040792bac566fa9571a216d11ae9">isLoggedIn</a>(<span class="stringliteral">&quot;mail@test.ru&quot;</span>));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">   54</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">TestDatabase::loginWrongPassword</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;wp@test.ru&quot;</span>, <span class="stringliteral">&quot;wp_user&quot;</span>, <span class="stringliteral">&quot;right&quot;</span>));</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;wp_user&quot;</span>, <span class="stringliteral">&quot;wrong&quot;</span>));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;wp_user&quot;</span>, <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a0bb0040792bac566fa9571a216d11ae9">isLoggedIn</a>(<span class="stringliteral">&quot;wp_user&quot;</span>));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">   63</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">TestDatabase::loginUnknownUser</a>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;nobody&quot;</span>, <span class="stringliteral">&quot;x&quot;</span>));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">loginUser</a>(<span class="stringliteral">&quot;nobody@test.ru&quot;</span>, <span class="stringliteral">&quot;x&quot;</span>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    QVERIFY(!db.<a class="code hl_function" href="classDatabase.html#a8df8d1ec0746f369dac3f3b53474298b">userExists</a>(<span class="stringliteral">&quot;nobody&quot;</span>));</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">   71</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">TestDatabase::getUserLoginByEmail</a>()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;find@test.ru&quot;</span>, <span class="stringliteral">&quot;find_user&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QCOMPARE(db.<a class="code hl_function" href="classDatabase.html#a686a8e15b17f3b433795ce9b80b8ab3d">getUserLogin</a>(<span class="stringliteral">&quot;find@test.ru&quot;</span>), QString(<span class="stringliteral">&quot;find_user&quot;</span>));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    QCOMPARE(db.<a class="code hl_function" href="classDatabase.html#a686a8e15b17f3b433795ce9b80b8ab3d">getUserLogin</a>(<span class="stringliteral">&quot;missing@test.ru&quot;</span>), QString());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">   79</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">TestDatabase::gameStatsUpdate</a>()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;g@test.ru&quot;</span>, <span class="stringliteral">&quot;gamer&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;gamer&quot;</span>, 7, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;gamer&quot;</span>, 3, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;gamer&quot;</span>, 10, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structGameStatsData.html">GameStatsData</a> s = db.<a class="code hl_function" href="classDatabase.html#a9aedf2cafd4b5909adc49377e3535dd8">getUserGameStats</a>(<span class="stringliteral">&quot;gamer&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#afdd42dc1e7c0f9fc607100928f54962a">totalAttempts</a>, 20);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#a555e88d052a5db02e64fc75655e779eb">totalCorrect</a>, 2);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#ad9dee42199116e73c6974ba84669c2c5">gamesPlayed</a>, 3);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#af059e5ff2f314904cebe26c84d423930">bestGameAttempts</a>, 3);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Для неизвестного пользователя — нули</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structGameStatsData.html">GameStatsData</a> none = db.<a class="code hl_function" href="classDatabase.html#a9aedf2cafd4b5909adc49377e3535dd8">getUserGameStats</a>(<span class="stringliteral">&quot;ghost&quot;</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    QCOMPARE(none.<a class="code hl_variable" href="structGameStatsData.html#afdd42dc1e7c0f9fc607100928f54962a">totalAttempts</a>, 0);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    QCOMPARE(none.<a class="code hl_variable" href="structGameStatsData.html#ad9dee42199116e73c6974ba84669c2c5">gamesPlayed</a>, 0);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">  100</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">TestDatabase::gameStatsReset</a>()</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;r@test.ru&quot;</span>, <span class="stringliteral">&quot;resetter&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;resetter&quot;</span>, 5, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    db.<a class="code hl_function" href="classDatabase.html#ab4b561535a1e6515c593de488108449b">resetUserGameStats</a>(<span class="stringliteral">&quot;resetter&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structGameStatsData.html">GameStatsData</a> s = db.<a class="code hl_function" href="classDatabase.html#a9aedf2cafd4b5909adc49377e3535dd8">getUserGameStats</a>(<span class="stringliteral">&quot;resetter&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#afdd42dc1e7c0f9fc607100928f54962a">totalAttempts</a>, 0);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#a555e88d052a5db02e64fc75655e779eb">totalCorrect</a>, 0);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    QCOMPARE(s.<a class="code hl_variable" href="structGameStatsData.html#ad9dee42199116e73c6974ba84669c2c5">gamesPlayed</a>, 0);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">  113</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">TestDatabase::topPlayersSortedAndLimited</a>()</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_class" href="classDatabase.html">Database</a>&amp; db = <a class="code hl_function" href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;t1@test.ru&quot;</span>, <span class="stringliteral">&quot;top_a&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    QVERIFY(db.<a class="code hl_function" href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">registerUser</a>(<span class="stringliteral">&quot;t2@test.ru&quot;</span>, <span class="stringliteral">&quot;top_b&quot;</span>, <span class="stringliteral">&quot;p&quot;</span>));</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 5; ++i) db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;top_a&quot;</span>, 1, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; ++i) db.<a class="code hl_function" href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">updateGameStats</a>(<span class="stringliteral">&quot;top_b&quot;</span>, 1, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">const</span> <span class="keyword">auto</span> top = db.<a class="code hl_function" href="classDatabase.html#abcc91725acf51e79b19cf05234be4487">getTopPlayers</a>(2);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    QCOMPARE(top.size(), 2);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    QCOMPARE(top[0].first, QString(<span class="stringliteral">&quot;top_b&quot;</span>));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    QCOMPARE(top[0].second, 9);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    QVERIFY(top[0].second &gt;= top[1].second);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+</div>
+<div class="ttc" id="aclassDatabase_html"><div class="ttname"><a href="classDatabase.html">Database</a></div><div class="ttdoc">База данных пользователей.</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00030">database.h:31</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a0bb0040792bac566fa9571a216d11ae9"><div class="ttname"><a href="classDatabase.html#a0bb0040792bac566fa9571a216d11ae9">Database::isLoggedIn</a></div><div class="ttdeci">bool isLoggedIn(const QString &amp;loginOrEmail)</div><div class="ttdoc">Проверить, выполнен ли вход.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00068">database.cpp:68</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a20a12a77740963d32222bc414a7bf1d2"><div class="ttname"><a href="classDatabase.html#a20a12a77740963d32222bc414a7bf1d2">Database::getTotalUsers</a></div><div class="ttdeci">int getTotalUsers()</div><div class="ttdoc">Количество зарегистрированных пользователей.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00096">database.cpp:96</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a672c0b75f6bf7c4d21dd04e41d261fcf"><div class="ttname"><a href="classDatabase.html#a672c0b75f6bf7c4d21dd04e41d261fcf">Database::loginUser</a></div><div class="ttdeci">bool loginUser(const QString &amp;loginOrEmail, const QString &amp;password)</div><div class="ttdoc">Вход в систему.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00039">database.cpp:39</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a686a8e15b17f3b433795ce9b80b8ab3d"><div class="ttname"><a href="classDatabase.html#a686a8e15b17f3b433795ce9b80b8ab3d">Database::getUserLogin</a></div><div class="ttdeci">QString getUserLogin(const QString &amp;email)</div><div class="ttdoc">Получить логин по email.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00082">database.cpp:82</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a68a9fdb40aaaae899a07df6a0b660eb5"><div class="ttname"><a href="classDatabase.html#a68a9fdb40aaaae899a07df6a0b660eb5">Database::getAllLogins</a></div><div class="ttdeci">QVector&lt; QString &gt; getAllLogins()</div><div class="ttdoc">Список всех логинов.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00101">database.cpp:101</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a76bedf03cc0e20538e7d14d9fe63a58f"><div class="ttname"><a href="classDatabase.html#a76bedf03cc0e20538e7d14d9fe63a58f">Database::updateGameStats</a></div><div class="ttdeci">void updateGameStats(const QString &amp;login, int attempts, bool success)</div><div class="ttdoc">Учесть результат партии игры.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00106">database.cpp:106</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a8df8d1ec0746f369dac3f3b53474298b"><div class="ttname"><a href="classDatabase.html#a8df8d1ec0746f369dac3f3b53474298b">Database::userExists</a></div><div class="ttdeci">bool userExists(const QString &amp;loginOrEmail)</div><div class="ttdoc">Существует ли пользователь.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00087">database.cpp:87</a></div></div>
+<div class="ttc" id="aclassDatabase_html_a9aedf2cafd4b5909adc49377e3535dd8"><div class="ttname"><a href="classDatabase.html#a9aedf2cafd4b5909adc49377e3535dd8">Database::getUserGameStats</a></div><div class="ttdeci">GameStatsData getUserGameStats(const QString &amp;login)</div><div class="ttdoc">Игровая статистика пользователя.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00124">database.cpp:124</a></div></div>
+<div class="ttc" id="aclassDatabase_html_ab4b561535a1e6515c593de488108449b"><div class="ttname"><a href="classDatabase.html#ab4b561535a1e6515c593de488108449b">Database::resetUserGameStats</a></div><div class="ttdeci">void resetUserGameStats(const QString &amp;login)</div><div class="ttdoc">Обнулить игровую статистику.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00131">database.cpp:131</a></div></div>
+<div class="ttc" id="aclassDatabase_html_abcc91725acf51e79b19cf05234be4487"><div class="ttname"><a href="classDatabase.html#abcc91725acf51e79b19cf05234be4487">Database::getTopPlayers</a></div><div class="ttdeci">QVector&lt; QPair&lt; QString, int &gt; &gt; getTopPlayers(int limit=10)</div><div class="ttdoc">Лучшие игроки по числу угаданных чисел.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00143">database.cpp:143</a></div></div>
+<div class="ttc" id="aclassDatabase_html_ac3325a4cc0a95ed83d10b2a9cf7541d0"><div class="ttname"><a href="classDatabase.html#ac3325a4cc0a95ed83d10b2a9cf7541d0">Database::instance</a></div><div class="ttdeci">static Database &amp; instance()</div><div class="ttdoc">Единственный экземпляр базы.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00004">database.cpp:4</a></div></div>
+<div class="ttc" id="aclassDatabase_html_af1ac6c5382564fc614c764070b7a1fcc"><div class="ttname"><a href="classDatabase.html#af1ac6c5382564fc614c764070b7a1fcc">Database::registerUser</a></div><div class="ttdeci">bool registerUser(const QString &amp;email, const QString &amp;login, const QString &amp;password)</div><div class="ttdoc">Зарегистрировать пользователя.</div><div class="ttdef"><b>Definition</b> <a href="database_8cpp_source.html#l00010">database.cpp:10</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a07bc0294c99c168694e3a2f0563e9a18"><div class="ttname"><a href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">TestDatabase::singletonIsSameInstance</a></div><div class="ttdeci">void singletonIsSameInstance()</div><div class="ttdoc">instance() всегда возвращает один объект</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00005">test_database.cpp:5</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a215e7cb7369e24f0924bdfba2d0840f2"><div class="ttname"><a href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">TestDatabase::loginByEmail</a></div><div class="ttdeci">void loginByEmail()</div><div class="ttdoc">Вход по email.</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00046">test_database.cpp:46</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a43118890e5155bb2b9995de388f46640"><div class="ttname"><a href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">TestDatabase::registerNewUser</a></div><div class="ttdeci">void registerNewUser()</div><div class="ttdoc">Регистрация нового пользователя</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00010">test_database.cpp:10</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a45442329e55468c14a5efab645d8bff1"><div class="ttname"><a href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">TestDatabase::loginUnknownUser</a></div><div class="ttdeci">void loginUnknownUser()</div><div class="ttdoc">Неизвестный пользователь не входит</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00063">test_database.cpp:63</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a4de19d1180cb2d8ae434847c076e26e3"><div class="ttname"><a href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">TestDatabase::gameStatsUpdate</a></div><div class="ttdeci">void gameStatsUpdate()</div><div class="ttdoc">Накопление игровой статистики</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00079">test_database.cpp:79</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a51e06d56d803f4439d0a68699bd8a6ba"><div class="ttname"><a href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">TestDatabase::loginByLogin</a></div><div class="ttdeci">void loginByLogin()</div><div class="ttdoc">Вход по логину</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00037">test_database.cpp:37</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a56e44f55ac8c7658e79e8e7db003f79b"><div class="ttname"><a href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">TestDatabase::getUserLoginByEmail</a></div><div class="ttdeci">void getUserLoginByEmail()</div><div class="ttdoc">Поиск логина по email.</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00071">test_database.cpp:71</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_a93d8e3db71f9351aa248b227915eec84"><div class="ttname"><a href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">TestDatabase::topPlayersSortedAndLimited</a></div><div class="ttdeci">void topPlayersSortedAndLimited()</div><div class="ttdoc">Топ игроков отсортирован и ограничен</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00113">test_database.cpp:113</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_aa330c42ce5cc2c9edb12145a1fd57e25"><div class="ttname"><a href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">TestDatabase::gameStatsReset</a></div><div class="ttdeci">void gameStatsReset()</div><div class="ttdoc">Сброс игровой статистики</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00100">test_database.cpp:100</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_aa9c7bab6c4b1f9cbacd000548fbdf673"><div class="ttname"><a href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">TestDatabase::loginWrongPassword</a></div><div class="ttdeci">void loginWrongPassword()</div><div class="ttdoc">Неверный пароль отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00054">test_database.cpp:54</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_ad64c9b1d88ba6534478b34d3f9c7a1e2"><div class="ttname"><a href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">TestDatabase::registerDuplicateEmail</a></div><div class="ttdeci">void registerDuplicateEmail()</div><div class="ttdoc">Повторный email отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00029">test_database.cpp:29</a></div></div>
+<div class="ttc" id="aclassTestDatabase_html_af0c214d00621c4bc9fd9f7db6c4893a0"><div class="ttname"><a href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">TestDatabase::registerDuplicateLogin</a></div><div class="ttdeci">void registerDuplicateLogin()</div><div class="ttdoc">Повторный логин отклоняется</div><div class="ttdef"><b>Definition</b> <a href="test__database_8cpp_source.html#l00022">test_database.cpp:22</a></div></div>
+<div class="ttc" id="adatabase_8h_html"><div class="ttname"><a href="database_8h.html">database.h</a></div><div class="ttdoc">Хранилище пользователей сервера (синглтон).</div></div>
+<div class="ttc" id="astructGameStatsData_html"><div class="ttname"><a href="structGameStatsData.html">GameStatsData</a></div><div class="ttdoc">Игровая статистика пользователя (игра «Угадай число»).</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00017">database.h:17</a></div></div>
+<div class="ttc" id="astructGameStatsData_html_a555e88d052a5db02e64fc75655e779eb"><div class="ttname"><a href="structGameStatsData.html#a555e88d052a5db02e64fc75655e779eb">GameStatsData::totalCorrect</a></div><div class="ttdeci">int totalCorrect</div><div class="ttdoc">Количество угаданных чисел</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00019">database.h:19</a></div></div>
+<div class="ttc" id="astructGameStatsData_html_ad9dee42199116e73c6974ba84669c2c5"><div class="ttname"><a href="structGameStatsData.html#ad9dee42199116e73c6974ba84669c2c5">GameStatsData::gamesPlayed</a></div><div class="ttdeci">int gamesPlayed</div><div class="ttdoc">Сыграно партий</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00020">database.h:20</a></div></div>
+<div class="ttc" id="astructGameStatsData_html_af059e5ff2f314904cebe26c84d423930"><div class="ttname"><a href="structGameStatsData.html#af059e5ff2f314904cebe26c84d423930">GameStatsData::bestGameAttempts</a></div><div class="ttdeci">int bestGameAttempts</div><div class="ttdoc">Лучший результат (меньше — лучше); 999999 — нет данных</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00021">database.h:21</a></div></div>
+<div class="ttc" id="astructGameStatsData_html_afdd42dc1e7c0f9fc607100928f54962a"><div class="ttname"><a href="structGameStatsData.html#afdd42dc1e7c0f9fc607100928f54962a">GameStatsData::totalAttempts</a></div><div class="ttdeci">int totalAttempts</div><div class="ttdoc">Сумма попыток по всем партиям</div><div class="ttdef"><b>Definition</b> <a href="database_8h_source.html#l00018">database.h:18</a></div></div>
+<div class="ttc" id="atest__database_8h_html"><div class="ttname"><a href="test__database_8h.html">test_database.h</a></div><div class="ttdoc">Тесты синглтона Database (server/database.h): регистрация, вход, статистика.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html">tests</a></li><li class="navelem"><b>test_database.cpp</b></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

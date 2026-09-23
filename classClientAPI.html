@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Класс ClientAPI</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classClientAPI.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classClientAPI-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс ClientAPI</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Единая точка связи клиента с сервером.  
+ <a href="classClientAPI.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="clientapi_8h_source.html">clientapi.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ClientAPI:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classClientAPI.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ae731a85f63156cc7cd9c66a1e5bdb9cc" id="r_ae731a85f63156cc7cd9c66a1e5bdb9cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#ae731a85f63156cc7cd9c66a1e5bdb9cc">connectToServer</a> (const QString &amp;host=&quot;127.0.0.1&quot;, int port=33333)</td></tr>
+<tr class="memdesc:ae731a85f63156cc7cd9c66a1e5bdb9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подключиться к серверу.  <br /></td></tr>
+<tr class="separator:ae731a85f63156cc7cd9c66a1e5bdb9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c83a1661a3904666fb51848f72c513a" id="r_a9c83a1661a3904666fb51848f72c513a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a9c83a1661a3904666fb51848f72c513a">disconnectFromServer</a> ()</td></tr>
+<tr class="memdesc:a9c83a1661a3904666fb51848f72c513a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разорвать соединение.  <br /></td></tr>
+<tr class="separator:a9c83a1661a3904666fb51848f72c513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3872649d8c57b747066b877447a5c9e" id="r_ab3872649d8c57b747066b877447a5c9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#ab3872649d8c57b747066b877447a5c9e">isConnected</a> () const</td></tr>
+<tr class="memdesc:ab3872649d8c57b747066b877447a5c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Есть ли соединение с сервером.  <br /></td></tr>
+<tr class="separator:ab3872649d8c57b747066b877447a5c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafa88bc295e4156625284f05d81228e" id="r_acafa88bc295e4156625284f05d81228e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e">sendAndReceive</a> (const QString &amp;message, int timeoutMs=5000)</td></tr>
+<tr class="memdesc:acafa88bc295e4156625284f05d81228e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправить строку и дождаться ответа.  <br /></td></tr>
+<tr class="separator:acafa88bc295e4156625284f05d81228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554dc5177eea37718eeb258e487e4fd7" id="r_a554dc5177eea37718eeb258e487e4fd7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a554dc5177eea37718eeb258e487e4fd7">registerUser</a> (const QString &amp;login, const QString &amp;email, const QString &amp;password)</td></tr>
+<tr class="memdesc:a554dc5177eea37718eeb258e487e4fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация: REGISTER, затем email, логин, пароль.  <br /></td></tr>
+<tr class="separator:a554dc5177eea37718eeb258e487e4fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1427f3fbd7b023751c650477b66c4daf" id="r_a1427f3fbd7b023751c650477b66c4daf"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a1427f3fbd7b023751c650477b66c4daf">loginUser</a> (const QString &amp;login, const QString &amp;password)</td></tr>
+<tr class="memdesc:a1427f3fbd7b023751c650477b66c4daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вход: LOGIN, затем логин (или email) и пароль.  <br /></td></tr>
+<tr class="separator:a1427f3fbd7b023751c650477b66c4daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c44ea53e45507b9ffbd76e04f81979" id="r_a14c44ea53e45507b9ffbd76e04f81979"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a14c44ea53e45507b9ffbd76e04f81979">logout</a> ()</td></tr>
+<tr class="memdesc:a14c44ea53e45507b9ffbd76e04f81979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выход из системы (LOGOUT).  <br /></td></tr>
+<tr class="separator:a14c44ea53e45507b9ffbd76e04f81979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0163740a83ddb5d55c39323c46aae6" id="r_a9f0163740a83ddb5d55c39323c46aae6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a9f0163740a83ddb5d55c39323c46aae6">isLoggedIn</a> () const</td></tr>
+<tr class="memdesc:a9f0163740a83ddb5d55c39323c46aae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполнен ли вход.  <br /></td></tr>
+<tr class="separator:a9f0163740a83ddb5d55c39323c46aae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7021b79a639dbdc6c6071ecb99f670" id="r_a8d7021b79a639dbdc6c6071ecb99f670"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a8d7021b79a639dbdc6c6071ecb99f670">getCurrentUser</a> () const</td></tr>
+<tr class="memdesc:a8d7021b79a639dbdc6c6071ecb99f670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логин текущего пользователя.  <br /></td></tr>
+<tr class="separator:a8d7021b79a639dbdc6c6071ecb99f670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09cec81747c50788af55dd01d6a6d0c0" id="r_a09cec81747c50788af55dd01d6a6d0c0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a09cec81747c50788af55dd01d6a6d0c0">sendCommand</a> (const QString &amp;command)</td></tr>
+<tr class="memdesc:a09cec81747c50788af55dd01d6a6d0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправить произвольную команду (только после входа).  <br /></td></tr>
+<tr class="separator:a09cec81747c50788af55dd01d6a6d0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b352f57dc1e3a670ffeaff26a5f40b" id="r_a38b352f57dc1e3a670ffeaff26a5f40b"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a38b352f57dc1e3a670ffeaff26a5f40b">getServerStats</a> ()</td></tr>
+<tr class="memdesc:a38b352f57dc1e3a670ffeaff26a5f40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статистика сервера (STATS).  <br /></td></tr>
+<tr class="separator:a38b352f57dc1e3a670ffeaff26a5f40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863f3209cc1d23439959232f13211d07" id="r_a863f3209cc1d23439959232f13211d07"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a863f3209cc1d23439959232f13211d07">startGame</a> ()</td></tr>
+<tr class="memdesc:a863f3209cc1d23439959232f13211d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начать игру «Угадай число» (STARTGAME).  <br /></td></tr>
+<tr class="separator:a863f3209cc1d23439959232f13211d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4935feee3343ac48c455a57336f086e1" id="r_a4935feee3343ac48c455a57336f086e1"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a4935feee3343ac48c455a57336f086e1">makeGuess</a> (int number)</td></tr>
+<tr class="memdesc:a4935feee3343ac48c455a57336f086e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сделать попытку (GUESS n).  <br /></td></tr>
+<tr class="separator:a4935feee3343ac48c455a57336f086e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1458522b2d526349b9b826bc8dbd07" id="r_a6f1458522b2d526349b9b826bc8dbd07"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a6f1458522b2d526349b9b826bc8dbd07">getGameStats</a> ()</td></tr>
+<tr class="memdesc:a6f1458522b2d526349b9b826bc8dbd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Игровая статистика (GAMESTATS).  <br /></td></tr>
+<tr class="separator:a6f1458522b2d526349b9b826bc8dbd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2b7303910603c2184ad407f8c60637" id="r_a5b2b7303910603c2184ad407f8c60637"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a5b2b7303910603c2184ad407f8c60637">getHint</a> ()</td></tr>
+<tr class="memdesc:a5b2b7303910603c2184ad407f8c60637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подсказка в игре (HINT).  <br /></td></tr>
+<tr class="separator:a5b2b7303910603c2184ad407f8c60637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1293f6dbf75248dbe4dcf0c07a9059" id="r_adf1293f6dbf75248dbe4dcf0c07a9059"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#adf1293f6dbf75248dbe4dcf0c07a9059">newtonStep</a> (double c3, double c2, double c1, double c0, double x0)</td></tr>
+<tr class="memdesc:adf1293f6dbf75248dbe4dcf0c07a9059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вариант 4: шаг метода Ньютона на сервере (команда NEWTON).  <br /></td></tr>
+<tr class="separator:adf1293f6dbf75248dbe4dcf0c07a9059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a6f291595ab86c589c32a1bcac3c33183" id="r_a6f291595ab86c589c32a1bcac3c33183"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classClientAPI.html">ClientAPI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a6f291595ab86c589c32a1bcac3c33183">getInstance</a> ()</td></tr>
+<tr class="memdesc:a6f291595ab86c589c32a1bcac3c33183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить экземпляр (создаётся при первом вызове).  <br /></td></tr>
+<tr class="separator:a6f291595ab86c589c32a1bcac3c33183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:a3b722e113baa0d10afe8d0f613c158df" id="r_a3b722e113baa0d10afe8d0f613c158df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a3b722e113baa0d10afe8d0f613c158df">onConnected</a> ()</td></tr>
+<tr class="memdesc:a3b722e113baa0d10afe8d0f613c158df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соединение установлено.  <br /></td></tr>
+<tr class="separator:a3b722e113baa0d10afe8d0f613c158df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35303b9ef3373c9101c92b1a4a196986" id="r_a35303b9ef3373c9101c92b1a4a196986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a35303b9ef3373c9101c92b1a4a196986">onDisconnected</a> ()</td></tr>
+<tr class="memdesc:a35303b9ef3373c9101c92b1a4a196986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Соединение разорвано.  <br /></td></tr>
+<tr class="separator:a35303b9ef3373c9101c92b1a4a196986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9de38ddc0ac668fd4d650789bd66278" id="r_af9de38ddc0ac668fd4d650789bd66278"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#af9de38ddc0ac668fd4d650789bd66278">onError</a> (QAbstractSocket::SocketError error)</td></tr>
+<tr class="memdesc:af9de38ddc0ac668fd4d650789bd66278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ошибка сокета.  <br /></td></tr>
+<tr class="separator:af9de38ddc0ac668fd4d650789bd66278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ac8a193c05f8eb1b9e5af93687de891be" id="r_ac8a193c05f8eb1b9e5af93687de891be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#ac8a193c05f8eb1b9e5af93687de891be">ClientAPI</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:ac8a193c05f8eb1b9e5af93687de891be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытый конструктор синглтона.  <br /></td></tr>
+<tr class="separator:ac8a193c05f8eb1b9e5af93687de891be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769fa11fcdc3976f09a7e506baa718f0" id="r_a769fa11fcdc3976f09a7e506baa718f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a769fa11fcdc3976f09a7e506baa718f0">~ClientAPI</a> ()</td></tr>
+<tr class="memdesc:a769fa11fcdc3976f09a7e506baa718f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разрывает соединение.  <br /></td></tr>
+<tr class="separator:a769fa11fcdc3976f09a7e506baa718f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a530efe98e2593b79673a56e0a7d48930" id="r_a530efe98e2593b79673a56e0a7d48930"><td class="memItemLeft" align="right" valign="top">QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a530efe98e2593b79673a56e0a7d48930">m_socket</a></td></tr>
+<tr class="memdesc:a530efe98e2593b79673a56e0a7d48930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сокет соединения с сервером  <br /></td></tr>
+<tr class="separator:a530efe98e2593b79673a56e0a7d48930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5224f533fe092e59743633596798c7a0" id="r_a5224f533fe092e59743633596798c7a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a5224f533fe092e59743633596798c7a0">m_connected</a></td></tr>
+<tr class="memdesc:a5224f533fe092e59743633596798c7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Есть ли соединение  <br /></td></tr>
+<tr class="separator:a5224f533fe092e59743633596798c7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae5067119617e6734b73ab73f3830af" id="r_aaae5067119617e6734b73ab73f3830af"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#aaae5067119617e6734b73ab73f3830af">m_userLogin</a></td></tr>
+<tr class="memdesc:aaae5067119617e6734b73ab73f3830af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логин вошедшего пользователя  <br /></td></tr>
+<tr class="separator:aaae5067119617e6734b73ab73f3830af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb1fbde46c743dab67684a1c4a6be4d" id="r_a6cb1fbde46c743dab67684a1c4a6be4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#a6cb1fbde46c743dab67684a1c4a6be4d">m_isLoggedIn</a></td></tr>
+<tr class="memdesc:a6cb1fbde46c743dab67684a1c4a6be4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполнен ли вход  <br /></td></tr>
+<tr class="separator:a6cb1fbde46c743dab67684a1c4a6be4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:af2264b830deff0d7670ae5c58edecba1" id="r_af2264b830deff0d7670ae5c58edecba1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classClientAPI.html">ClientAPI</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientAPI.html#af2264b830deff0d7670ae5c58edecba1">m_instance</a> = nullptr</td></tr>
+<tr class="memdesc:af2264b830deff0d7670ae5c58edecba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Единственный экземпляр  <br /></td></tr>
+<tr class="separator:af2264b830deff0d7670ae5c58edecba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Единая точка связи клиента с сервером. </p>
+<p>Реализована как синглтон.</p>
+<p>Все запросы синхронные: <a class="el" href="classClientAPI.html#acafa88bc295e4156625284f05d81228e" title="Отправить строку и дождаться ответа.">sendAndReceive()</a> отправляет строку и ждёт ответ. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00016">16</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac8a193c05f8eb1b9e5af93687de891be" name="ac8a193c05f8eb1b9e5af93687de891be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8a193c05f8eb1b9e5af93687de891be">&#9670;&#160;</a></span>ClientAPI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClientAPI::ClientAPI </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Закрытый конструктор синглтона. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Родительский объект Qt. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00007">7</a></p>
+
+</div>
+</div>
+<a id="a769fa11fcdc3976f09a7e506baa718f0" name="a769fa11fcdc3976f09a7e506baa718f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769fa11fcdc3976f09a7e506baa718f0">&#9670;&#160;</a></span>~ClientAPI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ClientAPI::~ClientAPI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Разрывает соединение. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae731a85f63156cc7cd9c66a1e5bdb9cc" name="ae731a85f63156cc7cd9c66a1e5bdb9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae731a85f63156cc7cd9c66a1e5bdb9cc">&#9670;&#160;</a></span>connectToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientAPI::connectToServer </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>host</em> = <code>&quot;127.0.0.1&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em> = <code>33333</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подключиться к серверу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Адрес сервера. </td></tr>
+    <tr><td class="paramname">port</td><td>Порт сервера. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если соединение установлено за 3 секунды. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="a9c83a1661a3904666fb51848f72c513a" name="a9c83a1661a3904666fb51848f72c513a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c83a1661a3904666fb51848f72c513a">&#9670;&#160;</a></span>disconnectFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientAPI::disconnectFromServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разорвать соединение. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<a id="a8d7021b79a639dbdc6c6071ecb99f670" name="a8d7021b79a639dbdc6c6071ecb99f670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7021b79a639dbdc6c6071ecb99f670">&#9670;&#160;</a></span>getCurrentUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::getCurrentUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Логин текущего пользователя. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Логин или пустая строка. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00098">98</a></p>
+
+</div>
+</div>
+<a id="a6f1458522b2d526349b9b826bc8dbd07" name="a6f1458522b2d526349b9b826bc8dbd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1458522b2d526349b9b826bc8dbd07">&#9670;&#160;</a></span>getGameStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::getGameStats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Игровая статистика (GAMESTATS). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00135">135</a></p>
+
+</div>
+</div>
+<a id="a5b2b7303910603c2184ad407f8c60637" name="a5b2b7303910603c2184ad407f8c60637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b2b7303910603c2184ad407f8c60637">&#9670;&#160;</a></span>getHint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::getHint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подсказка в игре (HINT). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00141">141</a></p>
+
+</div>
+</div>
+<a id="a6f291595ab86c589c32a1bcac3c33183" name="a6f291595ab86c589c32a1bcac3c33183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f291595ab86c589c32a1bcac3c33183">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classClientAPI.html">ClientAPI</a> * ClientAPI::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить экземпляр (создаётся при первом вызове). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на экземпляр. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="a38b352f57dc1e3a670ffeaff26a5f40b" name="a38b352f57dc1e3a670ffeaff26a5f40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b352f57dc1e3a670ffeaff26a5f40b">&#9670;&#160;</a></span>getServerStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::getServerStats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Статистика сервера (STATS). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00117">117</a></p>
+
+</div>
+</div>
+<a id="ab3872649d8c57b747066b877447a5c9e" name="ab3872649d8c57b747066b877447a5c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3872649d8c57b747066b877447a5c9e">&#9670;&#160;</a></span>isConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientAPI::isConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Есть ли соединение с сервером. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если подключены. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a9f0163740a83ddb5d55c39323c46aae6" name="a9f0163740a83ddb5d55c39323c46aae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f0163740a83ddb5d55c39323c46aae6">&#9670;&#160;</a></span>isLoggedIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientAPI::isLoggedIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполнен ли вход. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true после успешного <a class="el" href="classClientAPI.html#a1427f3fbd7b023751c650477b66c4daf" title="Вход: LOGIN, затем логин (или email) и пароль.">loginUser()</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00092">92</a></p>
+
+</div>
+</div>
+<a id="a1427f3fbd7b023751c650477b66c4daf" name="a1427f3fbd7b023751c650477b66c4daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1427f3fbd7b023751c650477b66c4daf">&#9670;&#160;</a></span>loginUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::loginUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вход: LOGIN, затем логин (или email) и пароль. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">login</td><td>Логин или email. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера; при успехе <a class="el" href="classClientAPI.html#a9f0163740a83ddb5d55c39323c46aae6" title="Выполнен ли вход.">isLoggedIn()</a> становится true. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00080">80</a></p>
+
+</div>
+</div>
+<a id="a14c44ea53e45507b9ffbd76e04f81979" name="a14c44ea53e45507b9ffbd76e04f81979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c44ea53e45507b9ffbd76e04f81979">&#9670;&#160;</a></span>logout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientAPI::logout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выход из системы (LOGOUT). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00102">102</a></p>
+
+</div>
+</div>
+<a id="a4935feee3343ac48c455a57336f086e1" name="a4935feee3343ac48c455a57336f086e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4935feee3343ac48c455a57336f086e1">&#9670;&#160;</a></span>makeGuess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::makeGuess </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сделать попытку (GUESS n). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Число. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00129">129</a></p>
+
+</div>
+</div>
+<a id="adf1293f6dbf75248dbe4dcf0c07a9059" name="adf1293f6dbf75248dbe4dcf0c07a9059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1293f6dbf75248dbe4dcf0c07a9059">&#9670;&#160;</a></span>newtonStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::newtonStep </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вариант 4: шаг метода Ньютона на сервере (команда NEWTON). </p>
+<p>f(x) = c3*x^3 + c2*x^2 + c1*x + c0. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c3</td><td>Коэффициент при x^3. </td></tr>
+    <tr><td class="paramname">c2</td><td>Коэффициент при x^2. </td></tr>
+    <tr><td class="paramname">c1</td><td>Коэффициент при x. </td></tr>
+    <tr><td class="paramname">c0</td><td>Свободный член. </td></tr>
+    <tr><td class="paramname">x0</td><td>Начальное приближение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера без главного меню. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00147">147</a></p>
+
+</div>
+</div>
+<a id="a3b722e113baa0d10afe8d0f613c158df" name="a3b722e113baa0d10afe8d0f613c158df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b722e113baa0d10afe8d0f613c158df">&#9670;&#160;</a></span>onConnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientAPI::onConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Соединение установлено. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00153">153</a></p>
+
+</div>
+</div>
+<a id="a35303b9ef3373c9101c92b1a4a196986" name="a35303b9ef3373c9101c92b1a4a196986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35303b9ef3373c9101c92b1a4a196986">&#9670;&#160;</a></span>onDisconnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientAPI::onDisconnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Соединение разорвано. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00158">158</a></p>
+
+</div>
+</div>
+<a id="af9de38ddc0ac668fd4d650789bd66278" name="af9de38ddc0ac668fd4d650789bd66278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9de38ddc0ac668fd4d650789bd66278">&#9670;&#160;</a></span>onError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientAPI::onError </td>
+          <td>(</td>
+          <td class="paramtype">QAbstractSocket::SocketError&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ошибка сокета. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>Код ошибки. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00163">163</a></p>
+
+</div>
+</div>
+<a id="a554dc5177eea37718eeb258e487e4fd7" name="a554dc5177eea37718eeb258e487e4fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554dc5177eea37718eeb258e487e4fd7">&#9670;&#160;</a></span>registerUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::registerUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Регистрация: REGISTER, затем email, логин, пароль. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">login</td><td>Логин. </td></tr>
+    <tr><td class="paramname">email</td><td>Email. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Последний ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00057">57</a></p>
+
+</div>
+</div>
+<a id="acafa88bc295e4156625284f05d81228e" name="acafa88bc295e4156625284f05d81228e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafa88bc295e4156625284f05d81228e">&#9670;&#160;</a></span>sendAndReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::sendAndReceive </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeoutMs</em> = <code>5000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправить строку и дождаться ответа. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Строка запроса (перевод строки добавляется автоматически). </td></tr>
+    <tr><td class="paramname">timeoutMs</td><td>Таймаут ожидания, мс. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера или строка "ERROR: ...". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<a id="a09cec81747c50788af55dd01d6a6d0c0" name="a09cec81747c50788af55dd01d6a6d0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09cec81747c50788af55dd01d6a6d0c0">&#9670;&#160;</a></span>sendCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::sendCommand </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправить произвольную команду (только после входа). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>Команда. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00111">111</a></p>
+
+</div>
+</div>
+<a id="a863f3209cc1d23439959232f13211d07" name="a863f3209cc1d23439959232f13211d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863f3209cc1d23439959232f13211d07">&#9670;&#160;</a></span>startGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::startGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Начать игру «Угадай число» (STARTGAME). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ сервера. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a> строка <a class="el" href="clientapi_8cpp_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a5224f533fe092e59743633596798c7a0" name="a5224f533fe092e59743633596798c7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5224f533fe092e59743633596798c7a0">&#9670;&#160;</a></span>m_connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientAPI::m_connected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Есть ли соединение </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="af2264b830deff0d7670ae5c58edecba1" name="af2264b830deff0d7670ae5c58edecba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2264b830deff0d7670ae5c58edecba1">&#9670;&#160;</a></span>m_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classClientAPI.html">ClientAPI</a> * ClientAPI::m_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Единственный экземпляр </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a6cb1fbde46c743dab67684a1c4a6be4d" name="a6cb1fbde46c743dab67684a1c4a6be4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb1fbde46c743dab67684a1c4a6be4d">&#9670;&#160;</a></span>m_isLoggedIn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientAPI::m_isLoggedIn</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполнен ли вход </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<a id="a530efe98e2593b79673a56e0a7d48930" name="a530efe98e2593b79673a56e0a7d48930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530efe98e2593b79673a56e0a7d48930">&#9670;&#160;</a></span>m_socket</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTcpSocket* ClientAPI::m_socket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сокет соединения с сервером </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="aaae5067119617e6734b73ab73f3830af" name="aaae5067119617e6734b73ab73f3830af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae5067119617e6734b73ab73f3830af">&#9670;&#160;</a></span>m_userLogin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientAPI::m_userLogin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Логин вошедшего пользователя </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientapi_8h_source.html">clientapi.h</a> строка <a class="el" href="clientapi_8h_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>client/<a class="el" href="clientapi_8h_source.html">clientapi.h</a></li>
+<li>client/<a class="el" href="clientapi_8cpp_source.html">clientapi.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classClientAPI.html">ClientAPI</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Юнит-тесты (Qt Test)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md_tests_2README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Юнит-тесты (Qt Test)</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md4"></a> Тесты проверяют настоящий код проекта: исходники сервера и клиента подключаются в тестовый проект напрямую (<code>tests.pro</code>), моков нет.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Набор   </th><th class="markdownTableHeadNone">Что тестирует   </th><th class="markdownTableHeadNone">Файл кода    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="classTestNewton.html" title="Набор тестов для Polynomial, newtonFirstStep, parseNewtonArgs и handleNewtonCommand.">TestNewton</a></code>   </td><td class="markdownTableBodyNone">Вариант 4: многочлен, производная, шаг метода Ньютона, разбор команды <code>NEWTON</code>, генератор задания <code>TASK4</code>   </td><td class="markdownTableBodyNone"><code><a class="el" href="newton_8cpp_source.html">server/newton.cpp</a></code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="classTestDatabase.html" title="Набор тестов для Database. Синглтон общий, поэтому каждый тест использует свои логины.">TestDatabase</a></code>   </td><td class="markdownTableBodyNone">Синглтон БД: регистрация, дубли логина/email, вход по логину и email, игровая статистика, топ игроков   </td><td class="markdownTableBodyNone"><code><a class="el" href="database_8cpp_source.html">server/database.cpp</a></code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="classTestFunctionClient.html" title="Набор тестов для функций вариантов 1, 4, 16 на стороне клиента.">TestFunctionClient</a></code>   </td><td class="markdownTableBodyNone">Клиент: формирование команды <code>NEWTON</code>, разбор ответа сервера, удаление меню из ответа, полный цикл клиент → сервер → клиент; варианты 1 и 16   </td><td class="markdownTableBodyNone"><code><a class="el" href="functionclient_8cpp_source.html">client/functionclient.cpp</a></code>   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Запуск</h1>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Qt Creator</h2>
+<p>Открыть <code>tests/tests.pro</code> → Build → Run. Результат — во вкладке «Вывод приложения».</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Командная строка (Windows, MinGW)</h2>
+<div class="fragment"><div class="line">mkdir build-tests &amp;&amp; cd build-tests</div>
+<div class="line">qmake ..\tests\tests.pro</div>
+<div class="line">mingw32-make</div>
+<div class="line">release\unit_tests.exe</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Linux</h2>
+<div class="fragment"><div class="line">mkdir build-tests &amp;&amp; cd build-tests</div>
+<div class="line">qmake ../tests/tests.pro &amp;&amp; make</div>
+<div class="line">./unit_tests</div>
+</div><!-- fragment --><p>Код возврата <code>0</code> — все тесты прошли, <code>1</code> — есть упавшие. Если задать переменную <code>TEST_LOG_DIR</code>, отчёт каждого набора дополнительно сохранится в файл <code>&lt;TEST_LOG_DIR&gt;/&lt;Набор&gt;.txt</code>.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+CI</h1>
+<p>Тесты запускаются автоматически в GitHub Actions (<code>.github/workflows/tests.yml</code>) при каждом push и pull request.</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Результат последнего запуска</h1>
+<div class="fragment"><div class="line">TestNewton:          Totals: 26 passed, 0 failed</div>
+<div class="line">TestDatabase:        Totals: 14 passed, 0 failed</div>
+<div class="line">TestFunctionClient:  Totals:  9 passed, 0 failed</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

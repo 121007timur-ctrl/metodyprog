@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Файл client/functionclient.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functionclient_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл functionclient.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Функции вариантов на стороне клиента (численные методы).  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br />
+</div>
+<p><a href="functionclient_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a2fc8500be0a45539605309af87d92510" id="r_a2fc8500be0a45539605309af87d92510"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a2fc8500be0a45539605309af87d92510">bisectionMethod</a> (double a, double b)</td></tr>
+<tr class="memdesc:a2fc8500be0a45539605309af87d92510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вариант 1: одна итерация метода половинного деления для f(x) = x^2 - 4.  <br /></td></tr>
+<tr class="separator:a2fc8500be0a45539605309af87d92510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32bc09ab9ecd12a95dbf940947afae84" id="r_a32bc09ab9ecd12a95dbf940947afae84"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a32bc09ab9ecd12a95dbf940947afae84">leftRectangleMethod</a> (double a, double b, int n)</td></tr>
+<tr class="memdesc:a32bc09ab9ecd12a95dbf940947afae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вариант 16: интеграл x^2 методом левых прямоугольников.  <br /></td></tr>
+<tr class="separator:a32bc09ab9ecd12a95dbf940947afae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36190901a6c4fcf1c667d255a3fa1742" id="r_a36190901a6c4fcf1c667d255a3fa1742"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a36190901a6c4fcf1c667d255a3fa1742">fBisection</a> (double x)</td></tr>
+<tr class="memdesc:a36190901a6c4fcf1c667d255a3fa1742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для варианта 1: f(x) = x^2 - 4.  <br /></td></tr>
+<tr class="separator:a36190901a6c4fcf1c667d255a3fa1742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9001664adadd4172369814893fe30150" id="r_a9001664adadd4172369814893fe30150"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a9001664adadd4172369814893fe30150">fRectangle</a> (double x)</td></tr>
+<tr class="memdesc:a9001664adadd4172369814893fe30150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подынтегральная функция для варианта 16: f(x) = x^2.  <br /></td></tr>
+<tr class="separator:a9001664adadd4172369814893fe30150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Вариант 4: метод Ньютона (Далаков Аслан, 251-952)</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Вычисление выполняет сервер (команда NEWTON), клиент формирует запрос и разбирает ответ. </p>
+</div></td></tr>
+<tr class="memitem:a5f46fe6ff746206d7344469be7a910cd" id="r_a5f46fe6ff746206d7344469be7a910cd"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a5f46fe6ff746206d7344469be7a910cd">buildNewtonCommand</a> (double c3, double c2, double c1, double c0, double x0)</td></tr>
+<tr class="memdesc:a5f46fe6ff746206d7344469be7a910cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сформировать команду для сервера.  <br /></td></tr>
+<tr class="separator:a5f46fe6ff746206d7344469be7a910cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfe2c2f8055e9f402ca09eadd9811bb" id="r_a7bfe2c2f8055e9f402ca09eadd9811bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a7bfe2c2f8055e9f402ca09eadd9811bb">parseNewtonResponse</a> (const QString &amp;response, double &amp;x1)</td></tr>
+<tr class="memdesc:a7bfe2c2f8055e9f402ca09eadd9811bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Достать x1 из ответа сервера на команду NEWTON.  <br /></td></tr>
+<tr class="separator:a7bfe2c2f8055e9f402ca09eadd9811bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95825cc4bf2d636ffcf2d375ee97ecf8" id="r_a95825cc4bf2d636ffcf2d375ee97ecf8"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a95825cc4bf2d636ffcf2d375ee97ecf8">stripServerMenu</a> (const QString &amp;response)</td></tr>
+<tr class="memdesc:a95825cc4bf2d636ffcf2d375ee97ecf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Убрать из ответа сервера главное меню, которое сервер дописывает после каждой команды.  <br /></td></tr>
+<tr class="separator:a95825cc4bf2d636ffcf2d375ee97ecf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Заглушки для вариантов, которые никто не выбрал</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Каждая возвращает строку "[ЗАГЛУШКА] Вариант N не выбран". </p>
+</div></td></tr>
+<tr class="memitem:a2eb8a1deaee72eb07041be1bc13f1c11" id="r_a2eb8a1deaee72eb07041be1bc13f1c11"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a2eb8a1deaee72eb07041be1bc13f1c11">variant2</a> ()</td></tr>
+<tr class="memdesc:a2eb8a1deaee72eb07041be1bc13f1c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 2.  <br /></td></tr>
+<tr class="separator:a2eb8a1deaee72eb07041be1bc13f1c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233ec27052defb27f57f8e5dc1ea6f48" id="r_a233ec27052defb27f57f8e5dc1ea6f48"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a233ec27052defb27f57f8e5dc1ea6f48">variant3</a> ()</td></tr>
+<tr class="memdesc:a233ec27052defb27f57f8e5dc1ea6f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 3.  <br /></td></tr>
+<tr class="separator:a233ec27052defb27f57f8e5dc1ea6f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedff61eaca7dad954ad558836e295a3e" id="r_aedff61eaca7dad954ad558836e295a3e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#aedff61eaca7dad954ad558836e295a3e">variant5</a> ()</td></tr>
+<tr class="memdesc:aedff61eaca7dad954ad558836e295a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 5.  <br /></td></tr>
+<tr class="separator:aedff61eaca7dad954ad558836e295a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52506ce7a3baa1559277373f81e43d1d" id="r_a52506ce7a3baa1559277373f81e43d1d"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a52506ce7a3baa1559277373f81e43d1d">variant6</a> ()</td></tr>
+<tr class="memdesc:a52506ce7a3baa1559277373f81e43d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 6.  <br /></td></tr>
+<tr class="separator:a52506ce7a3baa1559277373f81e43d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27295d764df8419e165769080a601613" id="r_a27295d764df8419e165769080a601613"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a27295d764df8419e165769080a601613">variant7</a> ()</td></tr>
+<tr class="memdesc:a27295d764df8419e165769080a601613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 7.  <br /></td></tr>
+<tr class="separator:a27295d764df8419e165769080a601613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f534d4d1e492c57cec97f7775fe01e4" id="r_a3f534d4d1e492c57cec97f7775fe01e4"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a3f534d4d1e492c57cec97f7775fe01e4">variant8</a> ()</td></tr>
+<tr class="memdesc:a3f534d4d1e492c57cec97f7775fe01e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 8.  <br /></td></tr>
+<tr class="separator:a3f534d4d1e492c57cec97f7775fe01e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcff4e582ef5ec70d4f2f147b7c747f8" id="r_abcff4e582ef5ec70d4f2f147b7c747f8"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#abcff4e582ef5ec70d4f2f147b7c747f8">variant9</a> ()</td></tr>
+<tr class="memdesc:abcff4e582ef5ec70d4f2f147b7c747f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 9.  <br /></td></tr>
+<tr class="separator:abcff4e582ef5ec70d4f2f147b7c747f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc1811265728d248d22310904851c3a" id="r_a1bc1811265728d248d22310904851c3a"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functionclient_8h.html#a1bc1811265728d248d22310904851c3a">variant10</a> ()</td></tr>
+<tr class="memdesc:a1bc1811265728d248d22310904851c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка варианта 10.  <br /></td></tr>
+<tr class="separator:a1bc1811265728d248d22310904851c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Функции вариантов на стороне клиента (численные методы). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8h_source.html">functionclient.h</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a2fc8500be0a45539605309af87d92510" name="a2fc8500be0a45539605309af87d92510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc8500be0a45539605309af87d92510">&#9670;&#160;</a></span>bisectionMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString bisectionMethod </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вариант 1: одна итерация метода половинного деления для f(x) = x^2 - 4. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Левая граница отрезка. </td></tr>
+    <tr><td class="paramname">b</td><td>Правая граница отрезка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Новые границы отрезка или сообщение об ошибке, если f не меняет знак. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00009">9</a></p>
+
+</div>
+</div>
+<a id="a5f46fe6ff746206d7344469be7a910cd" name="a5f46fe6ff746206d7344469be7a910cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f46fe6ff746206d7344469be7a910cd">&#9670;&#160;</a></span>buildNewtonCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString buildNewtonCommand </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сформировать команду для сервера. </p>
+<p>Функция задаётся многочленом f(x) = c3*x^3 + c2*x^2 + c1*x + c0. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c3</td><td>Коэффициент при x^3. </td></tr>
+    <tr><td class="paramname">c2</td><td>Коэффициент при x^2. </td></tr>
+    <tr><td class="paramname">c1</td><td>Коэффициент при x. </td></tr>
+    <tr><td class="paramname">c0</td><td>Свободный член. </td></tr>
+    <tr><td class="paramname">x0</td><td>Начальное приближение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка вида "NEWTON 1 0 -2 -5 2". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00055">55</a></p>
+
+</div>
+</div>
+<a id="a36190901a6c4fcf1c667d255a3fa1742" name="a36190901a6c4fcf1c667d255a3fa1742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36190901a6c4fcf1c667d255a3fa1742">&#9670;&#160;</a></span>fBisection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fBisection </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция для варианта 1: f(x) = x^2 - 4. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Аргумент. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>f(x). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00005">5</a></p>
+
+</div>
+</div>
+<a id="a9001664adadd4172369814893fe30150" name="a9001664adadd4172369814893fe30150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9001664adadd4172369814893fe30150">&#9670;&#160;</a></span>fRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fRectangle </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подынтегральная функция для варианта 16: f(x) = x^2. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Аргумент. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>f(x). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00006">6</a></p>
+
+</div>
+</div>
+<a id="a32bc09ab9ecd12a95dbf940947afae84" name="a32bc09ab9ecd12a95dbf940947afae84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32bc09ab9ecd12a95dbf940947afae84">&#9670;&#160;</a></span>leftRectangleMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString leftRectangleMethod </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вариант 16: интеграл x^2 методом левых прямоугольников. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Нижний предел. </td></tr>
+    <tr><td class="paramname">b</td><td>Верхний предел. </td></tr>
+    <tr><td class="paramname">n</td><td>Число отрезков разбиения (n &gt; 0). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значение интеграла или сообщение об ошибке. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00034">34</a></p>
+
+</div>
+</div>
+<a id="a7bfe2c2f8055e9f402ca09eadd9811bb" name="a7bfe2c2f8055e9f402ca09eadd9811bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfe2c2f8055e9f402ca09eadd9811bb">&#9670;&#160;</a></span>parseNewtonResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parseNewtonResponse </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>response</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Достать x1 из ответа сервера на команду NEWTON. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>Ответ сервера. </td></tr>
+    <tr><td class="paramname">x1</td><td>[out] Первое приближение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если в ответе есть строка "NEWTON OK x1=...". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00062">62</a></p>
+
+</div>
+</div>
+<a id="a95825cc4bf2d636ffcf2d375ee97ecf8" name="a95825cc4bf2d636ffcf2d375ee97ecf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95825cc4bf2d636ffcf2d375ee97ecf8">&#9670;&#160;</a></span>stripServerMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString stripServerMenu </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Убрать из ответа сервера главное меню, которое сервер дописывает после каждой команды. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>Ответ сервера. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Ответ без блока "=== ГЛАВНОЕ МЕНЮ ===". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00077">77</a></p>
+
+</div>
+</div>
+<a id="a1bc1811265728d248d22310904851c3a" name="a1bc1811265728d248d22310904851c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc1811265728d248d22310904851c3a">&#9670;&#160;</a></span>variant10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant10 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 10. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 10 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00091">91</a></p>
+
+</div>
+</div>
+<a id="a2eb8a1deaee72eb07041be1bc13f1c11" name="a2eb8a1deaee72eb07041be1bc13f1c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb8a1deaee72eb07041be1bc13f1c11">&#9670;&#160;</a></span>variant2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 2. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 2 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00084">84</a></p>
+
+</div>
+</div>
+<a id="a233ec27052defb27f57f8e5dc1ea6f48" name="a233ec27052defb27f57f8e5dc1ea6f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233ec27052defb27f57f8e5dc1ea6f48">&#9670;&#160;</a></span>variant3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 3. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 3 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00085">85</a></p>
+
+</div>
+</div>
+<a id="aedff61eaca7dad954ad558836e295a3e" name="aedff61eaca7dad954ad558836e295a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedff61eaca7dad954ad558836e295a3e">&#9670;&#160;</a></span>variant5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant5 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 5. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 5 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00086">86</a></p>
+
+</div>
+</div>
+<a id="a52506ce7a3baa1559277373f81e43d1d" name="a52506ce7a3baa1559277373f81e43d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52506ce7a3baa1559277373f81e43d1d">&#9670;&#160;</a></span>variant6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant6 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 6. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 6 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00087">87</a></p>
+
+</div>
+</div>
+<a id="a27295d764df8419e165769080a601613" name="a27295d764df8419e165769080a601613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27295d764df8419e165769080a601613">&#9670;&#160;</a></span>variant7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant7 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 7. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 7 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00088">88</a></p>
+
+</div>
+</div>
+<a id="a3f534d4d1e492c57cec97f7775fe01e4" name="a3f534d4d1e492c57cec97f7775fe01e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f534d4d1e492c57cec97f7775fe01e4">&#9670;&#160;</a></span>variant8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant8 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 8. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 8 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00089">89</a></p>
+
+</div>
+</div>
+<a id="abcff4e582ef5ec70d4f2f147b7c747f8" name="abcff4e582ef5ec70d4f2f147b7c747f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcff4e582ef5ec70d4f2f147b7c747f8">&#9670;&#160;</a></span>variant9()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString variant9 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка варианта 9. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>"[ЗАГЛУШКА] Вариант 9 не выбран". </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="functionclient_8cpp_source.html">functionclient.cpp</a> строка <a class="el" href="functionclient_8cpp_source.html#l00090">90</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="functionclient_8h.html">functionclient.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

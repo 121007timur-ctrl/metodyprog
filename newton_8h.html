@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Файл server/newton.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('newton_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл newton.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Вариант 4: первое приближение корня методом Ньютона (касательных).  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;QStringList&gt;</code><br />
+</div>
+<p><a href="newton_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPolynomial.html">Polynomial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Многочлен не выше третьей степени: c3*x^3 + c2*x^2 + c1*x + c0.  <a href="structPolynomial.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNewtonStep.html">NewtonStep</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Результат одного шага метода Ньютона.  <a href="structNewtonStep.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7a21e4d3a305928af2a842896b3b2c7a" id="r_a7a21e4d3a305928af2a842896b3b2c7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNewtonStep.html">NewtonStep</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newton_8h.html#a7a21e4d3a305928af2a842896b3b2c7a">newtonFirstStep</a> (const <a class="el" href="structPolynomial.html">Polynomial</a> &amp;f, double x0)</td></tr>
+<tr class="memdesc:a7a21e4d3a305928af2a842896b3b2c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет один шаг метода Ньютона.  <br /></td></tr>
+<tr class="separator:a7a21e4d3a305928af2a842896b3b2c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6705762939381441e6fae65653e5cf5a" id="r_a6705762939381441e6fae65653e5cf5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newton_8h.html#a6705762939381441e6fae65653e5cf5a">parseNewtonArgs</a> (const QStringList &amp;args, <a class="el" href="structPolynomial.html">Polynomial</a> &amp;f, double &amp;x0, QString &amp;error)</td></tr>
+<tr class="memdesc:a6705762939381441e6fae65653e5cf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разбирает аргументы команды NEWTON.  <br /></td></tr>
+<tr class="separator:a6705762939381441e6fae65653e5cf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e86ff29b01448b391b28ca26959a74" id="r_a38e86ff29b01448b391b28ca26959a74"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newton_8h.html#a38e86ff29b01448b391b28ca26959a74">handleNewtonCommand</a> (const QStringList &amp;args)</td></tr>
+<tr class="memdesc:a38e86ff29b01448b391b28ca26959a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик серверной команды <code>NEWTON c3 c2 c1 c0 x0</code>.  <br /></td></tr>
+<tr class="separator:a38e86ff29b01448b391b28ca26959a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e87ed318fcf45296b9532a49826182d" id="r_a6e87ed318fcf45296b9532a49826182d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newton_8h.html#a6e87ed318fcf45296b9532a49826182d">generateNewtonTask</a> (<a class="el" href="structPolynomial.html">Polynomial</a> &amp;f, int &amp;x0)</td></tr>
+<tr class="memdesc:a6e87ed318fcf45296b9532a49826182d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сгенерировать случайное задание варианта 4 (для команды TASK4).  <br /></td></tr>
+<tr class="separator:a6e87ed318fcf45296b9532a49826182d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Вариант 4: первое приближение корня методом Ньютона (касательных). </p>
+<dl class="section author"><dt>Автор</dt><dd>Далаков Аслан, 251-952</dd></dl>
+<p>Функция задаётся многочленом третьей степени f(x) = c3*x^3 + c2*x^2 + c1*x + c0, её производная f'(x) = 3*c3*x^2 + 2*c2*x + c1 вычисляется аналитически.</p>
+<p>Первое приближение считается по формуле </p><p class="formulaDsp">
+\[ x_1 = x_0 - \frac{f(x_0)}{f&#39;(x_0)} \]
+</p>
+ 
+<p class="definition">См. определение в файле <a class="el" href="newton_8h_source.html">newton.h</a></p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a6e87ed318fcf45296b9532a49826182d" name="a6e87ed318fcf45296b9532a49826182d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e87ed318fcf45296b9532a49826182d">&#9670;&#160;</a></span>generateNewtonTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateNewtonTask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPolynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сгенерировать случайное задание варианта 4 (для команды TASK4). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>[out] Многочлен задания. </td></tr>
+    <tr><td class="paramname">x0</td><td>[out] Начальное приближение.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Коэффициенты и x0 целые, f'(x0) != 0, ответ x1 получается конечной десятичной дробью. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="newton_8cpp_source.html">newton.cpp</a> строка <a class="el" href="newton_8cpp_source.html#l00139">139</a></p>
+
+</div>
+</div>
+<a id="a38e86ff29b01448b391b28ca26959a74" name="a38e86ff29b01448b391b28ca26959a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e86ff29b01448b391b28ca26959a74">&#9670;&#160;</a></span>handleNewtonCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString handleNewtonCommand </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обработчик серверной команды <code>NEWTON c3 c2 c1 c0 x0</code>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Аргументы команды. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Текстовый ответ сервера с f(x0), f'(x0), x1 и f(x1). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="newton_8cpp_source.html">newton.cpp</a> строка <a class="el" href="newton_8cpp_source.html#l00111">111</a></p>
+
+</div>
+</div>
+<a id="a7a21e4d3a305928af2a842896b3b2c7a" name="a7a21e4d3a305928af2a842896b3b2c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a21e4d3a305928af2a842896b3b2c7a">&#9670;&#160;</a></span>newtonFirstStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNewtonStep.html">NewtonStep</a> newtonFirstStep </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structPolynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выполняет один шаг метода Ньютона. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Многочлен. </td></tr>
+    <tr><td class="paramname">x0</td><td>Начальное приближение. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат шага. Если f'(x0) = 0 (касательная параллельна оси OX), возвращается ok == false и описание ошибки. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="newton_8cpp_source.html">newton.cpp</a> строка <a class="el" href="newton_8cpp_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="a6705762939381441e6fae65653e5cf5a" name="a6705762939381441e6fae65653e5cf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6705762939381441e6fae65653e5cf5a">&#9670;&#160;</a></span>parseNewtonArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool parseNewtonArgs </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPolynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разбирает аргументы команды NEWTON. </p>
+<p>Формат: <code>c3 c2 c1 c0 x0</code> — пять чисел через пробел, десятичный разделитель — точка или запятая.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Аргументы команды (без слова NEWTON). </td></tr>
+    <tr><td class="paramname">f</td><td>[out] Многочлен. </td></tr>
+    <tr><td class="paramname">x0</td><td>[out] Начальное приближение. </td></tr>
+    <tr><td class="paramname">error</td><td>[out] Текст ошибки разбора. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если все пять чисел прочитаны. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="newton_8cpp_source.html">newton.cpp</a> строка <a class="el" href="newton_8cpp_source.html#l00084">84</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="newton_8h.html">newton.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

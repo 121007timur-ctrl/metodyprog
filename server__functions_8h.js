@@ -1,0 +1,25 @@
+var server__functions_8h =
+[
+    [ "ClientInfo", "structClientInfo.html", "structClientInfo" ],
+    [ "GameSession", "structGameSession.html", "structGameSession" ],
+    [ "TaskStats", "structTaskStats.html", "structTaskStats" ],
+    [ "cleanupClient", "server__functions_8h.html#a9868d8a2143294bfe7a777e2b84cf0b1", null ],
+    [ "generateClientId", "server__functions_8h.html#ab9de5a5ab9d77bd0abb7cbf3bcbe5e82", null ],
+    [ "getStats", "server__functions_8h.html#a15992e026e1b66fb335a34285a95df26", null ],
+    [ "handleAuthSteps", "server__functions_8h.html#a9962da2269c06d26fc8c76c6ed7276f4", null ],
+    [ "handleCommands", "server__functions_8h.html#a534bd3ebda34baf561bdaf38c2c16a35", null ],
+    [ "handleGameStats", "server__functions_8h.html#a2ab479c8dfc1607570d553a3d36c532c", null ],
+    [ "handleGuess", "server__functions_8h.html#a98f569932083503c40f4bebb5d2be389", null ],
+    [ "handleHint", "server__functions_8h.html#a0f7f19cacb178765049e405848016432", null ],
+    [ "handleStartGame", "server__functions_8h.html#a9ca6fc2b7205dc89b07e40410c42a18c", null ],
+    [ "sendAuthMenu", "server__functions_8h.html#a5bafb310a0379a8f7212ef26a2faaeae", null ],
+    [ "sendMainMenu", "server__functions_8h.html#a0bde6e7390dd534761087102c497d020", null ],
+    [ "task1Handler", "server__functions_8h.html#ab46838195d061f42eaaecac96315da95", null ],
+    [ "task2Handler", "server__functions_8h.html#aec073cb656cd416a0f01a61bc918d570", null ],
+    [ "task4Handler", "server__functions_8h.html#a2ce1aabfceb25aeb2f087f9268dc503c", null ],
+    [ "g_clientCounter", "server__functions_8h.html#abfff783f4cdfe918696436ca32d1d739", null ],
+    [ "g_clients", "server__functions_8h.html#ad1a77e5b92fb0e99829df3575a3836fa", null ],
+    [ "g_gameSessions", "server__functions_8h.html#aa3d849422c292b84b47886979349575d", null ],
+    [ "g_logins", "server__functions_8h.html#a56b73ea549309d6daf989253dcdf6d5f", null ],
+    [ "g_taskStats", "server__functions_8h.html#a3646d53e62c9e95ed656950b95774b1f", null ]
+];

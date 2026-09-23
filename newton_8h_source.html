@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл server/newton.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('newton_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">newton.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="newton_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef NEWTON_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define NEWTON_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structPolynomial.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structPolynomial.html">Polynomial</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structPolynomial.html#a6819d33f8933e1d9486b2fe7b757b472">   23</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structPolynomial.html#a6819d33f8933e1d9486b2fe7b757b472">c3</a> = 0; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structPolynomial.html#aee67fe3d392b8f0ec515f2506fd8d073">   24</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structPolynomial.html#aee67fe3d392b8f0ec515f2506fd8d073">c2</a> = 0; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structPolynomial.html#aabd24bdc65f1a33ba3b2b996c56242f5">   25</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structPolynomial.html#aabd24bdc65f1a33ba3b2b996c56242f5">c1</a> = 0; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structPolynomial.html#a529fb42c48274d543feb90409145cd93">   26</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structPolynomial.html#a529fb42c48274d543feb90409145cd93">c0</a> = 0; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="structPolynomial.html#a535bf1dba0c7bdbff9210768f089065e">value</a>(<span class="keywordtype">double</span> x) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="structPolynomial.html#ad22fd1c624a93e09033ed7387440cbba">derivative</a>(<span class="keywordtype">double</span> x) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    QString <a class="code hl_function" href="structPolynomial.html#aa0effb4baf7cdaf54aa6172d32c2b284">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    QString <a class="code hl_function" href="structPolynomial.html#a60ae2596eb77c7371f2a55980a40319c">derivativeToString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structNewtonStep.html">   58</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structNewtonStep.html">NewtonStep</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structNewtonStep.html#a35f85fadffcf880e234dafca9b781a81">   59</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structNewtonStep.html#a35f85fadffcf880e234dafca9b781a81">ok</a> = <span class="keyword">false</span>;  </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structNewtonStep.html#ab27c7341cb88f73fbba0ed3242a37285">   60</a></span>    QString <a class="code hl_variable" href="structNewtonStep.html#ab27c7341cb88f73fbba0ed3242a37285">error</a>;    </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structNewtonStep.html#ab93ea93c3251d4e3e88071c1c3d18835">   61</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structNewtonStep.html#ab93ea93c3251d4e3e88071c1c3d18835">x0</a> = 0;    </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structNewtonStep.html#ade0351d381c952285175e584b81f68c9">   62</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structNewtonStep.html#ade0351d381c952285175e584b81f68c9">fx0</a> = 0;   </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structNewtonStep.html#a5036f0b45b54765480a9e857afb13d90">   63</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structNewtonStep.html#a5036f0b45b54765480a9e857afb13d90">dfx0</a> = 0;  </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structNewtonStep.html#a14f2b2ec1e1597edcab257e2cfc7e522">   64</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structNewtonStep.html#a14f2b2ec1e1597edcab257e2cfc7e522">x1</a> = 0;    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structNewtonStep.html#a4a2e7855e51dd01a830fcab50798d79b">   65</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structNewtonStep.html#a4a2e7855e51dd01a830fcab50798d79b">fx1</a> = 0;   </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><a class="code hl_struct" href="structNewtonStep.html">NewtonStep</a> <a class="code hl_function" href="newton_8h.html#a7a21e4d3a305928af2a842896b3b2c7a">newtonFirstStep</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structPolynomial.html">Polynomial</a>&amp; f, <span class="keywordtype">double</span> x0);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">bool</span> <a class="code hl_function" href="newton_8h.html#a6705762939381441e6fae65653e5cf5a">parseNewtonArgs</a>(<span class="keyword">const</span> QStringList&amp; args, <a class="code hl_struct" href="structPolynomial.html">Polynomial</a>&amp; f, <span class="keywordtype">double</span>&amp; x0, QString&amp; error);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>QString <a class="code hl_function" href="newton_8h.html#a38e86ff29b01448b391b28ca26959a74">handleNewtonCommand</a>(<span class="keyword">const</span> QStringList&amp; args);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">void</span> <a class="code hl_function" href="newton_8h.html#a6e87ed318fcf45296b9532a49826182d">generateNewtonTask</a>(<a class="code hl_struct" href="structPolynomial.html">Polynomial</a>&amp; f, <span class="keywordtype">int</span>&amp; x0);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span><span class="comment">// NEWTON_H</span></div>
+<div class="ttc" id="anewton_8h_html_a38e86ff29b01448b391b28ca26959a74"><div class="ttname"><a href="newton_8h.html#a38e86ff29b01448b391b28ca26959a74">handleNewtonCommand</a></div><div class="ttdeci">QString handleNewtonCommand(const QStringList &amp;args)</div><div class="ttdoc">Обработчик серверной команды NEWTON c3 c2 c1 c0 x0.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00111">newton.cpp:111</a></div></div>
+<div class="ttc" id="anewton_8h_html_a6705762939381441e6fae65653e5cf5a"><div class="ttname"><a href="newton_8h.html#a6705762939381441e6fae65653e5cf5a">parseNewtonArgs</a></div><div class="ttdeci">bool parseNewtonArgs(const QStringList &amp;args, Polynomial &amp;f, double &amp;x0, QString &amp;error)</div><div class="ttdoc">Разбирает аргументы команды NEWTON.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00084">newton.cpp:84</a></div></div>
+<div class="ttc" id="anewton_8h_html_a6e87ed318fcf45296b9532a49826182d"><div class="ttname"><a href="newton_8h.html#a6e87ed318fcf45296b9532a49826182d">generateNewtonTask</a></div><div class="ttdeci">void generateNewtonTask(Polynomial &amp;f, int &amp;x0)</div><div class="ttdoc">Сгенерировать случайное задание варианта 4 (для команды TASK4).</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00139">newton.cpp:139</a></div></div>
+<div class="ttc" id="anewton_8h_html_a7a21e4d3a305928af2a842896b3b2c7a"><div class="ttname"><a href="newton_8h.html#a7a21e4d3a305928af2a842896b3b2c7a">newtonFirstStep</a></div><div class="ttdeci">NewtonStep newtonFirstStep(const Polynomial &amp;f, double x0)</div><div class="ttdoc">Выполняет один шаг метода Ньютона.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00066">newton.cpp:66</a></div></div>
+<div class="ttc" id="astructNewtonStep_html"><div class="ttname"><a href="structNewtonStep.html">NewtonStep</a></div><div class="ttdoc">Результат одного шага метода Ньютона.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00058">newton.h:58</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_a14f2b2ec1e1597edcab257e2cfc7e522"><div class="ttname"><a href="structNewtonStep.html#a14f2b2ec1e1597edcab257e2cfc7e522">NewtonStep::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">Первое приближение x1.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00064">newton.h:64</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_a35f85fadffcf880e234dafca9b781a81"><div class="ttname"><a href="structNewtonStep.html#a35f85fadffcf880e234dafca9b781a81">NewtonStep::ok</a></div><div class="ttdeci">bool ok</div><div class="ttdoc">true, если шаг выполнен</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00059">newton.h:59</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_a4a2e7855e51dd01a830fcab50798d79b"><div class="ttname"><a href="structNewtonStep.html#a4a2e7855e51dd01a830fcab50798d79b">NewtonStep::fx1</a></div><div class="ttdeci">double fx1</div><div class="ttdoc">f(x1) — невязка после шага</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00065">newton.h:65</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_a5036f0b45b54765480a9e857afb13d90"><div class="ttname"><a href="structNewtonStep.html#a5036f0b45b54765480a9e857afb13d90">NewtonStep::dfx0</a></div><div class="ttdeci">double dfx0</div><div class="ttdoc">f'(x0)</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00063">newton.h:63</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_ab27c7341cb88f73fbba0ed3242a37285"><div class="ttname"><a href="structNewtonStep.html#ab27c7341cb88f73fbba0ed3242a37285">NewtonStep::error</a></div><div class="ttdeci">QString error</div><div class="ttdoc">Текст ошибки, если ok == false.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00060">newton.h:60</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_ab93ea93c3251d4e3e88071c1c3d18835"><div class="ttname"><a href="structNewtonStep.html#ab93ea93c3251d4e3e88071c1c3d18835">NewtonStep::x0</a></div><div class="ttdeci">double x0</div><div class="ttdoc">Начальное приближение</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00061">newton.h:61</a></div></div>
+<div class="ttc" id="astructNewtonStep_html_ade0351d381c952285175e584b81f68c9"><div class="ttname"><a href="structNewtonStep.html#ade0351d381c952285175e584b81f68c9">NewtonStep::fx0</a></div><div class="ttdeci">double fx0</div><div class="ttdoc">f(x0)</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00062">newton.h:62</a></div></div>
+<div class="ttc" id="astructPolynomial_html"><div class="ttname"><a href="structPolynomial.html">Polynomial</a></div><div class="ttdoc">Многочлен не выше третьей степени: c3*x^3 + c2*x^2 + c1*x + c0.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00022">newton.h:22</a></div></div>
+<div class="ttc" id="astructPolynomial_html_a529fb42c48274d543feb90409145cd93"><div class="ttname"><a href="structPolynomial.html#a529fb42c48274d543feb90409145cd93">Polynomial::c0</a></div><div class="ttdeci">double c0</div><div class="ttdoc">Свободный член</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00026">newton.h:26</a></div></div>
+<div class="ttc" id="astructPolynomial_html_a535bf1dba0c7bdbff9210768f089065e"><div class="ttname"><a href="structPolynomial.html#a535bf1dba0c7bdbff9210768f089065e">Polynomial::value</a></div><div class="ttdeci">double value(double x) const</div><div class="ttdoc">Значение многочлена в точке.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00037">newton.cpp:37</a></div></div>
+<div class="ttc" id="astructPolynomial_html_a60ae2596eb77c7371f2a55980a40319c"><div class="ttname"><a href="structPolynomial.html#a60ae2596eb77c7371f2a55980a40319c">Polynomial::derivativeToString</a></div><div class="ttdeci">QString derivativeToString() const</div><div class="ttdoc">Текстовая запись производной, например &quot;3x^2 - 2&quot;.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00057">newton.cpp:57</a></div></div>
+<div class="ttc" id="astructPolynomial_html_a6819d33f8933e1d9486b2fe7b757b472"><div class="ttname"><a href="structPolynomial.html#a6819d33f8933e1d9486b2fe7b757b472">Polynomial::c3</a></div><div class="ttdeci">double c3</div><div class="ttdoc">Коэффициент при x^3.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00023">newton.h:23</a></div></div>
+<div class="ttc" id="astructPolynomial_html_aa0effb4baf7cdaf54aa6172d32c2b284"><div class="ttname"><a href="structPolynomial.html#aa0effb4baf7cdaf54aa6172d32c2b284">Polynomial::toString</a></div><div class="ttdeci">QString toString() const</div><div class="ttdoc">Текстовая запись многочлена, например &quot;x^3 - 2x - 5&quot;.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00047">newton.cpp:47</a></div></div>
+<div class="ttc" id="astructPolynomial_html_aabd24bdc65f1a33ba3b2b996c56242f5"><div class="ttname"><a href="structPolynomial.html#aabd24bdc65f1a33ba3b2b996c56242f5">Polynomial::c1</a></div><div class="ttdeci">double c1</div><div class="ttdoc">Коэффициент при x.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00025">newton.h:25</a></div></div>
+<div class="ttc" id="astructPolynomial_html_ad22fd1c624a93e09033ed7387440cbba"><div class="ttname"><a href="structPolynomial.html#ad22fd1c624a93e09033ed7387440cbba">Polynomial::derivative</a></div><div class="ttdeci">double derivative(double x) const</div><div class="ttdoc">Значение производной многочлена в точке.</div><div class="ttdef"><b>Definition</b> <a href="newton_8cpp_source.html#l00042">newton.cpp:42</a></div></div>
+<div class="ttc" id="astructPolynomial_html_aee67fe3d392b8f0ec515f2506fd8d073"><div class="ttname"><a href="structPolynomial.html#aee67fe3d392b8f0ec515f2506fd8d073">Polynomial::c2</a></div><div class="ttdeci">double c2</div><div class="ttdoc">Коэффициент при x^2.</div><div class="ttdef"><b>Definition</b> <a href="newton_8h_source.html#l00024">newton.h:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="newton_8h.html">newton.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

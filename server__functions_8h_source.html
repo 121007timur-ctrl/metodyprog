@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Исходный файл server/server_functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('server__functions_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">server_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="server__functions_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef SERVER_FUNCTIONS_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define SERVER_FUNCTIONS_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structClientInfo.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structClientInfo.html">ClientInfo</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structClientInfo.html#ad9b74b18ae0ec3247eed14ae534b51bb">   28</a></span>    QString <a class="code hl_variable" href="structClientInfo.html#ad9b74b18ae0ec3247eed14ae534b51bb">clientId</a>;     </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structClientInfo.html#af561fa524d7929ea244684001af7b77c">   29</a></span>    QString <a class="code hl_variable" href="structClientInfo.html#af561fa524d7929ea244684001af7b77c">login</a>;        </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structClientInfo.html#a9a83d65ca44aef980ab7a058c9812e4e">   30</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structClientInfo.html#a9a83d65ca44aef980ab7a058c9812e4e">isAuthenticated</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structClientInfo.html#a35381d66855807a22eee9674748ede47">   31</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structClientInfo.html#a35381d66855807a22eee9674748ede47">authStep</a>;         </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structClientInfo.html#a9141286da1c4c2bc457bd7b9ede6d33d">   32</a></span>    QString <a class="code hl_variable" href="structClientInfo.html#a9141286da1c4c2bc457bd7b9ede6d33d">tempEmail</a>;    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structClientInfo.html#a31300f9690d7310a8a77b66fe2a5f108">   33</a></span>    QString <a class="code hl_variable" href="structClientInfo.html#a31300f9690d7310a8a77b66fe2a5f108">tempLogin</a>;    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structGameSession.html">   39</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structGameSession.html">GameSession</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structGameSession.html#a53317a816e5e84affc476e2215c9c5ab">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameSession.html#a53317a816e5e84affc476e2215c9c5ab">secretNumber</a>;  </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structGameSession.html#a5e2ef0f86cd4c4bc20f5560a7a12ccc8">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameSession.html#a5e2ef0f86cd4c4bc20f5560a7a12ccc8">attempts</a>;      </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structGameSession.html#aab205ad8dea980cb6559c9382045056a">   42</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameSession.html#aab205ad8dea980cb6559c9382045056a">minRange</a>;      </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structGameSession.html#ad47a8d61dd3baa83404b940cfd8b1382">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameSession.html#ad47a8d61dd3baa83404b940cfd8b1382">maxRange</a>;      </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structGameSession.html#acf775f0b3ae9a7e972648f9e8342e747">   44</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structGameSession.html#acf775f0b3ae9a7e972648f9e8342e747">gameActive</a>;   </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structGameSession.html#a80f551aaa18a5419a247ea6f2fc353e2">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structGameSession.html#a80f551aaa18a5419a247ea6f2fc353e2">currentNumber</a>; </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structTaskStats.html">   51</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structTaskStats.html">TaskStats</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structTaskStats.html#a05895a7ed3446602d9037901901315cb">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structTaskStats.html#a05895a7ed3446602d9037901901315cb">totalAttempts</a>;  </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structTaskStats.html#a077d643e9e4faadabf743130784bc05f">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structTaskStats.html#a077d643e9e4faadabf743130784bc05f">correctAnswers</a>; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">extern</span> QMap&lt;QTcpSocket*, ClientInfo&gt; <a class="code hl_variable" href="server__functions_8h.html#ad1a77e5b92fb0e99829df3575a3836fa">g_clients</a>;       </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">extern</span> QMap&lt;QString, QTcpSocket*&gt; <a class="code hl_variable" href="server__functions_8h.html#a56b73ea549309d6daf989253dcdf6d5f">g_logins</a>;           </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">extern</span> QMap&lt;QTcpSocket*, GameSession&gt; <a class="code hl_variable" href="server__functions_8h.html#aa3d849422c292b84b47886979349575d">g_gameSessions</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">extern</span> QMap&lt;QTcpSocket*, TaskStats&gt; <a class="code hl_variable" href="server__functions_8h.html#a3646d53e62c9e95ed656950b95774b1f">g_taskStats</a>;      </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="server__functions_8h.html#abfff783f4cdfe918696436ca32d1d739">g_clientCounter</a>;                           </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>QString <a class="code hl_function" href="server__functions_8h.html#ab9de5a5ab9d77bd0abb7cbf3bcbe5e82">generateClientId</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> <a class="code hl_function" href="server__functions_8h.html#a5bafb310a0379a8f7212ef26a2faaeae">sendAuthMenu</a>(QTcpSocket* socket);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">void</span> <a class="code hl_function" href="server__functions_8h.html#a0bde6e7390dd534761087102c497d020">sendMainMenu</a>(QTcpSocket* socket);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>QString <a class="code hl_function" href="server__functions_8h.html#a9962da2269c06d26fc8c76c6ed7276f4">handleAuthSteps</a>(QTcpSocket* socket, <a class="code hl_struct" href="structClientInfo.html">ClientInfo</a>&amp; info, <span class="keyword">const</span> QString&amp; request);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>QString <a class="code hl_function" href="server__functions_8h.html#a534bd3ebda34baf561bdaf38c2c16a35">handleCommands</a>(QTcpSocket* socket, <a class="code hl_struct" href="structClientInfo.html">ClientInfo</a>&amp; info, <span class="keyword">const</span> QString&amp; command);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> <a class="code hl_function" href="server__functions_8h.html#a9868d8a2143294bfe7a777e2b84cf0b1">cleanupClient</a>(QTcpSocket* socket);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>QString <a class="code hl_function" href="server__functions_8h.html#a15992e026e1b66fb335a34285a95df26">getStats</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>QString <a class="code hl_function" href="server__functions_8h.html#ab46838195d061f42eaaecac96315da95">task1Handler</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; answer = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>QString <a class="code hl_function" href="server__functions_8h.html#aec073cb656cd416a0f01a61bc918d570">task2Handler</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; answer = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>QString <a class="code hl_function" href="server__functions_8h.html#a2ce1aabfceb25aeb2f087f9268dc503c">task4Handler</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; answer = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>QString <a class="code hl_function" href="server__functions_8h.html#a9ca6fc2b7205dc89b07e40410c42a18c">handleStartGame</a>(QTcpSocket* socket);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>QString <a class="code hl_function" href="server__functions_8h.html#a98f569932083503c40f4bebb5d2be389">handleGuess</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; guess, <span class="keyword">const</span> QString&amp; login);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>QString <a class="code hl_function" href="server__functions_8h.html#a2ab479c8dfc1607570d553a3d36c532c">handleGameStats</a>(QTcpSocket* socket, <span class="keyword">const</span> QString&amp; login);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>QString <a class="code hl_function" href="server__functions_8h.html#a0f7f19cacb178765049e405848016432">handleHint</a>(QTcpSocket* socket);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#endif </span><span class="comment">// SERVER_FUNCTIONS_H</span></div>
+<div class="ttc" id="aserver__functions_8h_html_a0bde6e7390dd534761087102c497d020"><div class="ttname"><a href="server__functions_8h.html#a0bde6e7390dd534761087102c497d020">sendMainMenu</a></div><div class="ttdeci">void sendMainMenu(QTcpSocket *socket)</div><div class="ttdoc">Отправить главное меню со статистикой пользователя.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00042">server_functions.cpp:42</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a0f7f19cacb178765049e405848016432"><div class="ttname"><a href="server__functions_8h.html#a0f7f19cacb178765049e405848016432">handleHint</a></div><div class="ttdeci">QString handleHint(QTcpSocket *socket)</div><div class="ttdoc">Подсказка: в какой трети диапазона число (стоит одну попытку).</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00455">server_functions.cpp:455</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a15992e026e1b66fb335a34285a95df26"><div class="ttname"><a href="server__functions_8h.html#a15992e026e1b66fb335a34285a95df26">getStats</a></div><div class="ttdeci">QString getStats()</div><div class="ttdoc">Статистика сервера: подключено, авторизовано, зарегистрировано.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00077">server_functions.cpp:77</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a2ab479c8dfc1607570d553a3d36c532c"><div class="ttname"><a href="server__functions_8h.html#a2ab479c8dfc1607570d553a3d36c532c">handleGameStats</a></div><div class="ttdeci">QString handleGameStats(QTcpSocket *socket, const QString &amp;login)</div><div class="ttdoc">Игровая статистика пользователя из БД.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00430">server_functions.cpp:430</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a2ce1aabfceb25aeb2f087f9268dc503c"><div class="ttname"><a href="server__functions_8h.html#a2ce1aabfceb25aeb2f087f9268dc503c">task4Handler</a></div><div class="ttdeci">QString task4Handler(QTcpSocket *socket, const QString &amp;answer=&quot;&quot;)</div><div class="ttdoc">Задание 4 (вариант 4): найти первое приближение x1 методом Ньютона.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00329">server_functions.cpp:329</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a3646d53e62c9e95ed656950b95774b1f"><div class="ttname"><a href="server__functions_8h.html#a3646d53e62c9e95ed656950b95774b1f">g_taskStats</a></div><div class="ttdeci">QMap&lt; QTcpSocket *, TaskStats &gt; g_taskStats</div><div class="ttdoc">Статистика заданий по клиентам</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00012">server_functions.cpp:12</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a534bd3ebda34baf561bdaf38c2c16a35"><div class="ttname"><a href="server__functions_8h.html#a534bd3ebda34baf561bdaf38c2c16a35">handleCommands</a></div><div class="ttdeci">QString handleCommands(QTcpSocket *socket, ClientInfo &amp;info, const QString &amp;command)</div><div class="ttdoc">Выполнить команду клиента.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00484">server_functions.cpp:484</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a56b73ea549309d6daf989253dcdf6d5f"><div class="ttname"><a href="server__functions_8h.html#a56b73ea549309d6daf989253dcdf6d5f">g_logins</a></div><div class="ttdeci">QMap&lt; QString, QTcpSocket * &gt; g_logins</div><div class="ttdoc">Вошедшие пользователи: логин → сокет</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00010">server_functions.cpp:10</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a5bafb310a0379a8f7212ef26a2faaeae"><div class="ttname"><a href="server__functions_8h.html#a5bafb310a0379a8f7212ef26a2faaeae">sendAuthMenu</a></div><div class="ttdeci">void sendAuthMenu(QTcpSocket *socket)</div><div class="ttdoc">Отправить меню для неавторизованного клиента.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00025">server_functions.cpp:25</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a9868d8a2143294bfe7a777e2b84cf0b1"><div class="ttname"><a href="server__functions_8h.html#a9868d8a2143294bfe7a777e2b84cf0b1">cleanupClient</a></div><div class="ttdeci">void cleanupClient(QTcpSocket *socket)</div><div class="ttdoc">Удалить всё состояние отключившегося клиента.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00580">server_functions.cpp:580</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a98f569932083503c40f4bebb5d2be389"><div class="ttname"><a href="server__functions_8h.html#a98f569932083503c40f4bebb5d2be389">handleGuess</a></div><div class="ttdeci">QString handleGuess(QTcpSocket *socket, const QString &amp;guess, const QString &amp;login)</div><div class="ttdoc">Проверить догадку игрока.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00395">server_functions.cpp:395</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a9962da2269c06d26fc8c76c6ed7276f4"><div class="ttname"><a href="server__functions_8h.html#a9962da2269c06d26fc8c76c6ed7276f4">handleAuthSteps</a></div><div class="ttdeci">QString handleAuthSteps(QTcpSocket *socket, ClientInfo &amp;info, const QString &amp;request)</div><div class="ttdoc">Обработать очередной шаг регистрации или входа.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00104">server_functions.cpp:104</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_a9ca6fc2b7205dc89b07e40410c42a18c"><div class="ttname"><a href="server__functions_8h.html#a9ca6fc2b7205dc89b07e40410c42a18c">handleStartGame</a></div><div class="ttdeci">QString handleStartGame(QTcpSocket *socket)</div><div class="ttdoc">Начать партию «Угадай число» (1–100).</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00372">server_functions.cpp:372</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_aa3d849422c292b84b47886979349575d"><div class="ttname"><a href="server__functions_8h.html#aa3d849422c292b84b47886979349575d">g_gameSessions</a></div><div class="ttdeci">QMap&lt; QTcpSocket *, GameSession &gt; g_gameSessions</div><div class="ttdoc">Партии игры по клиентам</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00011">server_functions.cpp:11</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_ab46838195d061f42eaaecac96315da95"><div class="ttname"><a href="server__functions_8h.html#ab46838195d061f42eaaecac96315da95">task1Handler</a></div><div class="ttdeci">QString task1Handler(QTcpSocket *socket, const QString &amp;answer=&quot;&quot;)</div><div class="ttdoc">Задание 1: случайное линейное уравнение.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00241">server_functions.cpp:241</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_ab9de5a5ab9d77bd0abb7cbf3bcbe5e82"><div class="ttname"><a href="server__functions_8h.html#ab9de5a5ab9d77bd0abb7cbf3bcbe5e82">generateClientId</a></div><div class="ttdeci">QString generateClientId()</div><div class="ttdoc">Сгенерировать идентификатор нового клиента.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00020">server_functions.cpp:20</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_abfff783f4cdfe918696436ca32d1d739"><div class="ttname"><a href="server__functions_8h.html#abfff783f4cdfe918696436ca32d1d739">g_clientCounter</a></div><div class="ttdeci">int g_clientCounter</div><div class="ttdoc">Счётчик для номеров клиентов</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00013">server_functions.cpp:13</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_ad1a77e5b92fb0e99829df3575a3836fa"><div class="ttname"><a href="server__functions_8h.html#ad1a77e5b92fb0e99829df3575a3836fa">g_clients</a></div><div class="ttdeci">QMap&lt; QTcpSocket *, ClientInfo &gt; g_clients</div><div class="ttdoc">Все подключённые клиенты</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00009">server_functions.cpp:9</a></div></div>
+<div class="ttc" id="aserver__functions_8h_html_aec073cb656cd416a0f01a61bc918d570"><div class="ttname"><a href="server__functions_8h.html#aec073cb656cd416a0f01a61bc918d570">task2Handler</a></div><div class="ttdeci">QString task2Handler(QTcpSocket *socket, const QString &amp;answer=&quot;&quot;)</div><div class="ttdoc">Задание 2: случайный определённый интеграл.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8cpp_source.html#l00285">server_functions.cpp:285</a></div></div>
+<div class="ttc" id="astructClientInfo_html"><div class="ttname"><a href="structClientInfo.html">ClientInfo</a></div><div class="ttdoc">Состояние подключённого клиента.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00027">server_functions.h:27</a></div></div>
+<div class="ttc" id="astructClientInfo_html_a31300f9690d7310a8a77b66fe2a5f108"><div class="ttname"><a href="structClientInfo.html#a31300f9690d7310a8a77b66fe2a5f108">ClientInfo::tempLogin</a></div><div class="ttdeci">QString tempLogin</div><div class="ttdoc">Логин, введённый при регистрации/входе</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00033">server_functions.h:33</a></div></div>
+<div class="ttc" id="astructClientInfo_html_a35381d66855807a22eee9674748ede47"><div class="ttname"><a href="structClientInfo.html#a35381d66855807a22eee9674748ede47">ClientInfo::authStep</a></div><div class="ttdeci">int authStep</div><div class="ttdoc">Шаг диалога: 0 — нет, 1–3 — регистрация, 4–5 — вход</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00031">server_functions.h:31</a></div></div>
+<div class="ttc" id="astructClientInfo_html_a9141286da1c4c2bc457bd7b9ede6d33d"><div class="ttname"><a href="structClientInfo.html#a9141286da1c4c2bc457bd7b9ede6d33d">ClientInfo::tempEmail</a></div><div class="ttdeci">QString tempEmail</div><div class="ttdoc">Email, введённый при регистрации</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00032">server_functions.h:32</a></div></div>
+<div class="ttc" id="astructClientInfo_html_a9a83d65ca44aef980ab7a058c9812e4e"><div class="ttname"><a href="structClientInfo.html#a9a83d65ca44aef980ab7a058c9812e4e">ClientInfo::isAuthenticated</a></div><div class="ttdeci">bool isAuthenticated</div><div class="ttdoc">Выполнен ли вход</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00030">server_functions.h:30</a></div></div>
+<div class="ttc" id="astructClientInfo_html_ad9b74b18ae0ec3247eed14ae534b51bb"><div class="ttname"><a href="structClientInfo.html#ad9b74b18ae0ec3247eed14ae534b51bb">ClientInfo::clientId</a></div><div class="ttdeci">QString clientId</div><div class="ttdoc">Идентификатор вида &quot;Клиент_N&quot;.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00028">server_functions.h:28</a></div></div>
+<div class="ttc" id="astructClientInfo_html_af561fa524d7929ea244684001af7b77c"><div class="ttname"><a href="structClientInfo.html#af561fa524d7929ea244684001af7b77c">ClientInfo::login</a></div><div class="ttdeci">QString login</div><div class="ttdoc">Логин после входа</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00029">server_functions.h:29</a></div></div>
+<div class="ttc" id="astructGameSession_html"><div class="ttname"><a href="structGameSession.html">GameSession</a></div><div class="ttdoc">Партия игры «Угадай число».</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00039">server_functions.h:39</a></div></div>
+<div class="ttc" id="astructGameSession_html_a53317a816e5e84affc476e2215c9c5ab"><div class="ttname"><a href="structGameSession.html#a53317a816e5e84affc476e2215c9c5ab">GameSession::secretNumber</a></div><div class="ttdeci">int secretNumber</div><div class="ttdoc">Загаданное число</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00040">server_functions.h:40</a></div></div>
+<div class="ttc" id="astructGameSession_html_a5e2ef0f86cd4c4bc20f5560a7a12ccc8"><div class="ttname"><a href="structGameSession.html#a5e2ef0f86cd4c4bc20f5560a7a12ccc8">GameSession::attempts</a></div><div class="ttdeci">int attempts</div><div class="ttdoc">Сделано попыток</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00041">server_functions.h:41</a></div></div>
+<div class="ttc" id="astructGameSession_html_a80f551aaa18a5419a247ea6f2fc353e2"><div class="ttname"><a href="structGameSession.html#a80f551aaa18a5419a247ea6f2fc353e2">GameSession::currentNumber</a></div><div class="ttdeci">int currentNumber</div><div class="ttdoc">Копия загаданного числа</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00045">server_functions.h:45</a></div></div>
+<div class="ttc" id="astructGameSession_html_aab205ad8dea980cb6559c9382045056a"><div class="ttname"><a href="structGameSession.html#aab205ad8dea980cb6559c9382045056a">GameSession::minRange</a></div><div class="ttdeci">int minRange</div><div class="ttdoc">Нижняя граница диапазона</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00042">server_functions.h:42</a></div></div>
+<div class="ttc" id="astructGameSession_html_acf775f0b3ae9a7e972648f9e8342e747"><div class="ttname"><a href="structGameSession.html#acf775f0b3ae9a7e972648f9e8342e747">GameSession::gameActive</a></div><div class="ttdeci">bool gameActive</div><div class="ttdoc">Идёт ли партия</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00044">server_functions.h:44</a></div></div>
+<div class="ttc" id="astructGameSession_html_ad47a8d61dd3baa83404b940cfd8b1382"><div class="ttname"><a href="structGameSession.html#ad47a8d61dd3baa83404b940cfd8b1382">GameSession::maxRange</a></div><div class="ttdeci">int maxRange</div><div class="ttdoc">Верхняя граница диапазона</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00043">server_functions.h:43</a></div></div>
+<div class="ttc" id="astructTaskStats_html"><div class="ttname"><a href="structTaskStats.html">TaskStats</a></div><div class="ttdoc">Статистика решения заданий TASK1/TASK2/TASK4 за сессию.</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00051">server_functions.h:51</a></div></div>
+<div class="ttc" id="astructTaskStats_html_a05895a7ed3446602d9037901901315cb"><div class="ttname"><a href="structTaskStats.html#a05895a7ed3446602d9037901901315cb">TaskStats::totalAttempts</a></div><div class="ttdeci">int totalAttempts</div><div class="ttdoc">Всего решено заданий</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00052">server_functions.h:52</a></div></div>
+<div class="ttc" id="astructTaskStats_html_a077d643e9e4faadabf743130784bc05f"><div class="ttname"><a href="structTaskStats.html#a077d643e9e4faadabf743130784bc05f">TaskStats::correctAnswers</a></div><div class="ttdeci">int correctAnswers</div><div class="ttdoc">Правильных ответов</div><div class="ttdef"><b>Definition</b> <a href="server__functions_8h_source.html#l00053">server_functions.h:53</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="server__functions_8h.html">server_functions.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

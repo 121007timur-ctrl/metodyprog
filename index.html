@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: metodyprog — документация кода</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">metodyprog — документация кода </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="mainpage"></a> Клиент-серверное приложение на Qt 6 (C++): регистрация и вход пользователей, задания по численным методам и игра «Угадай число».</p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Состав</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Часть   </th><th class="markdownTableHeadNone">Точка входа   </th><th class="markdownTableHeadNone">Основные классы и модули    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Сервер (<code>server/</code>)   </td><td class="markdownTableBodyNone"><code>main.cpp</code>   </td><td class="markdownTableBodyNone"><a class="el" href="classMyTcpServer.html" title="Многоклиентский TCP-сервер на порту 33333.">MyTcpServer</a>, <a class="el" href="classDatabase.html" title="База данных пользователей.">Database</a>, <a class="el" href="server__functions_8h.html" title="Протокол сервера: состояние клиентов, меню и обработчики команд.">server_functions.h</a>, <a class="el" href="newton_8h.html" title="Вариант 4: первое приближение корня методом Ньютона (касательных).">newton.h</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Клиент (<code>client/</code>)   </td><td class="markdownTableBodyNone"><code>main.cpp</code>   </td><td class="markdownTableBodyNone"><a class="el" href="classAUTHregForm.html" title="Стартовое окно клиента: подключение к серверу, регистрация и вход.">AUTHregForm</a>, <a class="el" href="classMainWindow.html" title="Главное окно: задания, статистика, вариант 4, выход.">MainWindow</a>, <a class="el" href="classClientAPI.html" title="Единая точка связи клиента с сервером.">ClientAPI</a>, <a class="el" href="functionclient_8h.html" title="Функции вариантов на стороне клиента (численные методы).">functionclient.h</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Тесты (<code>tests/</code>)   </td><td class="markdownTableBodyNone"><code><a class="el" href="test__main_8cpp.html" title="Точка входа юнит-тестов: запускает все наборы Qt Test подряд.">test_main.cpp</a></code>   </td><td class="markdownTableBodyNone"><a class="el" href="classTestNewton.html" title="Набор тестов для Polynomial, newtonFirstStep, parseNewtonArgs и handleNewtonCommand.">TestNewton</a>, <a class="el" href="classTestDatabase.html" title="Набор тестов для Database. Синглтон общий, поэтому каждый тест использует свои логины.">TestDatabase</a>, <a class="el" href="classTestFunctionClient.html" title="Набор тестов для функций вариантов 1, 4, 16 на стороне клиента.">TestFunctionClient</a>   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Протокол</h1>
+<p>Клиент и сервер обмениваются текстовыми строками по TCP (порт 33333). Полный список команд — в описании файла <a class="el" href="server__functions_8h.html" title="Протокол сервера: состояние клиентов, меню и обработчики команд.">server_functions.h</a>.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Вариант 4 — метод Ньютона</h1>
+<p>Функция задаётся многочленом \(f(x) = c_3x^3 + c_2x^2 + c_1x + c_0\). Первое приближение:</p>
+<p class="formulaDsp">
+\[ x_1 = x_0 - \frac{f(x_0)}{f&#39;(x_0)} \]
+</p>
+<ul>
+<li>сервер: <a class="el" href="newton_8h.html" title="Вариант 4: первое приближение корня методом Ньютона (касательных).">newton.h</a> — newtonFirstStep(), handleNewtonCommand(), task4Handler();</li>
+<li>клиент: <a class="el" href="classClientAPI.html#adf1293f6dbf75248dbe4dcf0c07a9059" title="Вариант 4: шаг метода Ньютона на сервере (команда NEWTON).">ClientAPI::newtonStep()</a>, buildNewtonCommand(), parseNewtonResponse(), кнопки «Задание 4 (Ньютон)» и «Вариант 4: Ньютон» в <a class="el" href="classMainWindow.html" title="Главное окно: задания, статистика, вариант 4, выход.">MainWindow</a>.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Как собрать документацию</h1>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><p>Результат — <code>docs/html/index.html</code>. В GitHub Actions документация собирается автоматически и прикладывается к запуску как артефакт <code>doxygen-docs</code>. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

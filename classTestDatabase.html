@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>metodyprog: Класс TestDatabase</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">metodyprog<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classTestDatabase.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="classTestDatabase-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс TestDatabase</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Набор тестов для <a class="el" href="classDatabase.html" title="База данных пользователей.">Database</a>. Синглтон общий, поэтому каждый тест использует свои логины.  
+ <a href="classTestDatabase.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="test__database_8h_source.html">test_database.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:TestDatabase:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classTestDatabase.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:a07bc0294c99c168694e3a2f0563e9a18" id="r_a07bc0294c99c168694e3a2f0563e9a18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a07bc0294c99c168694e3a2f0563e9a18">singletonIsSameInstance</a> ()</td></tr>
+<tr class="memdesc:a07bc0294c99c168694e3a2f0563e9a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">instance() всегда возвращает один объект  <br /></td></tr>
+<tr class="separator:a07bc0294c99c168694e3a2f0563e9a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43118890e5155bb2b9995de388f46640" id="r_a43118890e5155bb2b9995de388f46640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a43118890e5155bb2b9995de388f46640">registerNewUser</a> ()</td></tr>
+<tr class="memdesc:a43118890e5155bb2b9995de388f46640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация нового пользователя  <br /></td></tr>
+<tr class="separator:a43118890e5155bb2b9995de388f46640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c214d00621c4bc9fd9f7db6c4893a0" id="r_af0c214d00621c4bc9fd9f7db6c4893a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#af0c214d00621c4bc9fd9f7db6c4893a0">registerDuplicateLogin</a> ()</td></tr>
+<tr class="memdesc:af0c214d00621c4bc9fd9f7db6c4893a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повторный логин отклоняется  <br /></td></tr>
+<tr class="separator:af0c214d00621c4bc9fd9f7db6c4893a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64c9b1d88ba6534478b34d3f9c7a1e2" id="r_ad64c9b1d88ba6534478b34d3f9c7a1e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#ad64c9b1d88ba6534478b34d3f9c7a1e2">registerDuplicateEmail</a> ()</td></tr>
+<tr class="memdesc:ad64c9b1d88ba6534478b34d3f9c7a1e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повторный email отклоняется  <br /></td></tr>
+<tr class="separator:ad64c9b1d88ba6534478b34d3f9c7a1e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e06d56d803f4439d0a68699bd8a6ba" id="r_a51e06d56d803f4439d0a68699bd8a6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a51e06d56d803f4439d0a68699bd8a6ba">loginByLogin</a> ()</td></tr>
+<tr class="memdesc:a51e06d56d803f4439d0a68699bd8a6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вход по логину  <br /></td></tr>
+<tr class="separator:a51e06d56d803f4439d0a68699bd8a6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215e7cb7369e24f0924bdfba2d0840f2" id="r_a215e7cb7369e24f0924bdfba2d0840f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a215e7cb7369e24f0924bdfba2d0840f2">loginByEmail</a> ()</td></tr>
+<tr class="memdesc:a215e7cb7369e24f0924bdfba2d0840f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вход по email.  <br /></td></tr>
+<tr class="separator:a215e7cb7369e24f0924bdfba2d0840f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c7bab6c4b1f9cbacd000548fbdf673" id="r_aa9c7bab6c4b1f9cbacd000548fbdf673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#aa9c7bab6c4b1f9cbacd000548fbdf673">loginWrongPassword</a> ()</td></tr>
+<tr class="memdesc:aa9c7bab6c4b1f9cbacd000548fbdf673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Неверный пароль отклоняется  <br /></td></tr>
+<tr class="separator:aa9c7bab6c4b1f9cbacd000548fbdf673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45442329e55468c14a5efab645d8bff1" id="r_a45442329e55468c14a5efab645d8bff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a45442329e55468c14a5efab645d8bff1">loginUnknownUser</a> ()</td></tr>
+<tr class="memdesc:a45442329e55468c14a5efab645d8bff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Неизвестный пользователь не входит  <br /></td></tr>
+<tr class="separator:a45442329e55468c14a5efab645d8bff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e44f55ac8c7658e79e8e7db003f79b" id="r_a56e44f55ac8c7658e79e8e7db003f79b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b">getUserLoginByEmail</a> ()</td></tr>
+<tr class="memdesc:a56e44f55ac8c7658e79e8e7db003f79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск логина по email.  <br /></td></tr>
+<tr class="separator:a56e44f55ac8c7658e79e8e7db003f79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de19d1180cb2d8ae434847c076e26e3" id="r_a4de19d1180cb2d8ae434847c076e26e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3">gameStatsUpdate</a> ()</td></tr>
+<tr class="memdesc:a4de19d1180cb2d8ae434847c076e26e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Накопление игровой статистики  <br /></td></tr>
+<tr class="separator:a4de19d1180cb2d8ae434847c076e26e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa330c42ce5cc2c9edb12145a1fd57e25" id="r_aa330c42ce5cc2c9edb12145a1fd57e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25">gameStatsReset</a> ()</td></tr>
+<tr class="memdesc:aa330c42ce5cc2c9edb12145a1fd57e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сброс игровой статистики  <br /></td></tr>
+<tr class="separator:aa330c42ce5cc2c9edb12145a1fd57e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d8e3db71f9351aa248b227915eec84" id="r_a93d8e3db71f9351aa248b227915eec84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTestDatabase.html#a93d8e3db71f9351aa248b227915eec84">topPlayersSortedAndLimited</a> ()</td></tr>
+<tr class="memdesc:a93d8e3db71f9351aa248b227915eec84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Топ игроков отсортирован и ограничен  <br /></td></tr>
+<tr class="separator:a93d8e3db71f9351aa248b227915eec84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Набор тестов для <a class="el" href="classDatabase.html" title="База данных пользователей.">Database</a>. Синглтон общий, поэтому каждый тест использует свои логины. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8h_source.html">test_database.h</a> строка <a class="el" href="test__database_8h_source.html#l00011">11</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aa330c42ce5cc2c9edb12145a1fd57e25" name="aa330c42ce5cc2c9edb12145a1fd57e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa330c42ce5cc2c9edb12145a1fd57e25">&#9670;&#160;</a></span>gameStatsReset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::gameStatsReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сброс игровой статистики </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00100">100</a></p>
+
+</div>
+</div>
+<a id="a4de19d1180cb2d8ae434847c076e26e3" name="a4de19d1180cb2d8ae434847c076e26e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de19d1180cb2d8ae434847c076e26e3">&#9670;&#160;</a></span>gameStatsUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::gameStatsUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Накопление игровой статистики </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00079">79</a></p>
+
+</div>
+</div>
+<a id="a56e44f55ac8c7658e79e8e7db003f79b" name="a56e44f55ac8c7658e79e8e7db003f79b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e44f55ac8c7658e79e8e7db003f79b">&#9670;&#160;</a></span>getUserLoginByEmail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::getUserLoginByEmail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поиск логина по email. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00071">71</a></p>
+
+</div>
+</div>
+<a id="a215e7cb7369e24f0924bdfba2d0840f2" name="a215e7cb7369e24f0924bdfba2d0840f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215e7cb7369e24f0924bdfba2d0840f2">&#9670;&#160;</a></span>loginByEmail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::loginByEmail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вход по email. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<a id="a51e06d56d803f4439d0a68699bd8a6ba" name="a51e06d56d803f4439d0a68699bd8a6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e06d56d803f4439d0a68699bd8a6ba">&#9670;&#160;</a></span>loginByLogin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::loginByLogin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вход по логину </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<a id="a45442329e55468c14a5efab645d8bff1" name="a45442329e55468c14a5efab645d8bff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45442329e55468c14a5efab645d8bff1">&#9670;&#160;</a></span>loginUnknownUser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::loginUnknownUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Неизвестный пользователь не входит </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a id="aa9c7bab6c4b1f9cbacd000548fbdf673" name="aa9c7bab6c4b1f9cbacd000548fbdf673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c7bab6c4b1f9cbacd000548fbdf673">&#9670;&#160;</a></span>loginWrongPassword</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::loginWrongPassword </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Неверный пароль отклоняется </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00054">54</a></p>
+
+</div>
+</div>
+<a id="ad64c9b1d88ba6534478b34d3f9c7a1e2" name="ad64c9b1d88ba6534478b34d3f9c7a1e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad64c9b1d88ba6534478b34d3f9c7a1e2">&#9670;&#160;</a></span>registerDuplicateEmail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::registerDuplicateEmail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Повторный email отклоняется </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="af0c214d00621c4bc9fd9f7db6c4893a0" name="af0c214d00621c4bc9fd9f7db6c4893a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c214d00621c4bc9fd9f7db6c4893a0">&#9670;&#160;</a></span>registerDuplicateLogin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::registerDuplicateLogin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Повторный логин отклоняется </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="a43118890e5155bb2b9995de388f46640" name="a43118890e5155bb2b9995de388f46640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43118890e5155bb2b9995de388f46640">&#9670;&#160;</a></span>registerNewUser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::registerNewUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Регистрация нового пользователя </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00010">10</a></p>
+
+</div>
+</div>
+<a id="a07bc0294c99c168694e3a2f0563e9a18" name="a07bc0294c99c168694e3a2f0563e9a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bc0294c99c168694e3a2f0563e9a18">&#9670;&#160;</a></span>singletonIsSameInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::singletonIsSameInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>instance() всегда возвращает один объект </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00005">5</a></p>
+
+</div>
+</div>
+<a id="a93d8e3db71f9351aa248b227915eec84" name="a93d8e3db71f9351aa248b227915eec84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d8e3db71f9351aa248b227915eec84">&#9670;&#160;</a></span>topPlayersSortedAndLimited</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TestDatabase::topPlayersSortedAndLimited </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Топ игроков отсортирован и ограничен </p>
+
+<p class="definition">См. определение в файле <a class="el" href="test__database_8cpp_source.html">test_database.cpp</a> строка <a class="el" href="test__database_8cpp_source.html#l00113">113</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>tests/<a class="el" href="test__database_8h_source.html">test_database.h</a></li>
+<li>tests/<a class="el" href="test__database_8cpp_source.html">test_database.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classTestDatabase.html">TestDatabase</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

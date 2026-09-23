@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['gamestatsreset_0',['gameStatsReset',['../classTestDatabase.html#aa330c42ce5cc2c9edb12145a1fd57e25',1,'TestDatabase']]],
+  ['gamestatsupdate_1',['gameStatsUpdate',['../classTestDatabase.html#a4de19d1180cb2d8ae434847c076e26e3',1,'TestDatabase']]],
+  ['generateclientid_2',['generateClientId',['../server__functions_8h.html#ab9de5a5ab9d77bd0abb7cbf3bcbe5e82',1,'server_functions.cpp']]],
+  ['generatedtaskissolvable_3',['generatedTaskIsSolvable',['../classTestNewton.html#a7947671f698ee04a80c7d740e05aaed9',1,'TestNewton']]],
+  ['generatenewtontask_4',['generateNewtonTask',['../newton_8h.html#a6e87ed318fcf45296b9532a49826182d',1,'newton.cpp']]],
+  ['getalllogins_5',['getAllLogins',['../classDatabase.html#a68a9fdb40aaaae899a07df6a0b660eb5',1,'Database']]],
+  ['getcurrentuser_6',['getCurrentUser',['../classClientAPI.html#a8d7021b79a639dbdc6c6071ecb99f670',1,'ClientAPI']]],
+  ['getgamestats_7',['getGameStats',['../classClientAPI.html#a6f1458522b2d526349b9b826bc8dbd07',1,'ClientAPI']]],
+  ['gethint_8',['getHint',['../classClientAPI.html#a5b2b7303910603c2184ad407f8c60637',1,'ClientAPI']]],
+  ['getinstance_9',['getInstance',['../classClientAPI.html#a6f291595ab86c589c32a1bcac3c33183',1,'ClientAPI']]],
+  ['getserverstats_10',['getServerStats',['../classClientAPI.html#a38b352f57dc1e3a670ffeaff26a5f40b',1,'ClientAPI']]],
+  ['getstats_11',['getStats',['../server__functions_8h.html#a15992e026e1b66fb335a34285a95df26',1,'server_functions.cpp']]],
+  ['gettopplayers_12',['getTopPlayers',['../classDatabase.html#abcc91725acf51e79b19cf05234be4487',1,'Database']]],
+  ['gettotalusers_13',['getTotalUsers',['../classDatabase.html#a20a12a77740963d32222bc414a7bf1d2',1,'Database']]],
+  ['getusergamestats_14',['getUserGameStats',['../classDatabase.html#a9aedf2cafd4b5909adc49377e3535dd8',1,'Database']]],
+  ['getuserlogin_15',['getUserLogin',['../classDatabase.html#a686a8e15b17f3b433795ce9b80b8ab3d',1,'Database']]],
+  ['getuserloginbyemail_16',['getUserLoginByEmail',['../classTestDatabase.html#a56e44f55ac8c7658e79e8e7db003f79b',1,'TestDatabase']]]
+];

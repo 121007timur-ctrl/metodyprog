@@ -1,0 +1,36 @@
+name: Unit Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.*'
+          cache: true
+
+      - name: Build tests
+        run: |
+          mkdir build-tests && cd build-tests
+          qmake ../tests/tests.pro
+          make -j"$(nproc)"
+
+      - name: Run tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+          TEST_LOG_DIR: ${{ github.workspace }}/test-logs
+        run: ./build-tests/unit_tests
+
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-logs
+          path: test-logs

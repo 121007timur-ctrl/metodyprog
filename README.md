@@ -77,7 +77,7 @@ NEWTON OK x1=2.1
 
 ## Тестирование
 
-- Юнит-тесты (Qt Test, 49 проверок, запускаются в CI): [`tests/`](tests/README.md)
+- Юнит-тесты (Qt Test, 43 теста, запускаются в CI): [`tests/`](tests/README.md)
 - Тест-кейсы и дефекты варианта 4 и смежного функционала (Далаков Аслан):
   [docs/testing/test_cases_defects_dalakov.xlsx](docs/testing/test_cases_defects_dalakov.xlsx)
 - Тест-кейс и дефект клиента (Насыров Тимур): [client/test_case/test_case_client.xlsx](client/test_case/test_case_client.xlsx)

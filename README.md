@@ -32,7 +32,7 @@ TCP-сервер на Qt обслуживает несколько клиент�
 | `STATS` | все | статистика сервера |
 | `TASK1` / `TASK2` | пользователь | уравнение / интеграл |
 | `TASK4` | пользователь | **вариант 4:** найти x1 методом Ньютона |
-| `NEWTON c3 c2 c1 c0 x0` | пользователь | **вариант 4:** шаг Ньютона для f(x) = c3x³ + c2x² + c1x + c0 |
+| `NEWTON c3 c2 c1 c0 x0 [f'(x0)]` | пользователь | **вариант 4:** шаг Ньютона для f(x) = c3x³ + c2x² + c1x + c0; f′(x0) можно задать шестым числом |
 | `STARTGAME`, `GUESS n`, `HINT`, `GAMESTATS` | пользователь | игра «Угадай число» |
 | `MENU`, `LOGOUT` | пользователь | меню, выход |
 
@@ -43,18 +43,19 @@ TCP-сервер на Qt обслуживает несколько клиент�
 $$x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}$$
 
 - **Сервер** — [`server/newton.h`](server/newton.h): многочлен до 3-й степени, производная, шаг
-  Ньютона с проверкой f′(x₀) = 0; команды `NEWTON` (калькулятор) и `TASK4` (случайное задание,
+  Ньютона с проверкой f′(x₀) = 0; команды `NEWTON` (калькулятор; производная f′(x₀) задаётся
+  шестым числом, как в условии, или считается по формуле) и `TASK4` (случайное задание,
   проверка ответа с точностью 0.01, учёт в статистике).
-- **Клиент** — кнопки **«Вариант 4: Ньютон»** (ввод c3…c0, x0) и **«Задание 4 (Ньютон)»**;
+- **Клиент** — кнопки **«Вариант 4: Ньютон»** (ввод c3…c0, x0 и f′(x0)) и **«Задание 4 (Ньютон)»**;
   `ClientAPI::newtonStep()`, `buildNewtonCommand()` / `parseNewtonResponse()` в
   [`client/functionclient.h`](client/functionclient.h).
 
-Пример:
+Пример (f′(x0) = 10 задано):
 ```
-> NEWTON 1 0 -2 -5 2
+> NEWTON 1 0 -2 -5 2 10
 f(x)  = x^3 - 2x - 5
 f'(x) = 3x^2 - 2
-x0 = 2,  f(x0) = -1,  f'(x0) = 10
+x0 = 2,  f(x0) = -1,  f'(x0) = 10 (задано)
 x1 = x0 - f(x0)/f'(x0) = 2.1
 NEWTON OK x1=2.1
 ```
@@ -77,9 +78,10 @@ NEWTON OK x1=2.1
 
 ## Тестирование
 
-- Юнит-тесты (Qt Test, 43 теста, запускаются в CI): [`tests/`](tests/README.md)
+- Юнит-тесты (Qt Test, 46 тестов, запускаются в CI): [`tests/`](tests/README.md)
 - Тест-кейсы и дефекты варианта 4 и смежного функционала (Далаков Аслан):
-  [docs/testing/test_cases_defects_dalakov.xlsx](docs/testing/test_cases_defects_dalakov.xlsx)
+  [docs/testing/test_cases_defects_dalakov.xlsx](docs/testing/test_cases_defects_dalakov.xlsx),
+  скриншоты прогона окна клиента: [docs/testing/screenshots](docs/testing/screenshots)
 - Тест-кейс и дефект клиента (Насыров Тимур): [client/test_case/test_case_client.xlsx](client/test_case/test_case_client.xlsx)
 - Тест-кейс и дефект сервера (Чистяков Аким): [server/server_registration_db_test_case.xlsx](server/server_registration_db_test_case.xlsx)
 - Тест-план: [test-plan.md](test-plan.md), чек-лист: [test-cases/checklist.md](test-cases/checklist.md)

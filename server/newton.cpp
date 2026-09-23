@@ -1,5 +1,6 @@
 #include "newton.h"
 #include <QRandomGenerator>
+#include <algorithm>
 #include <cmath>
 
 namespace {
@@ -65,10 +66,15 @@ QString Polynomial::derivativeToString() const
 
 NewtonStep newtonFirstStep(const Polynomial& f, double x0)
 {
+    return newtonFirstStep(f, x0, f.derivative(x0));
+}
+
+NewtonStep newtonFirstStep(const Polynomial& f, double x0, double dfx0)
+{
     NewtonStep step;
     step.x0 = x0;
     step.fx0 = f.value(x0);
-    step.dfx0 = f.derivative(x0);
+    step.dfx0 = dfx0;
 
     if (std::fabs(step.dfx0) < 1e-12) {
         step.error = "f'(x0) = 0: касательная параллельна оси OX, выберите другое x0";
@@ -81,15 +87,16 @@ NewtonStep newtonFirstStep(const Polynomial& f, double x0)
     return step;
 }
 
-bool parseNewtonArgs(const QStringList& args, Polynomial& f, double& x0, QString& error)
+bool parseNewtonArgs(const QStringList& args, Polynomial& f, double& x0, QString& error,
+                     bool* hasDerivative, double* dfx0)
 {
-    if (args.size() != 5) {
-        error = "нужно 5 чисел: c3 c2 c1 c0 x0";
+    if (args.size() != 5 && args.size() != 6) {
+        error = "нужно 5 или 6 чисел: c3 c2 c1 c0 x0 [f'(x0)]";
         return false;
     }
 
-    double v[5];
-    for (int i = 0; i < 5; ++i) {
+    double v[6];
+    for (int i = 0; i < args.size(); ++i) {
         QString s = args[i];
         s.replace(',', '.');
         bool ok = false;
@@ -105,6 +112,10 @@ bool parseNewtonArgs(const QStringList& args, Polynomial& f, double& x0, QString
     f.c1 = v[2];
     f.c0 = v[3];
     x0 = v[4];
+
+    const bool given = (args.size() == 6);
+    if (hasDerivative) *hasDerivative = given;
+    if (dfx0) *dfx0 = given ? v[5] : f.derivative(x0);
     return true;
 }
 
@@ -112,14 +123,16 @@ QString handleNewtonCommand(const QStringList& args)
 {
     Polynomial f;
     double x0 = 0;
+    double dfx0 = 0;
+    bool derivativeGiven = false;
     QString error;
 
-    if (!parseNewtonArgs(args, f, x0, error)) {
+    if (!parseNewtonArgs(args, f, x0, error, &derivativeGiven, &dfx0)) {
         return "\r\nNEWTON ERROR: " + error + "\r\n"
-               "Формат: NEWTON c3 c2 c1 c0 x0  (f(x) = c3*x^3 + c2*x^2 + c1*x + c0)\r\n";
+               "Формат: NEWTON c3 c2 c1 c0 x0 [f'(x0)]  (f(x) = c3*x^3 + c2*x^2 + c1*x + c0)\r\n";
     }
 
-    const NewtonStep step = newtonFirstStep(f, x0);
+    const NewtonStep step = newtonFirstStep(f, x0, dfx0);
     if (!step.ok) {
         return "\r\nNEWTON ERROR: " + step.error + "\r\n";
     }
@@ -129,7 +142,15 @@ QString handleNewtonCommand(const QStringList& args)
     r += "f'(x) = " + f.derivativeToString() + "\r\n";
     r += "x0 = " + num(step.x0) + "\r\n";
     r += "f(x0) = " + num(step.fx0) + "\r\n";
-    r += "f'(x0) = " + num(step.dfx0) + "\r\n";
+    if (derivativeGiven) {
+        const double byFormula = f.derivative(x0);
+        r += "f'(x0) = " + num(step.dfx0) + " (задано)\r\n";
+        if (std::fabs(byFormula - step.dfx0) > 1e-9 * std::max(1.0, std::fabs(byFormula))) {
+            r += "ВНИМАНИЕ: по формуле f'(x0) = " + num(byFormula) + ", заданное значение отличается\r\n";
+        }
+    } else {
+        r += "f'(x0) = " + num(step.dfx0) + "\r\n";
+    }
     r += "x1 = x0 - f(x0)/f'(x0) = " + num(step.x1) + "\r\n";
     r += "f(x1) = " + num(step.fx1) + "\r\n";
     r += "NEWTON OK x1=" + num(step.x1) + "\r\n";

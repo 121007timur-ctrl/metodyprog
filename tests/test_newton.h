@@ -34,6 +34,10 @@ private slots:
     void commandError(); ///< Ответ сервера на ошибочную команду NEWTON
 
     void generatedTaskIsSolvable(); ///< Задание TASK4 всегда корректно (200 генераций)
+
+    void parseArgsWithDerivative();  ///< Шестой аргумент — заданная f'(x0)
+    void firstStepGivenDerivative(); ///< Шаг по заданной производной
+    void commandWithDerivative();    ///< Ответ NEWTON с заданной f'(x0), предупреждение о несовпадении
 };
 
 #endif // TEST_NEWTON_H

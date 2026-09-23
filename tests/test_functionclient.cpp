@@ -7,6 +7,7 @@ void TestFunctionClient::buildNewtonCommand()
 {
     QCOMPARE(::buildNewtonCommand(1, 0, -2, -5, 2), QString("NEWTON 1 0 -2 -5 2"));
     QCOMPARE(::buildNewtonCommand(0, 0.5, 0, -1.25, 1.5), QString("NEWTON 0 0.5 0 -1.25 1.5"));
+    QCOMPARE(::buildNewtonCommand(1, 0, -2, -5, 2, 10), QString("NEWTON 1 0 -2 -5 2 10"));
 }
 
 void TestFunctionClient::parseNewtonResponseOk()

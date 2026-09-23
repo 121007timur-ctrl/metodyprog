@@ -7,6 +7,7 @@
 #include <QInputDialog>
 #include <QDateTime>
 #include <QDialog>
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QDoubleSpinBox>
 #include <QFormLayout>
@@ -159,6 +160,15 @@ void MainWindow::on_newtonButton_clicked()
     form->addRow("c0:", c0);
     form->addRow("x0:", x0);
 
+    // По условию варианта производная дана: по умолчанию вводится вручную,
+    // галочку можно снять — тогда сервер посчитает f'(x0) сам
+    QCheckBox* giveDerivative = new QCheckBox("Задать f'(x0) вручную", &dialog);
+    giveDerivative->setChecked(true);
+    QDoubleSpinBox* dfx0 = makeSpin(10);   // f'(2) = 3·2² − 2 = 10
+    connect(giveDerivative, &QCheckBox::toggled, dfx0, &QWidget::setEnabled);
+    form->addRow(giveDerivative);
+    form->addRow("f'(x0):", dfx0);
+
     QDialogButtonBox* buttons =
         new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog);
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
@@ -167,8 +177,10 @@ void MainWindow::on_newtonButton_clicked()
 
     if (dialog.exec() != QDialog::Accepted) return;
 
-    QString response = ClientAPI::getInstance()->newtonStep(
-        c3->value(), c2->value(), c1->value(), c0->value(), x0->value());
+    ClientAPI* api = ClientAPI::getInstance();
+    QString response = giveDerivative->isChecked()
+        ? api->newtonStep(c3->value(), c2->value(), c1->value(), c0->value(), x0->value(), dfx0->value())
+        : api->newtonStep(c3->value(), c2->value(), c1->value(), c0->value(), x0->value());
     addInfo(response);
 
     double x1;

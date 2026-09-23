@@ -1,5 +1,6 @@
 #include "server_functions.h"
 #include "database.h"
+#include "newton.h"
 #include <QDebug>
 #include <QRandomGenerator>
 #include <QMap>
@@ -64,6 +65,8 @@ void sendMainMenu(QTcpSocket* socket)
     menu += "STATS     - статистика сервера\r\n";
     menu += "TASK1     - Случайное уравнение\r\n";
     menu += "TASK2     - Случайный интеграл\r\n";
+    menu += "TASK4     - Метод Ньютона: найти x1 (вариант 4)\r\n";
+    menu += "NEWTON c3 c2 c1 c0 x0 - шаг метода Ньютона для c3x^3+c2x^2+c1x+c0\r\n";
     menu += "MENU      - Показать меню\r\n";
     menu += "LOGOUT    - Выйти из системы\r\n";
     menu += "> ";
@@ -323,6 +326,49 @@ QString task2Handler(QTcpSocket* socket, const QString& answer)
     }
 }
 
+QString task4Handler(QTcpSocket* socket, const QString& answer)
+{
+    static QMap<QTcpSocket*, bool> ожиданиеОтвета;
+
+    if (!ожиданиеОтвета.value(socket, false)) {
+        Polynomial f;
+        int x0 = 0;
+        generateNewtonTask(f, x0);
+        const NewtonStep step = newtonFirstStep(f, x0);
+
+        ожиданиеОтвета[socket] = true;
+        текущееЗадание[socket] = qMakePair(step.x1, 4.0);
+
+        return "\r\n=== ЗАДАНИЕ 4 (метод Ньютона) ===\r\n"
+               "f(x) = " + f.toString() + ", f'(x) = " + f.derivativeToString() + "\r\n"
+               "Начальное приближение x0 = " + QString::number(x0) + "\r\n"
+               "Найдите первое приближение x1 (точность 0.01): ";
+    }
+
+    ожиданиеОтвета[socket] = false;
+    QString text = answer;
+    text.replace(',', '.');
+    bool ok;
+    const double userAnswer = text.toDouble(&ok);
+
+    if (!ok) {
+        return "\r\nОшибка: введите число!\r\n";
+    }
+
+    const double correctAnswer = текущееЗадание[socket].first;
+    TaskStats& stats = g_taskStats[socket];
+    stats.totalAttempts++;
+    выполненныеЗадания[socket] = true;
+
+    const bool correct = qAbs(userAnswer - correctAnswer) < 0.01;
+    if (correct) stats.correctAnswers++;
+
+    return QString(correct ? "\r\n✅ ПРАВИЛЬНО! x1 = " : "\r\n❌ НЕПРАВИЛЬНО! Правильный ответ: x1 = ")
+           + QString::number(correctAnswer, 'f', 4) + "\r\n"
+           "Ваша статистика: " + QString::number(stats.correctAnswers) +
+           " правильных из " + QString::number(stats.totalAttempts) + "\r\n";
+}
+
 QString handleStartGame(QTcpSocket* socket)
 {
     if (!g_clients.contains(socket)) return "\r\nОшибка: вы не авторизованы\r\n";
@@ -469,6 +515,8 @@ QString handleCommands(QTcpSocket* socket, ClientInfo& info, const QString& comm
                 return task1Handler(socket, command);
             } else if (taskType == "TASK2") {
                 return task2Handler(socket, command);
+            } else if (taskType == "TASK4") {
+                return task4Handler(socket, command);
             }
         }
 
@@ -495,6 +543,13 @@ QString handleCommands(QTcpSocket* socket, ClientInfo& info, const QString& comm
         else if (command == "TASK2") {
             ожиданиеЗадания[socket] = "TASK2";
             return task2Handler(socket);
+        }
+        else if (command == "TASK4") {
+            ожиданиеЗадания[socket] = "TASK4";
+            return task4Handler(socket);
+        }
+        else if (command == "NEWTON" || command.startsWith("NEWTON ")) {
+            return handleNewtonCommand(command.mid(6).split(' ', Qt::SkipEmptyParts));
         }
         else if (command == "MENU") {
             sendMainMenu(socket);

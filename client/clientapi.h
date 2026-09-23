@@ -40,6 +40,14 @@ public:
     QString getGameStats();
     QString getHint();
 
+    /**
+     * @brief Вариант 4: шаг метода Ньютона на сервере (команда NEWTON).
+     *
+     * f(x) = c3*x^3 + c2*x^2 + c1*x + c0.
+     * @return Ответ сервера без главного меню.
+     */
+    QString newtonStep(double c3, double c2, double c1, double c0, double x0);
+
 private slots:
     void onConnected();
     void onDisconnected();

@@ -1,4 +1,5 @@
 #include "clientapi.h"
+#include "functionclient.h"
 #include <QDebug>
 
 ClientAPI* ClientAPI::m_instance = nullptr;
@@ -141,6 +142,12 @@ QString ClientAPI::getHint()
 {
     if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
     return sendAndReceive("HINT");
+}
+
+QString ClientAPI::newtonStep(double c3, double c2, double c1, double c0, double x0)
+{
+    if (!m_connected || !m_isLoggedIn) return "ERROR: Not logged in";
+    return stripServerMenu(sendAndReceive(buildNewtonCommand(c3, c2, c1, c0, x0)));
 }
 
 void ClientAPI::onConnected()

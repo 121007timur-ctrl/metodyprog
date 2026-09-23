@@ -24,6 +24,8 @@ private slots:
     void on_statsButton_clicked();
     void on_menuButton_clicked();
     void on_logoutButton_clicked();
+    void on_task4Button_clicked();   ///< Вариант 4: задание на метод Ньютона (TASK4)
+    void on_newtonButton_clicked();  ///< Вариант 4: калькулятор шага Ньютона (NEWTON)
 
 private:
     Ui::MainWindow *ui;

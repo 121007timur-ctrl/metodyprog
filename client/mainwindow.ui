@@ -128,6 +128,44 @@
      <string>Выход</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="task4Button">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>320</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Задание 4 (Ньютон)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="newtonButton">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>320</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Вариант 4: Ньютон</string>
+    </property>
+   </widget>
    <widget class="QTextEdit" name="infoTextEdit">
     <property name="geometry">
      <rect>

@@ -45,6 +45,7 @@ void cleanupClient(QTcpSocket* socket);
 QString getStats();
 QString task1Handler(QTcpSocket* socket, const QString& answer = "");
 QString task2Handler(QTcpSocket* socket, const QString& answer = "");
+QString task4Handler(QTcpSocket* socket, const QString& answer = ""); // Вариант 4: метод Ньютона
 
 QString handleStartGame(QTcpSocket* socket);
 QString handleGuess(QTcpSocket* socket, const QString& guess, const QString& login);

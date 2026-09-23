@@ -13,27 +13,27 @@ class TestNewton : public QObject
     Q_OBJECT
 
 private slots:
-    void polynomialValue_data();
-    void polynomialValue();
-    void polynomialDerivative();
-    void polynomialToString_data();
-    void polynomialToString();
+    void polynomialValue_data(); ///< Данные: коэффициенты, точка, ожидаемое значение
+    void polynomialValue(); ///< f(x) для разных многочленов
+    void polynomialDerivative(); ///< f'(x) считается верно
+    void polynomialToString_data(); ///< Данные: многочлен и его запись
+    void polynomialToString(); ///< Текстовая запись f и f'
 
-    void firstStep_data();
-    void firstStep();
-    void firstStepZeroDerivative();
-    void firstStepRootStaysRoot();
-    void stepsConvergeToRoot();
+    void firstStep_data(); ///< Данные: многочлен, x0 и ожидаемое x1
+    void firstStep(); ///< x1 = x0 - f(x0)/f'(x0) на известных примерах
+    void firstStepZeroDerivative(); ///< Ошибка при f'(x0) = 0
+    void firstStepRootStaysRoot(); ///< Если x0 — корень, то x1 = x0
+    void stepsConvergeToRoot(); ///< Повторные шаги сходятся к sqrt(2)
 
-    void parseArgsValid();
-    void parseArgsCommaDecimal();
-    void parseArgsWrongCount();
-    void parseArgsNotNumber();
+    void parseArgsValid(); ///< Разбор пяти чисел
+    void parseArgsCommaDecimal(); ///< Запятая как десятичный разделитель
+    void parseArgsWrongCount(); ///< Ошибка при неверном числе аргументов
+    void parseArgsNotNumber(); ///< Ошибка при нечисловом аргументе
 
-    void commandOk();
-    void commandError();
+    void commandOk(); ///< Ответ сервера на корректную команду NEWTON
+    void commandError(); ///< Ответ сервера на ошибочную команду NEWTON
 
-    void generatedTaskIsSolvable();
+    void generatedTaskIsSolvable(); ///< Задание TASK4 всегда корректно (200 генераций)
 };
 
 #endif // TEST_NEWTON_H

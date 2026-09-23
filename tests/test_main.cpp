@@ -2,8 +2,8 @@
  * @file test_main.cpp
  * @brief Точка входа юнит-тестов: запускает все наборы Qt Test подряд.
  *
- * Если задана переменная окружения TEST_LOG_DIR, отчёт каждого набора
- * дополнительно пишется в файл <TEST_LOG_DIR>/<ИмяНабора>.txt.
+ * Если задана переменная окружения `TEST_LOG_DIR`, отчёт каждого набора
+ * дополнительно пишется в файл `TEST_LOG_DIR/ИмяНабора.txt`.
  */
 #include <QCoreApplication>
 #include <QDir>
@@ -13,7 +13,12 @@
 #include "test_database.h"
 #include "test_functionclient.h"
 
-/// Запускает один набор тестов, возвращает число упавших тестов.
+/**
+ * @brief Запустить один набор тестов.
+ * @param suite    Объект с тестовыми слотами.
+ * @param baseArgs Аргументы командной строки.
+ * @return Число упавших тестов.
+ */
 static int run(QObject* suite, const QStringList& baseArgs)
 {
     QStringList args = baseArgs;
@@ -26,6 +31,12 @@ static int run(QObject* suite, const QStringList& baseArgs)
     return QTest::qExec(suite, args);
 }
 
+/**
+ * @brief Запуск всех наборов тестов.
+ * @param argc Число аргументов.
+ * @param argv Аргументы (передаются в Qt Test).
+ * @return 0 — все тесты прошли, 1 — есть упавшие.
+ */
 int main(int argc, char* argv[])
 {
     QCoreApplication app(argc, argv);

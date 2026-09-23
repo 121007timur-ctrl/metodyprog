@@ -13,18 +13,18 @@ class TestDatabase : public QObject
     Q_OBJECT
 
 private slots:
-    void singletonIsSameInstance();
-    void registerNewUser();
-    void registerDuplicateLogin();
-    void registerDuplicateEmail();
-    void loginByLogin();
-    void loginByEmail();
-    void loginWrongPassword();
-    void loginUnknownUser();
-    void getUserLoginByEmail();
-    void gameStatsUpdate();
-    void gameStatsReset();
-    void topPlayersSortedAndLimited();
+    void singletonIsSameInstance(); ///< instance() всегда возвращает один объект
+    void registerNewUser(); ///< Регистрация нового пользователя
+    void registerDuplicateLogin(); ///< Повторный логин отклоняется
+    void registerDuplicateEmail(); ///< Повторный email отклоняется
+    void loginByLogin(); ///< Вход по логину
+    void loginByEmail(); ///< Вход по email
+    void loginWrongPassword(); ///< Неверный пароль отклоняется
+    void loginUnknownUser(); ///< Неизвестный пользователь не входит
+    void getUserLoginByEmail(); ///< Поиск логина по email
+    void gameStatsUpdate(); ///< Накопление игровой статистики
+    void gameStatsReset(); ///< Сброс игровой статистики
+    void topPlayersSortedAndLimited(); ///< Топ игроков отсортирован и ограничен
 };
 
 #endif // TEST_DATABASE_H

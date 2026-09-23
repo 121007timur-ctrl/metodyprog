@@ -1,0 +1,38 @@
+# Конфигурация Doxygen для проекта metodyprog.
+# Локальный запуск из корня репозитория:  doxygen Doxyfile
+# Результат: docs/html/index.html
+
+PROJECT_NAME           = "metodyprog"
+PROJECT_BRIEF          = "Клиент-серверное приложение на Qt: авторизация, задания по численным методам, игра"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+INPUT_ENCODING         = UTF-8
+
+INPUT                  = docs/mainpage.md server client tests
+FILE_PATTERNS          = *.h *.cpp *.md
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */build/* */.qtcreator/* */test_case/* */test/*
+USE_MDFILE_AS_MAINPAGE = docs/mainpage.md
+
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_ANON_NSPACES   = NO
+JAVADOC_AUTOBRIEF      = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+
+QUIET                  = YES
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_LOGFILE           = docs/doxygen-warnings.log
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+USE_MATHJAX            = YES
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES

@@ -1,0 +1,83 @@
+@startuml class_client
+!pragma layout smetana
+title Диаграмма классов — клиент
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #F5F9FF
+  BorderColor #3A6EA5
+}
+
+class QObject <<Qt>>
+class QWidget <<Qt>>
+class QMainWindow <<Qt>>
+class QTcpSocket <<Qt>>
+
+class ClientAPI <<singleton>> {
+  - {static} m_instance : ClientAPI*
+  - m_socket : QTcpSocket*
+  - m_connected : bool
+  - m_userLogin : QString
+  - m_isLoggedIn : bool
+  - ClientAPI(parent : QObject*)
+  + {static} getInstance() : ClientAPI*
+  + connectToServer(host = "127.0.0.1", port = 33333) : bool
+  + disconnectFromServer() : void
+  + isConnected() : bool
+  + sendAndReceive(message, timeoutMs = 5000) : QString
+  + registerUser(login, email, password) : QString
+  + loginUser(login, password) : QString
+  + logout() : void
+  + isLoggedIn() : bool
+  + getCurrentUser() : QString
+  + sendCommand(command) : QString
+  + getServerStats() : QString
+  + startGame() / makeGuess(n) / getHint() / getGameStats() : QString
+  + newtonStep(c3, c2, c1, c0, x0) : QString
+  .. slots ..
+  - onConnected() / onDisconnected() / onError(error)
+}
+
+class AUTHregForm {
+  - ui : Ui::AUTHregForm*
+  + AUTHregForm(parent : QWidget*)
+  - updateStatus(status) : void
+  .. slots ..
+  - on_registerButton_clicked()
+  - on_loginButton_clicked()
+}
+
+class MainWindow {
+  - ui : Ui::MainWindow*
+  - currentUser : QString
+  + MainWindow(parent, username)
+  - addInfo(text) : void
+  .. slots ..
+  - on_task1Button_clicked()
+  - on_task2Button_clicked()
+  - on_task4Button_clicked()
+  - on_newtonButton_clicked()
+  - on_statsButton_clicked()
+  - on_menuButton_clicked()
+  - on_logoutButton_clicked()
+}
+
+class "functionclient" as FC <<module>> {
+  + bisectionMethod(a, b) : QString  // вариант 1
+  + leftRectangleMethod(a, b, n) : QString  // вариант 16
+  + buildNewtonCommand(c3, c2, c1, c0, x0) : QString  // вариант 4
+  + parseNewtonResponse(response, x1&) : bool  // вариант 4
+  + stripServerMenu(response) : QString
+  + variant2() ... variant10() : QString  // заглушки
+}
+
+QObject <|-- ClientAPI
+QWidget <|-- AUTHregForm
+QMainWindow <|-- MainWindow
+ClientAPI *-- QTcpSocket
+AUTHregForm ..> ClientAPI : getInstance()
+AUTHregForm ..> MainWindow : создаёт после входа
+MainWindow ..> AUTHregForm : создаёт при выходе
+MainWindow ..> ClientAPI : getInstance()
+MainWindow ..> FC
+ClientAPI ..> FC : NEWTON
+@enduml

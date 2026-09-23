@@ -1,0 +1,135 @@
+@startuml class_server
+!pragma layout smetana
+title Диаграмма классов — сервер
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor #FFFDF5
+  BorderColor #A5803A
+}
+
+class QObject <<Qt>>
+class QTcpServer <<Qt>>
+class QTcpSocket <<Qt>>
+class QTimer <<Qt>>
+
+class MyTcpServer {
+  - mTcpServer : QTcpServer*
+  - m_authTimers : QMap<QTcpSocket*, QTimer*>
+  + MyTcpServer(parent : QObject*)
+  + ~MyTcpServer()
+  .. slots ..
+  - slotNewConnection() : void
+  - slotServerRead() : void
+  - slotClientDisconnected() : void
+  - slotAuthTimeout() : void
+}
+
+class Database <<singleton>> {
+  - users : QMap<QString, UserData>
+  - emailToLogin : QMap<QString, QString>
+  - Database()
+  + {static} instance() : Database&
+  + registerUser(email, login, password) : bool
+  + loginUser(loginOrEmail, password) : bool
+  + isLoggedIn(loginOrEmail) : bool
+  + getUserLogin(email) : QString
+  + userExists(loginOrEmail) : bool
+  + getTotalUsers() : int
+  + getAllLogins() : QVector<QString>
+  + updateGameStats(login, attempts, success) : void
+  + getUserGameStats(login) : GameStatsData
+  + resetUserGameStats(login) : void
+  + getTopPlayers(limit = 10) : QVector<QPair<QString,int>>
+}
+
+class UserData <<struct>> {
+  + email : QString
+  + login : QString
+  + password : QString
+  + isOnline : bool
+  + gameStats : GameStatsData
+}
+
+class GameStatsData <<struct>> {
+  + totalAttempts : int
+  + totalCorrect : int
+  + gamesPlayed : int
+  + bestGameAttempts : int
+}
+
+class "server_functions" as SF <<module>> {
+  + g_clients : QMap<QTcpSocket*, ClientInfo>
+  + g_logins : QMap<QString, QTcpSocket*>
+  + g_gameSessions : QMap<QTcpSocket*, GameSession>
+  + g_taskStats : QMap<QTcpSocket*, TaskStats>
+  --
+  + handleAuthSteps(socket, info, request) : QString
+  + handleCommands(socket, info, command) : QString
+  + sendAuthMenu(socket) / sendMainMenu(socket)
+  + getStats() : QString
+  + task1Handler() / task2Handler() : QString
+  + task4Handler(socket, answer) : QString
+  + handleStartGame() / handleGuess() / handleHint()
+  + handleGameStats(socket, login) : QString
+  + cleanupClient(socket) : void
+}
+
+class ClientInfo <<struct>> {
+  + clientId : QString
+  + login : QString
+  + isAuthenticated : bool
+  + authStep : int
+  + tempEmail : QString
+  + tempLogin : QString
+}
+
+class GameSession <<struct>> {
+  + secretNumber : int
+  + attempts : int
+  + minRange : int
+  + maxRange : int
+  + gameActive : bool
+}
+
+class TaskStats <<struct>> {
+  + totalAttempts : int
+  + correctAnswers : int
+}
+
+package "Вариант 4 — newton_h" #EEF7EE {
+  class Polynomial <<struct>> {
+    + c3, c2, c1, c0 : double
+    + value(x) : double
+    + derivative(x) : double
+    + toString() : QString
+    + derivativeToString() : QString
+  }
+  class NewtonStep <<struct>> {
+    + ok : bool
+    + error : QString
+    + x0, fx0, dfx0 : double
+    + x1, fx1 : double
+  }
+  class "newton" as NM <<module>> {
+    + newtonFirstStep(f, x0) : NewtonStep
+    + parseNewtonArgs(args, f, x0, error) : bool
+    + handleNewtonCommand(args) : QString
+    + generateNewtonTask(f, x0) : void
+  }
+}
+
+QObject <|-- MyTcpServer
+MyTcpServer *-- QTcpServer
+MyTcpServer o-- "0..*" QTimer
+MyTcpServer ..> SF : вызывает
+MyTcpServer ..> QTcpSocket
+SF ..> Database : instance()
+SF o-- "0..*" ClientInfo
+SF o-- "0..*" GameSession
+SF o-- "0..*" TaskStats
+SF ..> NM : TASK4, NEWTON
+Database *-- "0..*" UserData
+UserData *-- GameStatsData
+NM ..> Polynomial
+NM ..> NewtonStep
+@enduml

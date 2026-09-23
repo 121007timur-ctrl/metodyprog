@@ -75,21 +75,40 @@ struct NewtonStep {
 NewtonStep newtonFirstStep(const Polynomial& f, double x0);
 
 /**
- * @brief Разбирает аргументы команды NEWTON.
+ * @brief Шаг метода Ньютона с заданным значением производной.
  *
- * Формат: `c3 c2 c1 c0 x0` — пять чисел через пробел,
- * десятичный разделитель — точка или запятая.
- *
- * @param args  Аргументы команды (без слова NEWTON).
- * @param f     [out] Многочлен.
- * @param x0    [out] Начальное приближение.
- * @param error [out] Текст ошибки разбора.
- * @return true, если все пять чисел прочитаны.
+ * Соответствует условию варианта 4 «дана функция и её производная»:
+ * f'(x0) берётся из входных данных, а не вычисляется.
+ * @param f    Многочлен.
+ * @param x0   Начальное приближение.
+ * @param dfx0 Значение производной в точке x0.
+ * @return Результат шага; ok == false, если dfx0 = 0.
  */
-bool parseNewtonArgs(const QStringList& args, Polynomial& f, double& x0, QString& error);
+NewtonStep newtonFirstStep(const Polynomial& f, double x0, double dfx0);
 
 /**
- * @brief Обработчик серверной команды `NEWTON c3 c2 c1 c0 x0`.
+ * @brief Разбирает аргументы команды NEWTON.
+ *
+ * Формат: `c3 c2 c1 c0 x0 [f'(x0)]` — пять или шесть чисел через пробел,
+ * десятичный разделитель — точка или запятая. Шестое число — заданное
+ * значение производной в x0; если его нет, производная вычисляется по формуле.
+ *
+ * @param args          Аргументы команды (без слова NEWTON).
+ * @param f             [out] Многочлен.
+ * @param x0            [out] Начальное приближение.
+ * @param error         [out] Текст ошибки разбора.
+ * @param hasDerivative [out, необязательно] true, если f'(x0) задано явно.
+ * @param dfx0          [out, необязательно] f'(x0): заданное или вычисленное.
+ * @return true, если аргументы прочитаны.
+ */
+bool parseNewtonArgs(const QStringList& args, Polynomial& f, double& x0, QString& error,
+                     bool* hasDerivative = nullptr, double* dfx0 = nullptr);
+
+/**
+ * @brief Обработчик серверной команды `NEWTON c3 c2 c1 c0 x0 [f'(x0)]`.
+ *
+ * Если f'(x0) задано и не совпадает с вычисленным по формуле, в ответ
+ * добавляется предупреждение, но шаг считается по заданному значению.
  * @param args Аргументы команды.
  * @return Текстовый ответ сервера с f(x0), f'(x0), x1 и f(x1).
  */

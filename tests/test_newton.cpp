@@ -170,9 +170,9 @@ void TestNewton::parseArgsWrongCount()
     double x0 = 0;
     QString error;
     QVERIFY(!parseNewtonArgs({"1", "2", "3"}, f, x0, error));
-    QVERIFY(error.contains("5 чисел"));
+    QVERIFY(error.contains("5 или 6 чисел"));
     QVERIFY(!parseNewtonArgs({}, f, x0, error));
-    QVERIFY(!parseNewtonArgs({"1", "2", "3", "4", "5", "6"}, f, x0, error));
+    QVERIFY(!parseNewtonArgs({"1", "2", "3", "4", "5", "6", "7"}, f, x0, error));
 }
 
 void TestNewton::parseArgsNotNumber()
@@ -217,4 +217,52 @@ void TestNewton::generatedTaskIsSolvable()
         QVERIFY(step.ok);
         QVERIFY(std::isfinite(step.x1));
     }
+}
+
+void TestNewton::parseArgsWithDerivative()
+{
+    Polynomial f;
+    double x0 = 0, dfx0 = 0;
+    bool given = false;
+    QString error;
+
+    QVERIFY(parseNewtonArgs({"1", "0", "-2", "-5", "2", "10"}, f, x0, error, &given, &dfx0));
+    QVERIFY(given);
+    QCOMPARE(dfx0, 10.0);
+
+    // Без шестого числа производная считается по формуле
+    QVERIFY(parseNewtonArgs({"1", "0", "-2", "-5", "2"}, f, x0, error, &given, &dfx0));
+    QVERIFY(!given);
+    QCOMPARE(dfx0, 10.0);
+
+    QVERIFY(!parseNewtonArgs({"1", "0", "-2", "-5", "2", "abc"}, f, x0, error, &given, &dfx0));
+}
+
+void TestNewton::firstStepGivenDerivative()
+{
+    // Условие варианта: дана f, f'(x0) и x0. x1 = 2 - (-1)/10 = 2.1
+    const NewtonStep step = newtonFirstStep(Polynomial{1, 0, -2, -5}, 2, 10);
+    QVERIFY(step.ok);
+    QCOMPARE(step.dfx0, 10.0);
+    QVERIFY(qAbs(step.x1 - 2.1) < 1e-12);
+
+    // Шаг считается по заданному значению, даже если оно отличается от формулы
+    const NewtonStep other = newtonFirstStep(Polynomial{1, 0, -2, -5}, 2, 5);
+    QVERIFY(qAbs(other.x1 - 2.2) < 1e-12);
+
+    QVERIFY(!newtonFirstStep(Polynomial{1, 0, -2, -5}, 2, 0).ok);
+}
+
+void TestNewton::commandWithDerivative()
+{
+    const QString ok = handleNewtonCommand({"1", "0", "-2", "-5", "2", "10"});
+    QVERIFY(ok.contains("f'(x0) = 10 (задано)"));
+    QVERIFY(!ok.contains("ВНИМАНИЕ"));
+    QVERIFY(ok.contains("NEWTON OK x1=2.1"));
+
+    const QString warn = handleNewtonCommand({"1", "0", "-2", "-5", "2", "5"});
+    QVERIFY(warn.contains("ВНИМАНИЕ: по формуле f'(x0) = 10"));
+    QVERIFY(warn.contains("NEWTON OK x1=2.2"));
+
+    QVERIFY(handleNewtonCommand({"1", "0", "-2", "-5", "2", "0"}).contains("NEWTON ERROR"));
 }

@@ -148,6 +148,18 @@ public:
      */
     QString newtonStep(double c3, double c2, double c1, double c0, double x0);
 
+    /**
+     * @brief Вариант 4: шаг метода Ньютона с заданной производной f'(x0).
+     * @param c3   Коэффициент при x^3.
+     * @param c2   Коэффициент при x^2.
+     * @param c1   Коэффициент при x.
+     * @param c0   Свободный член.
+     * @param x0   Начальное приближение.
+     * @param dfx0 Значение производной в точке x0.
+     * @return Ответ сервера без главного меню.
+     */
+    QString newtonStep(double c3, double c2, double c1, double c0, double x0, double dfx0);
+
 private slots:
     /// Соединение установлено.
     void onConnected();

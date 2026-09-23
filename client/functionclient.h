@@ -45,6 +45,18 @@ QString leftRectangleMethod(double a, double b, int n);
 QString buildNewtonCommand(double c3, double c2, double c1, double c0, double x0);
 
 /**
+ * @brief Сформировать команду для сервера с заданной производной f'(x0).
+ * @param c3   Коэффициент при x^3.
+ * @param c2   Коэффициент при x^2.
+ * @param c1   Коэффициент при x.
+ * @param c0   Свободный член.
+ * @param x0   Начальное приближение.
+ * @param dfx0 Значение производной в точке x0.
+ * @return Строка вида "NEWTON 1 0 -2 -5 2 10".
+ */
+QString buildNewtonCommand(double c3, double c2, double c1, double c0, double x0, double dfx0);
+
+/**
  * @brief Достать x1 из ответа сервера на команду NEWTON.
  * @param response Ответ сервера.
  * @param x1 [out] Первое приближение.

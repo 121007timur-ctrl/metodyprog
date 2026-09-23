@@ -59,6 +59,11 @@ QString buildNewtonCommand(double c3, double c2, double c1, double c0, double x0
         .arg(c0, 0, 'g', 15).arg(x0, 0, 'g', 15);
 }
 
+QString buildNewtonCommand(double c3, double c2, double c1, double c0, double x0, double dfx0)
+{
+    return buildNewtonCommand(c3, c2, c1, c0, x0) + QString(" %1").arg(dfx0, 0, 'g', 15);
+}
+
 bool parseNewtonResponse(const QString& response, double& x1)
 {
     static const QString marker = "NEWTON OK x1=";

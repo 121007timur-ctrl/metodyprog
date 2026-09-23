@@ -19,3 +19,8 @@ release/
 # Служебные файлы
 *.idx
 compile_commands.json
+# Сборка тестов и документация Doxygen
+build-*/
+docs/html/
+docs/latex/
+docs/doxygen-warnings.log

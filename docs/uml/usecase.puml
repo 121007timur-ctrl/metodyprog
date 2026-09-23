@@ -1,0 +1,67 @@
+@startuml usecase
+!pragma layout smetana
+title Диаграмма вариантов использования (Use Case)\nmetodyprog: клиент-серверное приложение
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor #F5F9FF
+  BorderColor #3A6EA5
+}
+
+actor "Гость\n(не авторизован)" as Guest
+actor "Пользователь" as User
+actor "Сервер\n(таймер 60 с)" as Timer
+
+Guest <|-- User
+
+rectangle "Система (клиент Qt + TCP-сервер)" {
+  usecase "Подключиться к серверу" as UC_Connect
+  usecase "Зарегистрироваться\n(email, логин, пароль)" as UC_Register
+  usecase "Войти\n(логин или email + пароль)" as UC_Login
+  usecase "Посмотреть статистику\nсервера (STATS)" as UC_Stats
+
+  usecase "Решить задание 1:\nуравнение (TASK1)" as UC_T1
+  usecase "Решить задание 2:\nинтеграл (TASK2)" as UC_T2
+  usecase "Решить задание 4:\nнайти x1 методом Ньютона (TASK4)" as UC_T4
+  usecase "Рассчитать шаг Ньютона\nдля своей функции (NEWTON)" as UC_Newton
+  usecase "Проверить ответ\nи обновить статистику" as UC_Check
+
+  usecase "Играть «Угадай число»\n(STARTGAME, GUESS)" as UC_Game
+  usecase "Получить подсказку (HINT)" as UC_Hint
+  usecase "Посмотреть игровую\nстатистику (GAMESTATS)" as UC_GStats
+
+  usecase "Открыть меню\n(MENU / О программе)" as UC_Menu
+  usecase "Выйти (LOGOUT)" as UC_Logout
+  usecase "Сбросить незавершённую\nрегистрацию/вход" as UC_Timeout
+}
+
+Guest --> UC_Register
+Guest --> UC_Login
+Guest --> UC_Stats
+
+User --> UC_T1
+User --> UC_T2
+User --> UC_T4
+User --> UC_Newton
+User --> UC_Game
+User --> UC_GStats
+User --> UC_Menu
+User --> UC_Logout
+
+UC_Register ..> UC_Connect : <<include>>
+UC_Login ..> UC_Connect : <<include>>
+UC_T1 ..> UC_Check : <<include>>
+UC_T2 ..> UC_Check : <<include>>
+UC_T4 ..> UC_Check : <<include>>
+UC_Hint ..> UC_Game : <<extend>>
+
+Timer --> UC_Timeout
+UC_Timeout ..> UC_Register : <<extend>>
+UC_Timeout ..> UC_Login : <<extend>>
+
+note right of UC_T4
+  Вариант 4 (Далаков А., 251-952):
+  x1 = x0 - f(x0) / f'(x0)
+end note
+@enduml

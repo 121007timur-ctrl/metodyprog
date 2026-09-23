@@ -1,0 +1,29 @@
+@startuml git_branches
+!pragma layout smetana
+title Структура веток репозитория metodyprog
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  RoundCorner 12
+}
+
+rectangle "main\nстабильная версия\n(сдача работ,\nизменения через PR)" as main #C8E6C9
+rectangle "develop\nинтеграция\nготовых фич" as develop #BBDEFB
+rectangle "feature/client-update\nклиент: окна, синглтон" as f1 #FFF9C4
+rectangle "feature/dalakov\nвариант 4, UnitTest,\nDoxygen, UML, тест-кейсы" as f2 #FFF9C4
+rectangle "feature/<задача>\nновая задача\nучастника" as f3 #FFF9C4
+rectangle "hotfix/<ошибка>\nсрочное исправление" as hot #FFCDD2
+
+develop -up-> main : Pull Request\n(после проверки CI)
+f1 -up-> develop : PR
+f2 -up-> main : PR
+f3 -up-> develop : PR
+hot -up-> main : PR
+main .down.> f3 : git checkout -b
+hot .> develop : merge back
+
+note bottom of f2
+  Каждый push запускает GitHub Actions:
+  • Unit Tests (Qt Test)
+  • Doxygen (0 предупреждений)
+end note
+@enduml

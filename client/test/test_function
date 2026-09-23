@@ -38,7 +38,6 @@ private slots:
     {
         QCOMPARE(variant2(), QString("[ЗАГЛУШКА] Вариант 2 не выбран"));
         QCOMPARE(variant3(), QString("[ЗАГЛУШКА] Вариант 3 не выбран"));
-        QCOMPARE(variant4(), QString("[ЗАГЛУШКА] Вариант 4 не выбран"));
         QCOMPARE(variant5(), QString("[ЗАГЛУШКА] Вариант 5 не выбран"));
         QCOMPARE(variant6(), QString("[ЗАГЛУШКА] Вариант 6 не выбран"));
         QCOMPARE(variant7(), QString("[ЗАГЛУШКА] Вариант 7 не выбран"));

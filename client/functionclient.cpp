@@ -51,10 +51,38 @@ QString leftRectangleMethod(double a, double b, int n)
                ).arg(a).arg(b).arg(integral).arg(n).arg(h);
 }
 
+// ========== ВАРИАНТ 4 ==========
+QString buildNewtonCommand(double c3, double c2, double c1, double c0, double x0)
+{
+    return QString("NEWTON %1 %2 %3 %4 %5")
+        .arg(c3, 0, 'g', 15).arg(c2, 0, 'g', 15).arg(c1, 0, 'g', 15)
+        .arg(c0, 0, 'g', 15).arg(x0, 0, 'g', 15);
+}
+
+bool parseNewtonResponse(const QString& response, double& x1)
+{
+    static const QString marker = "NEWTON OK x1=";
+    const int pos = response.indexOf(marker);
+    if (pos < 0) return false;
+
+    const int start = pos + marker.size();
+    int end = start;
+    while (end < response.size() && !response[end].isSpace()) ++end;
+
+    bool ok = false;
+    x1 = response.mid(start, end - start).toDouble(&ok);
+    return ok;
+}
+
+QString stripServerMenu(const QString& response)
+{
+    const int pos = response.indexOf("=== ГЛАВНОЕ МЕНЮ ===");
+    return (pos < 0 ? response : response.left(pos)).trimmed();
+}
+
 // ========== ЗАГЛУШКИ ==========
 QString variant2() { return "[ЗАГЛУШКА] Вариант 2 не выбран"; }
 QString variant3() { return "[ЗАГЛУШКА] Вариант 3 не выбран"; }
-QString variant4() { return "[ЗАГЛУШКА] Вариант 4 не выбран"; }
 QString variant5() { return "[ЗАГЛУШКА] Вариант 5 не выбран"; }
 QString variant6() { return "[ЗАГЛУШКА] Вариант 6 не выбран"; }
 QString variant7() { return "[ЗАГЛУШКА] Вариант 7 не выбран"; }

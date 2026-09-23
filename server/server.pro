@@ -8,11 +8,13 @@ SOURCES += \
     main.cpp \
     mytcpserver.cpp \
     server_functions.cpp \
+    newton.cpp \
     database.cpp
 
 HEADERS += \
     mytcpserver.h \
     server_functions.h \
+    newton.h \
     database.h
 
 DESTDIR = $$PWD/../bin

@@ -32,7 +32,19 @@ WARN_LOGFILE           = docs/doxygen-warnings.log
 
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO
-GENERATE_TREEVIEW      = YES
 USE_MATHJAX            = YES
 HAVE_DOT               = NO
 CLASS_GRAPH            = YES
+
+# --- Оформление: тема doxygen-awesome-css ---
+# Подключение только через стили (без кастомного HTML-заголовка), чтобы сборка
+# работала на любой версии Doxygen, включая 1.9.8 на GitHub Actions.
+# Светлая база; тёмная тема включается автоматически по настройке ОС
+# (prefers-color-scheme) — за это отвечает сама doxygen-awesome.css.
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+HTML_COLORSTYLE        = LIGHT
+
+HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome/doxygen-awesome.css \
+                         docs/doxygen-awesome/doxygen-awesome-sidebar-only.css
